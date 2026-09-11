@@ -247,131 +247,229 @@
   <!-- Main Content Area -->
   <main class="flex-grow py-8 px-4 sm:px-6 lg:px-8">
     
-<div class="max-w-4xl mx-auto">
+<div class="max-w-5xl mx-auto">
   <div class="bg-[#11141d] rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.5)] border border-[#1e2333] hover:border-[#10b981]/50 p-4 sm:p-6 md:p-8">
     <div class="border-b border-[#1e2333] pb-4 sm:pb-6">
       <div class="flex items-center justify-between mb-2 sm:mb-3">
         <div class="inline-flex items-center px-2 py-0.5 rounded text-[11px] bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 font-mono">
-          <span>[ENGINE: Vanilla Micro-Reactive]</span>
+          <span>[ENGINE: High-Precision Temporal Epoch Engine]</span>
         </div>
-        <span class="text-[10px] sm:text-[11px] font-mono opacity-50">Instant Client-Side</span>
+        <span class="text-[10px] sm:text-[11px] font-mono opacity-50">Ticking Live &bull; Sub-second</span>
       </div>
-      <h1 class="text-xl sm:text-2xl md:text-3xl font-black tracking-tight break-words">Conversor de Timestamp Unix</h1>
-      <p class="text-xs sm:text-sm opacity-70 mt-1.5 sm:mt-2 leading-relaxed">Converta timestamps Unix em segundos ou milissegundos para datas humanas.</p>
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-black tracking-tight">Conversor de Timestamp Unix</h1>
+      <p class="text-xs sm:text-sm opacity-70 mt-1.5 leading-relaxed">Converta timestamps Unix em segundos ou milissegundos para datas humanas.</p>
     </div>
 
-    <!-- Tool Interactive Workspace -->
-    <div class="mt-6 sm:mt-8 space-y-4 sm:space-y-5">
+    <!-- Live Digital Epoch Clock -->
+    <div class="mt-6 p-4 sm:p-5 rounded-2xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/10 dark:bg-black/30 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
       <div>
-        <div class="flex items-center justify-between mb-2">
-          <label for="input-data" class="text-xs font-bold uppercase tracking-wider opacity-80 font-mono">Input Payload / Query</label>
-          <button id="btn-sample" class="text-xs hover:underline font-mono opacity-60 hover:opacity-100 transition">Load Sample Data</button>
+        <div class="text-xs font-mono opacity-60 uppercase tracking-wider">Timestamp Unix Atual</div>
+        <div class="flex items-baseline space-x-3 mt-1">
+          <span id="live-epoch-sec" class="text-2xl sm:text-4xl font-black font-mono tracking-tight" style="color: #10b981">0000000000</span>
+          <span class="text-xs font-mono opacity-50">seconds</span>
         </div>
-        <textarea id="input-data" rows="5" placeholder="Enter or paste your text, JSON, or code snippet here (Press Ctrl+Enter to execute)..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/10 dark:bg-black/30 p-3 sm:p-4 text-xs sm:text-sm font-mono focus:outline-none transition"></textarea>
+        <div id="live-human-date" class="text-xs font-mono opacity-75 mt-1">UTC: -</div>
+      </div>
+      <button id="btn-copy-live-sec" class="px-4 py-2 rounded-xl text-xs font-mono font-bold transition flex items-center justify-center space-x-2 bg-[#10b981] hover:bg-[#059669] text-black font-bold tracking-tight shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+        <span>Copiar Timestamp</span>
+      </button>
+    </div>
+
+    <!-- Dual Converters -->
+    <div class="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <!-- A: Timestamp to Date -->
+      <div class="p-4 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5 space-y-3">
+        <div class="text-xs font-bold font-mono uppercase tracking-wider opacity-80">Timestamp &rarr; Human Date</div>
+        <div>
+          <label for="ts-input" class="text-[11px] font-mono opacity-70 block mb-1">Unix Epoch (Seconds or Milliseconds)</label>
+          <div class="flex gap-2">
+            <input type="number" id="ts-input" class="flex-1 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-black/20 px-3 py-1.5 text-xs font-mono focus:outline-none">
+            <button id="btn-ts-now" class="px-2.5 py-1 text-xs rounded border border-[#1e2333] hover:border-[#10b981]/50 font-mono hover:bg-white/10">Now</button>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-1 text-[11px] font-mono">
+          <button class="btn-ts-offset px-2 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10" data-diff="-86400">-1d</button>
+          <button class="btn-ts-offset px-2 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10" data-diff="-3600">-1h</button>
+          <button class="btn-ts-offset px-2 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10" data-diff="3600">+1h</button>
+          <button class="btn-ts-offset px-2 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10" data-diff="86400">+1d</button>
+          <button class="btn-ts-offset px-2 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10" data-diff="604800">+7d</button>
+        </div>
+
+        <div class="pt-2 border-t border-[#1e2333] hover:border-[#10b981]/50/50 space-y-1.5 font-mono text-xs">
+          <div class="flex justify-between"><span class="opacity-60">Hora Local:</span><span id="ts-out-local" class="font-bold">-</span></div>
+          <div class="flex justify-between"><span class="opacity-60">Hora UTC:</span><span id="ts-out-utc" class="font-bold">-</span></div>
+          <div class="flex justify-between"><span class="opacity-60">Formato ISO-8601:</span><span id="ts-out-iso" class="font-bold">-</span></div>
+          <div class="flex justify-between"><span class="opacity-60">Tempo Relativo:</span><span id="ts-out-relative" class="font-bold" style="color: #10b981">-</span></div>
+        </div>
       </div>
 
-      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
-        <button id="btn-process" class="w-full sm:w-auto px-6 py-2.5 rounded-xl font-bold transition flex items-center justify-center space-x-2 bg-[#10b981] hover:bg-[#059669] text-black font-bold tracking-tight shadow-[0_0_15px_rgba(16,185,129,0.3)]">
-          <span>Run Execution</span>
-        </button>
-        <button id="btn-clear" class="w-full sm:w-auto px-4 py-2.5 rounded-xl text-xs font-semibold border border-[#1e2333] hover:border-[#10b981]/50 hover:opacity-80 transition text-center">
-          Clear
-        </button>
-      </div>
-
-      <div>
-        <div class="flex items-center justify-between mb-2">
-          <label for="output-data" class="text-xs font-bold uppercase tracking-wider opacity-80 font-mono">Processed Result</label>
-          <button id="btn-copy" class="text-xs font-mono font-bold hover:underline transition opacity-70 hover:opacity-100" style="color: #10b981">
-            Copy to Clipboard
-          </button>
+      <!-- B: Date to Timestamp -->
+      <div class="p-4 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5 space-y-3">
+        <div class="text-xs font-bold font-mono uppercase tracking-wider opacity-80">Human Date &rarr; Timestamp</div>
+        <div>
+          <label for="date-input" class="text-[11px] font-mono opacity-70 block mb-1">Pick Date & Time (Local)</label>
+          <input type="datetime-local" id="date-input" class="w-full rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-black/20 px-3 py-1.5 text-xs font-mono focus:outline-none">
         </div>
-        <textarea id="output-data" rows="5" readonly placeholder="Output will appear here instantly..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-black/20 p-3 sm:p-4 text-xs sm:text-sm font-mono opacity-90 focus:outline-none transition"></textarea>
+
+        <div class="pt-2 border-t border-[#1e2333] hover:border-[#10b981]/50/50 space-y-2 font-mono text-xs">
+          <div>
+            <div class="text-[11px] opacity-60">Epoch in Seconds:</div>
+            <div class="flex items-center justify-between mt-1">
+              <span id="date-out-sec" class="font-bold text-sm" style="color: #10b981">-</span>
+              <button id="btn-copy-date-sec" class="px-2 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 text-[11px] hover:bg-white/10">Copiar</button>
+            </div>
+          </div>
+          <div>
+            <div class="text-[11px] opacity-60">Epoch in Milliseconds:</div>
+            <div class="flex items-center justify-between mt-1">
+              <span id="date-out-ms" class="font-bold text-sm">-</span>
+              <button id="btn-copy-date-ms" class="px-2 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 text-[11px] hover:bg-white/10">Copiar</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- SEO Documentation -->
+    
+    <!-- SEO & Capabilities Section -->
     <div class="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-[#1e2333] grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
       <div>
-        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">How to Use Conversor Timestamp Unix</h2>
+        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">About Conversor de Timestamp Unix</h2>
         <p class="text-xs opacity-75 leading-relaxed">
-          Enter your payload in the input console above and trigger execution. All parsing, validation, and transformation runs locally in your browser with zero latency and complete privacy.
+          Online, zero-latency browser utility for <strong>conversor timestamp unix</strong>. All computing operations execute in real-time within your browser sandbox with zero telemetry or network calls.
         </p>
-        <h3 class="text-xs font-bold uppercase tracking-wider opacity-70 mt-3 sm:mt-4 mb-2">Indexed Search Capabilities</h3>
+        <h3 class="text-xs font-bold uppercase tracking-wider opacity-70 mt-3 sm:mt-4 mb-2">Supported Queries & Intent</h3>
         <ul class="space-y-0.5"><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>converter epoch para data</li></ul>
       </div>
       <div>
-        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">Architecture & Privacy</h2>
+        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">Architecture & Privacy Guarantees</h2>
         <div class="space-y-2">
           <div class="p-3 sm:p-3.5 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5">
-            <div class="text-xs font-bold">100% Client-Side Privacy</div>
-            <p class="text-[11px] opacity-60 mt-0.5">Your sensitive data never leaves your device. No analytics, tracking, or server-side logging.</p>
+            <div class="text-xs font-bold">100% Client-Side Computation</div>
+            <p class="text-[11px] opacity-60 mt-0.5">Your data never touches remote servers or analytics backends. Complete privacy guaranteed.</p>
           </div>
           <div class="p-3 sm:p-3.5 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5">
-            <div class="text-xs font-bold">Zero Dependencies & Offline Ready</div>
-            <p class="text-[11px] opacity-60 mt-0.5">Architected with native Web APIs for instantaneous processing under 1ms.</p>
+            <div class="text-xs font-bold">Edge Accelerated & Offline Ready</div>
+            <p class="text-[11px] opacity-60 mt-0.5">Powered by native browser Web APIs for instant sub-millisecond execution.</p>
           </div>
         </div>
       </div>
     </div>
+        
   </div>
 </div>
 
 <script>
 (function() {
-  const inputEl = document.getElementById('input-data');
-  const outputEl = document.getElementById('output-data');
-  const btnProcess = document.getElementById('btn-process');
-  const btnClear = document.getElementById('btn-clear');
-  const btnCopy = document.getElementById('btn-copy');
-  const btnSample = document.getElementById('btn-sample');
+  const liveSec = document.getElementById('live-epoch-sec');
+  const liveHuman = document.getElementById('live-human-date');
+  const btnCopyLive = document.getElementById('btn-copy-live-sec');
+  const tsInput = document.getElementById('ts-input');
+  const btnTsNow = document.getElementById('btn-ts-now');
+  const tsOutLocal = document.getElementById('ts-out-local');
+  const tsOutUtc = document.getElementById('ts-out-utc');
+  const tsOutIso = document.getElementById('ts-out-iso');
+  const tsOutRel = document.getElementById('ts-out-relative');
+  const dateInput = document.getElementById('date-input');
+  const dateOutSec = document.getElementById('date-out-sec');
+  const dateOutMs = document.getElementById('date-out-ms');
+  const btnCopyDateSec = document.getElementById('btn-copy-date-sec');
+  const btnCopyDateMs = document.getElementById('btn-copy-date-ms');
 
-  function processData() {
-    const val = inputEl.value.trim();
-    if (!val) {
-      outputEl.value = 'Please provide input data above.';
-      return;
-    }
-    try {
-      // Auto-detect JSON formatting or utility transform
-      const parsed = JSON.parse(val);
-      outputEl.value = JSON.stringify(parsed, null, 2);
-    } catch(e) {
-      outputEl.value = '--- Processed Output (' + new Date().toLocaleTimeString() + ') ---
-' + val.toUpperCase();
-    }
-    if (window.showToast) window.showToast('Processed successfully!');
+  // Digital clock tick
+  function tick() {
+    const now = new Date();
+    const sec = Math.floor(now.getTime() / 1000);
+    liveSec.innerText = sec;
+    liveHuman.innerText = 'UTC: ' + now.toUTCString() + ' | Local: ' + now.toLocaleTimeString();
   }
+  setInterval(tick, 1000);
+  tick();
 
-  btnProcess.addEventListener('click', processData);
-
-  inputEl.addEventListener('keydown', e => {
-    if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
-      e.preventDefault();
-      processData();
-    }
-  });
-
-  btnClear.addEventListener('click', () => {
-    inputEl.value = '';
-    outputEl.value = '';
-    if (window.showToast) window.showToast('Cleared input workspace');
-  });
-
-  btnSample.addEventListener('click', () => {
-    inputEl.value = JSON.stringify({ "service": "DevZen Tools", "topic": "conversor timestamp unix", "status": "active", "timestamp": Date.now() }, null, 2);
-    processData();
-  });
-
-  btnCopy.addEventListener('click', () => {
-    if (!outputEl.value) return;
-    navigator.clipboard.writeText(outputEl.value).then(() => {
-      if (window.showToast) window.showToast('Copied to clipboard!');
+  btnCopyLive.addEventListener('click', () => {
+    navigator.clipboard.writeText(liveSec.innerText).then(() => {
+      if (window.showToast) window.showToast('Copied current epoch ' + liveSec.innerText);
     });
   });
+
+  function getRelativeTime(d) {
+    const diffSec = Math.round((d.getTime() - Date.now()) / 1000);
+    const absSec = Math.abs(diffSec);
+    const suffix = diffSec > 0 ? 'from now' : 'ago';
+    if (absSec < 5) return 'Just now';
+    if (absSec < 60) return absSec + 's ' + suffix;
+    if (absSec < 3600) return Math.round(absSec / 60) + 'm ' + suffix;
+    if (absSec < 86400) return Math.round(absSec / 3600) + 'h ' + suffix;
+    return Math.round(absSec / 86400) + 'd ' + suffix;
+  }
+
+  function updateTsConverter() {
+    let raw = tsInput.value.trim();
+    if (!raw) return;
+    let num = parseInt(raw, 10);
+    if (isNaN(num)) return;
+    // Auto detect ms vs sec
+    const isMs = num > 9999999999;
+    const date = new Date(isMs ? num : num * 1000);
+
+    tsOutLocal.innerText = date.toLocaleString();
+    tsOutUtc.innerText = date.toUTCString();
+    tsOutIso.innerText = date.toISOString();
+    tsOutRel.innerText = getRelativeTime(date);
+  }
+
+  tsInput.addEventListener('input', updateTsConverter);
+
+  btnTsNow.addEventListener('click', () => {
+    tsInput.value = Math.floor(Date.now() / 1000);
+    updateTsConverter();
+  });
+
+  document.querySelectorAll('.btn-ts-offset').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const diff = parseInt(btn.getAttribute('data-diff'), 10);
+      let cur = parseInt(tsInput.value, 10) || Math.floor(Date.now() / 1000);
+      tsInput.value = cur + diff;
+      updateTsConverter();
+    });
+  });
+
+  // Date to Timestamp Converter
+  function updateDateConverter() {
+    if (!dateInput.value) return;
+    const date = new Date(dateInput.value);
+    if (isNaN(date.getTime())) return;
+    const ms = date.getTime();
+    const sec = Math.floor(ms / 1000);
+    dateOutSec.innerText = sec;
+    dateOutMs.innerText = ms;
+  }
+
+  dateInput.addEventListener('input', updateDateConverter);
+
+  btnCopyDateSec.addEventListener('click', () => {
+    navigator.clipboard.writeText(dateOutSec.innerText).then(() => {
+      if (window.showToast) window.showToast('Copied seconds timestamp');
+    });
+  });
+
+  btnCopyDateMs.addEventListener('click', () => {
+    navigator.clipboard.writeText(dateOutMs.innerText).then(() => {
+      if (window.showToast) window.showToast('Copied milliseconds timestamp');
+    });
+  });
+
+  // Initialize with now
+  tsInput.value = Math.floor(Date.now() / 1000);
+  updateTsConverter();
+
+  const nowIso = new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 16);
+  dateInput.value = nowIso;
+  updateDateConverter();
 })();
 </script>
-
+        
   </main>
 
   <!-- Internal Linking Matrix -->

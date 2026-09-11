@@ -247,131 +247,188 @@
   <!-- Main Content Area -->
   <main class="flex-grow py-8 px-4 sm:px-6 lg:px-8">
     
-<div class="max-w-4xl mx-auto">
+<div class="max-w-5xl mx-auto">
   <div class="bg-[#11141d] rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.5)] border border-[#1e2333] hover:border-[#10b981]/50 p-4 sm:p-6 md:p-8">
     <div class="border-b border-[#1e2333] pb-4 sm:pb-6">
       <div class="flex items-center justify-between mb-2 sm:mb-3">
         <div class="inline-flex items-center px-2 py-0.5 rounded text-[11px] bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 font-mono">
-          <span>[ENGINE: Vanilla Micro-Reactive]</span>
+          <span>[ENGINE: JavaScript ECMAScript RegExp]</span>
         </div>
-        <span class="text-[10px] sm:text-[11px] font-mono opacity-50">Instant Client-Side</span>
+        <span class="text-[10px] sm:text-[11px] font-mono opacity-50">Real-Time Regex Debugger</span>
       </div>
-      <h1 class="text-xl sm:text-2xl md:text-3xl font-black tracking-tight break-words">Probador y Depurador RegEx</h1>
-      <p class="text-xs sm:text-sm opacity-70 mt-1.5 sm:mt-2 leading-relaxed">Pruebe y depure patrones de expresiones regulares en tiempo real con resaltado de coincidencias.</p>
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-black tracking-tight">Probador y Depurador RegEx</h1>
+      <p class="text-xs sm:text-sm opacity-70 mt-1.5 leading-relaxed">Pruebe y depure patrones de expresiones regulares en tiempo real con resaltado de coincidencias.</p>
     </div>
 
-    <!-- Tool Interactive Workspace -->
-    <div class="mt-6 sm:mt-8 space-y-4 sm:space-y-5">
-      <div>
-        <div class="flex items-center justify-between mb-2">
-          <label for="input-data" class="text-xs font-bold uppercase tracking-wider opacity-80 font-mono">Input Payload / Query</label>
-          <button id="btn-sample" class="text-xs hover:underline font-mono opacity-60 hover:opacity-100 transition">Load Sample Data</button>
+    <!-- Regex Pattern Bar -->
+    <div class="mt-6 p-3 sm:p-4 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5 space-y-3">
+      <div class="flex items-center gap-2">
+        <span class="text-lg font-mono opacity-50">/</span>
+        <input type="text" id="regex-pattern" value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="Type regex pattern here..." class="flex-1 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-black/10 dark:bg-black/40 px-3 py-2 text-xs sm:text-sm font-mono focus:outline-none transition">
+        <span class="text-lg font-mono opacity-50">/</span>
+        <div class="flex items-center gap-1 font-mono text-xs">
+          <label class="px-2 py-1 rounded border border-[#1e2333] hover:border-[#10b981]/50 cursor-pointer hover:bg-white/10 flex items-center space-x-1">
+            <input type="checkbox" id="flag-g" checked class="accent-emerald-500"><span>g</span>
+          </label>
+          <label class="px-2 py-1 rounded border border-[#1e2333] hover:border-[#10b981]/50 cursor-pointer hover:bg-white/10 flex items-center space-x-1">
+            <input type="checkbox" id="flag-i" checked class="accent-emerald-500"><span>i</span>
+          </label>
+          <label class="px-2 py-1 rounded border border-[#1e2333] hover:border-[#10b981]/50 cursor-pointer hover:bg-white/10 flex items-center space-x-1">
+            <input type="checkbox" id="flag-m" class="accent-emerald-500"><span>m</span>
+          </label>
+          <label class="px-2 py-1 rounded border border-[#1e2333] hover:border-[#10b981]/50 cursor-pointer hover:bg-white/10 flex items-center space-x-1">
+            <input type="checkbox" id="flag-s" class="accent-emerald-500"><span>s</span>
+          </label>
         </div>
-        <textarea id="input-data" rows="5" placeholder="Enter or paste your text, JSON, or code snippet here (Press Ctrl+Enter to execute)..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/10 dark:bg-black/30 p-3 sm:p-4 text-xs sm:text-sm font-mono focus:outline-none transition"></textarea>
       </div>
 
-      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
-        <button id="btn-process" class="w-full sm:w-auto px-6 py-2.5 rounded-xl font-bold transition flex items-center justify-center space-x-2 bg-[#10b981] hover:bg-[#059669] text-black font-bold tracking-tight shadow-[0_0_15px_rgba(16,185,129,0.3)]">
-          <span>Run Execution</span>
-        </button>
-        <button id="btn-clear" class="w-full sm:w-auto px-4 py-2.5 rounded-xl text-xs font-semibold border border-[#1e2333] hover:border-[#10b981]/50 hover:opacity-80 transition text-center">
-          Clear
-        </button>
-      </div>
-
-      <div>
-        <div class="flex items-center justify-between mb-2">
-          <label for="output-data" class="text-xs font-bold uppercase tracking-wider opacity-80 font-mono">Processed Result</label>
-          <button id="btn-copy" class="text-xs font-mono font-bold hover:underline transition opacity-70 hover:opacity-100" style="color: #10b981">
-            Copy to Clipboard
-          </button>
-        </div>
-        <textarea id="output-data" rows="5" readonly placeholder="Output will appear here instantly..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-black/20 p-3 sm:p-4 text-xs sm:text-sm font-mono opacity-90 focus:outline-none transition"></textarea>
+      <!-- Presets Selector -->
+      <div class="flex items-center flex-wrap gap-1.5 pt-1">
+        <span class="text-[11px] font-mono opacity-60 mr-1">Presets:</span>
+        <button class="btn-preset px-2 py-0.5 text-[11px] rounded border border-[#1e2333] hover:border-[#10b981]/50 font-mono hover:bg-white/10" data-pat="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" data-sample="Contact us at support@example.com or sales@webutil.com for inquiries.">Email</button>
+        <button class="btn-preset px-2 py-0.5 text-[11px] rounded border border-[#1e2333] hover:border-[#10b981]/50 font-mono hover:bg-white/10" data-pat="\b(?:\d{1,3}\.){3}\d{1,3}\b" data-sample="Server IP addresses: 192.168.1.1 and 10.0.0.254 (gateway: 127.0.0.1).">IPv4</button>
+        <button class="btn-preset px-2 py-0.5 text-[11px] rounded border border-[#1e2333] hover:border-[#10b981]/50 font-mono hover:bg-white/10" data-pat="https?:\/\/[^\s$.?#].[^\s]*" data-sample="Visit https://webutil.globalcorehub.com or http://github.com for code.">URL</button>
+        <button class="btn-preset px-2 py-0.5 text-[11px] rounded border border-[#1e2333] hover:border-[#10b981]/50 font-mono hover:bg-white/10" data-pat="\b\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\d|3[01])\b" data-sample="Milestones: 2026-09-11, release on 2026-10-01.">ISO Date</button>
+        <button class="btn-preset px-2 py-0.5 text-[11px] rounded border border-[#1e2333] hover:border-[#10b981]/50 font-mono hover:bg-white/10" data-pat="#(?:[0-9a-fA-F]{3}){1,2}\b" data-sample="Primary colors: #10b981, #0c0e14, and #fff.">Hex Color</button>
       </div>
     </div>
 
-    <!-- SEO Documentation -->
+    <!-- Test String Input -->
+    <div class="mt-4">
+      <div class="flex items-center justify-between mb-1.5">
+        <label for="regex-text" class="text-xs font-bold uppercase tracking-wider font-mono opacity-80">Test String</label>
+        <span id="match-badge" class="text-xs font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">0 matches</span>
+      </div>
+      <textarea id="regex-text" rows="6" spellcheck="false" placeholder="Type or paste test string here..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/10 dark:bg-black/30 p-3 text-xs sm:text-sm font-mono focus:outline-none transition leading-relaxed">Contact us at support@example.com or dev@webutil.globalcorehub.com for any developer questions!</textarea>
+    </div>
+
+    <!-- Match Results Breakdown -->
+    <div class="mt-4">
+      <div class="text-xs font-bold uppercase tracking-wider font-mono opacity-80 mb-2">Coincidencias Breakdown</div>
+      <div id="matches-container" class="max-h-60 overflow-y-auto space-y-2 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 p-3 bg-black/5 dark:bg-black/20 font-mono text-xs">
+        <span class="opacity-50">No matches found.</span>
+      </div>
+    </div>
+
+    
+    <!-- SEO & Capabilities Section -->
     <div class="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-[#1e2333] grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
       <div>
-        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">How to Use Probador Regex</h2>
+        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">About Probador y Depurador RegEx</h2>
         <p class="text-xs opacity-75 leading-relaxed">
-          Enter your payload in the input console above and trigger execution. All parsing, validation, and transformation runs locally in your browser with zero latency and complete privacy.
+          Online, zero-latency browser utility for <strong>probador regex</strong>. All computing operations execute in real-time within your browser sandbox with zero telemetry or network calls.
         </p>
-        <h3 class="text-xs font-bold uppercase tracking-wider opacity-70 mt-3 sm:mt-4 mb-2">Indexed Search Capabilities</h3>
+        <h3 class="text-xs font-bold uppercase tracking-wider opacity-70 mt-3 sm:mt-4 mb-2">Supported Queries & Intent</h3>
         <ul class="space-y-0.5"><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>regex online espanol</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>expresiones regulares test</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>depurar regex</li></ul>
       </div>
       <div>
-        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">Architecture & Privacy</h2>
+        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">Architecture & Privacy Guarantees</h2>
         <div class="space-y-2">
           <div class="p-3 sm:p-3.5 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5">
-            <div class="text-xs font-bold">100% Client-Side Privacy</div>
-            <p class="text-[11px] opacity-60 mt-0.5">Your sensitive data never leaves your device. No analytics, tracking, or server-side logging.</p>
+            <div class="text-xs font-bold">100% Client-Side Computation</div>
+            <p class="text-[11px] opacity-60 mt-0.5">Your data never touches remote servers or analytics backends. Complete privacy guaranteed.</p>
           </div>
           <div class="p-3 sm:p-3.5 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5">
-            <div class="text-xs font-bold">Zero Dependencies & Offline Ready</div>
-            <p class="text-[11px] opacity-60 mt-0.5">Architected with native Web APIs for instantaneous processing under 1ms.</p>
+            <div class="text-xs font-bold">Edge Accelerated & Offline Ready</div>
+            <p class="text-[11px] opacity-60 mt-0.5">Powered by native browser Web APIs for instant sub-millisecond execution.</p>
           </div>
         </div>
       </div>
     </div>
+        
   </div>
 </div>
 
 <script>
 (function() {
-  const inputEl = document.getElementById('input-data');
-  const outputEl = document.getElementById('output-data');
-  const btnProcess = document.getElementById('btn-process');
-  const btnClear = document.getElementById('btn-clear');
-  const btnCopy = document.getElementById('btn-copy');
-  const btnSample = document.getElementById('btn-sample');
+  const patInput = document.getElementById('regex-pattern');
+  const textInput = document.getElementById('regex-text');
+  const matchBadge = document.getElementById('match-badge');
+  const container = document.getElementById('matches-container');
+  const flagG = document.getElementById('flag-g');
+  const flagI = document.getElementById('flag-i');
+  const flagM = document.getElementById('flag-m');
+  const flagS = document.getElementById('flag-s');
 
-  function processData() {
-    const val = inputEl.value.trim();
-    if (!val) {
-      outputEl.value = 'Please provide input data above.';
+  function getFlags() {
+    let f = '';
+    if (flagG.checked) f += 'g';
+    if (flagI.checked) f += 'i';
+    if (flagM.checked) f += 'm';
+    if (flagS.checked) f += 's';
+    return f;
+  }
+
+  function runRegex() {
+    const pat = patInput.value;
+    const text = textInput.value;
+    if (!pat) {
+      matchBadge.innerText = '0 matches';
+      container.innerHTML = '<span class="opacity-50">Empty pattern.</span>';
       return;
     }
     try {
-      // Auto-detect JSON formatting or utility transform
-      const parsed = JSON.parse(val);
-      outputEl.value = JSON.stringify(parsed, null, 2);
-    } catch(e) {
-      outputEl.value = '--- Processed Output (' + new Date().toLocaleTimeString() + ') ---
-' + val.toUpperCase();
+      const flags = getFlags();
+      const re = new RegExp(pat, flags);
+      let matches = [];
+      if (flags.includes('g')) {
+        let m;
+        while ((m = re.exec(text)) !== null) {
+          matches.push(m);
+          if (re.lastIndex === m.index) re.lastIndex++;
+        }
+      } else {
+        const m = re.exec(text);
+        if (m) matches.push(m);
+      }
+
+      matchBadge.innerText = matches.length + ' Coincidencias';
+      if (matches.length === 0) {
+        container.innerHTML = '<span class="opacity-50">No matches found.</span>';
+        return;
+      }
+
+      let html = '';
+      matches.forEach((m, idx) => {
+        const groups = m.slice(1).map((g, gi) => '<div class="text-[11px] opacity-75">Group $' + (gi + 1) + ': <span class="text-amber-400 font-bold">' + escapeHtml(g) + '</span></div>').join('');
+        html += '<div class="p-2.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-white/5 flex flex-col gap-1">' +
+          '<div class="flex items-center justify-between">' +
+          '<span class="font-bold" style="color:#10b981">Match #' + (idx + 1) + '</span>' +
+          '<span class="text-[11px] opacity-50">Index: ' + m.index + '</span>' +
+          '</div>' +
+          '<div class="text-xs break-all font-mono font-semibold">' + escapeHtml(m[0]) + '</div>' +
+          (groups ? '<div class="pt-1 border-t border-[#1e2333] hover:border-[#10b981]/50/40">' + groups + '</div>' : '') +
+          '</div>';
+      });
+      container.innerHTML = html;
+    } catch (e) {
+      matchBadge.innerText = 'RegExp Error';
+      container.innerHTML = '<span class="text-rose-400">&#x2717; ' + escapeHtml(e.message) + '</span>';
     }
-    if (window.showToast) window.showToast('Processed successfully!');
   }
 
-  btnProcess.addEventListener('click', processData);
+  function escapeHtml(str) {
+    if (str === undefined || str === null) return 'undefined';
+    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
 
-  inputEl.addEventListener('keydown', e => {
-    if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
-      e.preventDefault();
-      processData();
-    }
-  });
+  patInput.addEventListener('input', runRegex);
+  textInput.addEventListener('input', runRegex);
+  [flagG, flagI, flagM, flagS].forEach(el => el.addEventListener('change', runRegex));
 
-  btnClear.addEventListener('click', () => {
-    inputEl.value = '';
-    outputEl.value = '';
-    if (window.showToast) window.showToast('Cleared input workspace');
-  });
-
-  btnSample.addEventListener('click', () => {
-    inputEl.value = JSON.stringify({ "service": "DevZen Tools", "topic": "probador regex", "status": "active", "timestamp": Date.now() }, null, 2);
-    processData();
-  });
-
-  btnCopy.addEventListener('click', () => {
-    if (!outputEl.value) return;
-    navigator.clipboard.writeText(outputEl.value).then(() => {
-      if (window.showToast) window.showToast('Copied to clipboard!');
+  document.querySelectorAll('.btn-preset').forEach(btn => {
+    btn.addEventListener('click', () => {
+      patInput.value = btn.getAttribute('data-pat');
+      textInput.value = btn.getAttribute('data-sample');
+      runRegex();
+      if (window.showToast) window.showToast('Loaded ' + btn.innerText + ' preset');
     });
   });
+
+  runRegex();
 })();
 </script>
-
+        
   </main>
 
   <!-- Internal Linking Matrix -->

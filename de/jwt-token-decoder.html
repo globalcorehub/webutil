@@ -247,131 +247,210 @@
   <!-- Main Content Area -->
   <main class="flex-grow py-8 px-4 sm:px-6 lg:px-8">
     
-<div class="max-w-4xl mx-auto">
+<div class="max-w-5xl mx-auto">
   <div class="bg-[#11141d] rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.5)] border border-[#1e2333] hover:border-[#10b981]/50 p-4 sm:p-6 md:p-8">
     <div class="border-b border-[#1e2333] pb-4 sm:pb-6">
       <div class="flex items-center justify-between mb-2 sm:mb-3">
         <div class="inline-flex items-center px-2 py-0.5 rounded text-[11px] bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 font-mono">
-          <span>[ENGINE: Vanilla Micro-Reactive]</span>
+          <span>[ENGINE: Client-Side JOSE Token Inspector]</span>
         </div>
-        <span class="text-[10px] sm:text-[11px] font-mono opacity-50">Instant Client-Side</span>
+        <span class="text-[10px] sm:text-[11px] font-mono opacity-50">Zero Secret Leaks &bull; 100% Local</span>
       </div>
-      <h1 class="text-xl sm:text-2xl md:text-3xl font-black tracking-tight break-words">JWT Token Dekodierer</h1>
-      <p class="text-xs sm:text-sm opacity-70 mt-1.5 sm:mt-2 leading-relaxed">JWT Tokens einsehen, Header und Payload entschlüsseln ohne Server-Übertragung.</p>
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-black tracking-tight">JWT Token Dekodierer</h1>
+      <p class="text-xs sm:text-sm opacity-70 mt-1.5 leading-relaxed">JWT Tokens einsehen, Header und Payload entschlüsseln ohne Server-Übertragung.</p>
     </div>
 
-    <!-- Tool Interactive Workspace -->
-    <div class="mt-6 sm:mt-8 space-y-4 sm:space-y-5">
-      <div>
+    <!-- Action Toolbar -->
+    <div class="mt-6 flex flex-wrap items-center justify-between gap-3 p-3 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5">
+      <div class="flex items-center gap-2">
+        <button id="btn-sample-active" class="px-3 py-1.5 text-xs rounded-lg font-mono border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10">Active JWT Sample</button>
+        <button id="btn-sample-expired" class="px-3 py-1.5 text-xs rounded-lg font-mono border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10">Expired JWT Sample</button>
+      </div>
+      <button id="btn-clear" class="px-3 py-1 text-xs rounded border border-[#1e2333] hover:border-[#10b981]/50 font-mono opacity-70 hover:opacity-100">Löschen</button>
+    </div>
+
+    <!-- Raw JWT Input Box -->
+    <div class="mt-4">
+      <label for="jwt-input" class="block text-xs font-bold uppercase tracking-wider font-mono opacity-80 mb-1.5">Encoded JWT Token (header.payload.signature)</label>
+      <textarea id="jwt-input" rows="4" spellcheck="false" placeholder="Paste your eyJ... token here..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/10 dark:bg-black/30 p-3 text-xs sm:text-sm font-mono focus:outline-none transition leading-relaxed"></textarea>
+    </div>
+
+    <!-- Token Metadata & Status Banner -->
+    <div id="jwt-banner" class="mt-4 p-3 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-white/5 font-mono text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-2 hidden">
+      <div class="flex items-center space-x-2">
+        <span id="jwt-status-badge" class="px-2 py-0.5 rounded text-[11px] font-bold">Status</span>
+        <span id="jwt-status-text" class="opacity-90"></span>
+      </div>
+      <div class="text-[11px] opacity-70" id="jwt-alg-info">Algorithm: -</div>
+    </div>
+
+    <!-- 3-Segment Inspector Grid -->
+    <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <!-- Header -->
+      <div class="p-4 rounded-xl border border-rose-500/30 bg-rose-500/5">
         <div class="flex items-center justify-between mb-2">
-          <label for="input-data" class="text-xs font-bold uppercase tracking-wider opacity-80 font-mono">Input Payload / Query</label>
-          <button id="btn-sample" class="text-xs hover:underline font-mono opacity-60 hover:opacity-100 transition">Load Sample Data</button>
+          <span class="text-xs font-mono font-bold text-rose-400 uppercase tracking-wider">Header (Algorithm & Typ)</span>
+          <button id="btn-copy-hdr" class="text-xs font-mono hover:underline text-rose-400">Kopieren</button>
         </div>
-        <textarea id="input-data" rows="5" placeholder="Enter or paste your text, JSON, or code snippet here (Press Ctrl+Enter to execute)..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/10 dark:bg-black/30 p-3 sm:p-4 text-xs sm:text-sm font-mono focus:outline-none transition"></textarea>
+        <pre id="jwt-hdr-out" class="text-xs font-mono overflow-x-auto p-2.5 rounded bg-black/40 text-rose-200">Waiting for token...</pre>
       </div>
 
-      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
-        <button id="btn-process" class="w-full sm:w-auto px-6 py-2.5 rounded-xl font-bold transition flex items-center justify-center space-x-2 bg-[#10b981] hover:bg-[#059669] text-black font-bold tracking-tight shadow-[0_0_15px_rgba(16,185,129,0.3)]">
-          <span>Run Execution</span>
-        </button>
-        <button id="btn-clear" class="w-full sm:w-auto px-4 py-2.5 rounded-xl text-xs font-semibold border border-[#1e2333] hover:border-[#10b981]/50 hover:opacity-80 transition text-center">
-          Clear
-        </button>
-      </div>
-
-      <div>
+      <!-- Payload -->
+      <div class="p-4 rounded-xl border border-violet-500/30 bg-violet-500/5">
         <div class="flex items-center justify-between mb-2">
-          <label for="output-data" class="text-xs font-bold uppercase tracking-wider opacity-80 font-mono">Processed Result</label>
-          <button id="btn-copy" class="text-xs font-mono font-bold hover:underline transition opacity-70 hover:opacity-100" style="color: #10b981">
-            Copy to Clipboard
-          </button>
+          <span class="text-xs font-mono font-bold text-violet-400 uppercase tracking-wider">Payload (Claims & Exp)</span>
+          <button id="btn-copy-pay" class="text-xs font-mono hover:underline text-violet-400">Kopieren</button>
         </div>
-        <textarea id="output-data" rows="5" readonly placeholder="Output will appear here instantly..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-black/20 p-3 sm:p-4 text-xs sm:text-sm font-mono opacity-90 focus:outline-none transition"></textarea>
+        <pre id="jwt-pay-out" class="text-xs font-mono overflow-x-auto p-2.5 rounded bg-black/40 text-violet-200">Waiting for token...</pre>
       </div>
     </div>
 
-    <!-- SEO Documentation -->
+    
+    <!-- SEO & Capabilities Section -->
     <div class="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-[#1e2333] grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
       <div>
-        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">How to Use Jwt Decoder Online</h2>
+        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">About JWT Token Dekodierer</h2>
         <p class="text-xs opacity-75 leading-relaxed">
-          Enter your payload in the input console above and trigger execution. All parsing, validation, and transformation runs locally in your browser with zero latency and complete privacy.
+          Online, zero-latency browser utility for <strong>jwt decoder online</strong>. All computing operations execute in real-time within your browser sandbox with zero telemetry or network calls.
         </p>
-        <h3 class="text-xs font-bold uppercase tracking-wider opacity-70 mt-3 sm:mt-4 mb-2">Indexed Search Capabilities</h3>
+        <h3 class="text-xs font-bold uppercase tracking-wider opacity-70 mt-3 sm:mt-4 mb-2">Supported Queries & Intent</h3>
         <ul class="space-y-0.5"><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>jwt token entschluesseln</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>jwt payload anzeigen</li></ul>
       </div>
       <div>
-        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">Architecture & Privacy</h2>
+        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">Architecture & Privacy Guarantees</h2>
         <div class="space-y-2">
           <div class="p-3 sm:p-3.5 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5">
-            <div class="text-xs font-bold">100% Client-Side Privacy</div>
-            <p class="text-[11px] opacity-60 mt-0.5">Your sensitive data never leaves your device. No analytics, tracking, or server-side logging.</p>
+            <div class="text-xs font-bold">100% Client-Side Computation</div>
+            <p class="text-[11px] opacity-60 mt-0.5">Your data never touches remote servers or analytics backends. Complete privacy guaranteed.</p>
           </div>
           <div class="p-3 sm:p-3.5 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5">
-            <div class="text-xs font-bold">Zero Dependencies & Offline Ready</div>
-            <p class="text-[11px] opacity-60 mt-0.5">Architected with native Web APIs for instantaneous processing under 1ms.</p>
+            <div class="text-xs font-bold">Edge Accelerated & Offline Ready</div>
+            <p class="text-[11px] opacity-60 mt-0.5">Powered by native browser Web APIs for instant sub-millisecond execution.</p>
           </div>
         </div>
       </div>
     </div>
+        
   </div>
 </div>
 
 <script>
 (function() {
-  const inputEl = document.getElementById('input-data');
-  const outputEl = document.getElementById('output-data');
-  const btnProcess = document.getElementById('btn-process');
+  const inputEl = document.getElementById('jwt-input');
+  const banner = document.getElementById('jwt-banner');
+  const statusBadge = document.getElementById('jwt-status-badge');
+  const statusText = document.getElementById('jwt-status-text');
+  const algInfo = document.getElementById('jwt-alg-info');
+  const hdrOut = document.getElementById('jwt-hdr-out');
+  const payOut = document.getElementById('jwt-pay-out');
+  const btnSampleAct = document.getElementById('btn-sample-active');
+  const btnSampleExp = document.getElementById('btn-sample-expired');
   const btnClear = document.getElementById('btn-clear');
-  const btnCopy = document.getElementById('btn-copy');
-  const btnSample = document.getElementById('btn-sample');
+  const btnCopyHdr = document.getElementById('btn-copy-hdr');
+  const btnCopyPay = document.getElementById('btn-copy-pay');
 
-  function processData() {
-    const val = inputEl.value.trim();
-    if (!val) {
-      outputEl.value = 'Please provide input data above.';
-      return;
-    }
-    try {
-      // Auto-detect JSON formatting or utility transform
-      const parsed = JSON.parse(val);
-      outputEl.value = JSON.stringify(parsed, null, 2);
-    } catch(e) {
-      outputEl.value = '--- Processed Output (' + new Date().toLocaleTimeString() + ') ---
-' + val.toUpperCase();
-    }
-    if (window.showToast) window.showToast('Processed successfully!');
+  function decodeSegment(str) {
+    let b64 = str.replace(/-/g, '+').replace(/_/g, '/');
+    while (b64.length % 4) b64 += '=';
+    return decodeURIComponent(escape(window.atob(b64)));
   }
 
-  btnProcess.addEventListener('click', processData);
-
-  inputEl.addEventListener('keydown', e => {
-    if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
-      e.preventDefault();
-      processData();
+  function parseJWT() {
+    const val = inputEl.value.trim();
+    if (!val) {
+      banner.classList.add('hidden');
+      hdrOut.innerText = 'Waiting for token...';
+      payOut.innerText = 'Waiting for token...';
+      return;
     }
+    const parts = val.split('.');
+    if (parts.length < 2) {
+      banner.classList.remove('hidden');
+      statusBadge.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-rose-500 text-white';
+      statusBadge.innerText = 'Malformed';
+      statusText.innerText = 'JWT must contain at least Header and Payload separated by dot (.)';
+      algInfo.innerText = '';
+      return;
+    }
+
+    try {
+      const header = JSON.parse(decodeSegment(parts[0]));
+      const payload = JSON.parse(decodeSegment(parts[1]));
+
+      hdrOut.innerText = JSON.stringify(header, null, 2);
+      payOut.innerText = JSON.stringify(payload, null, 2);
+
+      // Check Expiration
+      banner.classList.remove('hidden');
+      algInfo.innerText = 'Algorithm: ' + (header.alg || 'none') + ' | Typ: ' + (header.typ || 'JWT');
+
+      if (payload.exp) {
+        const expDate = new Date(payload.exp * 1000);
+        const now = new Date();
+        if (now > expDate) {
+          statusBadge.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-rose-500/20 text-rose-400 border border-rose-500/40';
+          statusBadge.innerText = 'Expired';
+          statusText.innerText = 'Expired on ' + expDate.toLocaleString();
+        } else {
+          statusBadge.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/40';
+          statusBadge.innerText = 'Active';
+          statusText.innerText = 'Valid until ' + expDate.toLocaleString();
+        }
+      } else {
+        statusBadge.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-sky-500/20 text-sky-400 border border-sky-500/40';
+        statusBadge.innerText = 'No Expiration';
+        statusText.innerText = 'Token does not contain an "exp" claim.';
+      }
+    } catch (e) {
+      banner.classList.remove('hidden');
+      statusBadge.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-rose-500 text-white';
+      statusBadge.innerText = 'Parse Error';
+      statusText.innerText = e.message;
+    }
+  }
+
+  inputEl.addEventListener('input', parseJWT);
+
+  btnSampleAct.addEventListener('click', () => {
+    const futureExp = Math.floor(Date.now() / 1000) + 86400 * 7;
+    const h = window.btoa(JSON.stringify({ alg: "HS256", typ: "JWT" }));
+    const p = window.btoa(JSON.stringify({ sub: "usr_9981", name: "Alex Chen", role: "developer", site: "webutil", exp: futureExp }));
+    inputEl.value = h + '.' + p + '.dummy_signature_hash_preview';
+    parseJWT();
+    if (window.showToast) window.showToast('Loaded active JWT sample');
+  });
+
+  btnSampleExp.addEventListener('click', () => {
+    const pastExp = 1600000000;
+    const h = window.btoa(JSON.stringify({ alg: "HS256", typ: "JWT" }));
+    const p = window.btoa(JSON.stringify({ sub: "usr_expired", role: "guest", exp: pastExp }));
+    inputEl.value = h + '.' + p + '.expired_mock_signature';
+    parseJWT();
+    if (window.showToast) window.showToast('Loaded expired JWT sample');
   });
 
   btnClear.addEventListener('click', () => {
     inputEl.value = '';
-    outputEl.value = '';
-    if (window.showToast) window.showToast('Cleared input workspace');
+    parseJWT();
   });
 
-  btnSample.addEventListener('click', () => {
-    inputEl.value = JSON.stringify({ "service": "DevZen Tools", "topic": "jwt decoder online", "status": "active", "timestamp": Date.now() }, null, 2);
-    processData();
-  });
-
-  btnCopy.addEventListener('click', () => {
-    if (!outputEl.value) return;
-    navigator.clipboard.writeText(outputEl.value).then(() => {
-      if (window.showToast) window.showToast('Copied to clipboard!');
+  btnCopyHdr.addEventListener('click', () => {
+    navigator.clipboard.writeText(hdrOut.innerText).then(() => {
+      if (window.showToast) window.showToast('Header copied!');
     });
   });
+
+  btnCopyPay.addEventListener('click', () => {
+    navigator.clipboard.writeText(payOut.innerText).then(() => {
+      if (window.showToast) window.showToast('Payload copied!');
+    });
+  });
+
+  // Initial load sample
+  btnSampleAct.click();
 })();
 </script>
-
+        
   </main>
 
   <!-- Internal Linking Matrix -->

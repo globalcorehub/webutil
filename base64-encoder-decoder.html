@@ -247,131 +247,215 @@
   <!-- Main Content Area -->
   <main class="flex-grow py-8 px-4 sm:px-6 lg:px-8">
     
-<div class="max-w-4xl mx-auto">
+<div class="max-w-5xl mx-auto">
   <div class="bg-[#11141d] rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.5)] border border-[#1e2333] hover:border-[#10b981]/50 p-4 sm:p-6 md:p-8">
     <div class="border-b border-[#1e2333] pb-4 sm:pb-6">
       <div class="flex items-center justify-between mb-2 sm:mb-3">
         <div class="inline-flex items-center px-2 py-0.5 rounded text-[11px] bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 font-mono">
-          <span>[ENGINE: Vanilla Micro-Reactive]</span>
+          <span>[ENGINE: Web Standard UTF-8 Base64 Engine]</span>
         </div>
-        <span class="text-[10px] sm:text-[11px] font-mono opacity-50">Instant Client-Side</span>
+        <span class="text-[10px] sm:text-[11px] font-mono opacity-50">UTF-8 &bull; URL-Safe &bull; Instant</span>
       </div>
-      <h1 class="text-xl sm:text-2xl md:text-3xl font-black tracking-tight break-words">Base64 Encoder & Decoder</h1>
-      <p class="text-xs sm:text-sm opacity-70 mt-1.5 sm:mt-2 leading-relaxed">Encode plain text and UTF-8 characters to Base64 or decode Base64 strings instantly with zero server lag.</p>
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-black tracking-tight">Base64 Encoder & Decoder</h1>
+      <p class="text-xs sm:text-sm opacity-70 mt-1.5 leading-relaxed">Encode plain text and UTF-8 characters to Base64 or decode Base64 strings instantly with zero server lag.</p>
     </div>
 
-    <!-- Tool Interactive Workspace -->
-    <div class="mt-6 sm:mt-8 space-y-4 sm:space-y-5">
-      <div>
-        <div class="flex items-center justify-between mb-2">
-          <label for="input-data" class="text-xs font-bold uppercase tracking-wider opacity-80 font-mono">Input Payload / Query</label>
-          <button id="btn-sample" class="text-xs hover:underline font-mono opacity-60 hover:opacity-100 transition">Load Sample Data</button>
-        </div>
-        <textarea id="input-data" rows="5" placeholder="Enter or paste your text, JSON, or code snippet here (Press Ctrl+Enter to execute)..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/10 dark:bg-black/30 p-3 sm:p-4 text-xs sm:text-sm font-mono focus:outline-none transition"></textarea>
+    <!-- Mode & Options Toolbar -->
+    <div class="mt-6 flex flex-wrap items-center justify-between gap-3 p-3 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5">
+      <div class="flex items-center gap-2">
+        <button id="btn-mode-encode" class="px-3 py-1.5 text-xs rounded-lg font-bold font-mono border border-[#1e2333] hover:border-[#10b981]/50 bg-white/15">Encode to Base64</button>
+        <button id="btn-mode-decode" class="px-3 py-1.5 text-xs rounded-lg font-mono border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10">Decode from Base64</button>
+        <label class="flex items-center space-x-1.5 text-xs font-mono ml-2 cursor-pointer opacity-80 hover:opacity-100">
+          <input type="checkbox" id="chk-urlsafe" class="rounded accent-emerald-500">
+          <span>URL-Safe (- / _)</span>
+        </label>
       </div>
-
-      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
-        <button id="btn-process" class="w-full sm:w-auto px-6 py-2.5 rounded-xl font-bold transition flex items-center justify-center space-x-2 bg-[#10b981] hover:bg-[#059669] text-black font-bold tracking-tight shadow-[0_0_15px_rgba(16,185,129,0.3)]">
-          <span>Run Execution</span>
-        </button>
-        <button id="btn-clear" class="w-full sm:w-auto px-4 py-2.5 rounded-xl text-xs font-semibold border border-[#1e2333] hover:border-[#10b981]/50 hover:opacity-80 transition text-center">
-          Clear
-        </button>
-      </div>
-
-      <div>
-        <div class="flex items-center justify-between mb-2">
-          <label for="output-data" class="text-xs font-bold uppercase tracking-wider opacity-80 font-mono">Processed Result</label>
-          <button id="btn-copy" class="text-xs font-mono font-bold hover:underline transition opacity-70 hover:opacity-100" style="color: #10b981">
-            Copy to Clipboard
-          </button>
-        </div>
-        <textarea id="output-data" rows="5" readonly placeholder="Output will appear here instantly..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-black/20 p-3 sm:p-4 text-xs sm:text-sm font-mono opacity-90 focus:outline-none transition"></textarea>
+      <div class="flex items-center gap-2">
+        <button id="btn-swap" class="px-2.5 py-1 text-xs rounded border border-[#1e2333] hover:border-[#10b981]/50 font-mono opacity-80 hover:opacity-100">&#8645; Swap Input/Output</button>
+        <button id="btn-sample" class="px-2.5 py-1 text-xs rounded border border-[#1e2333] hover:border-[#10b981]/50 font-mono opacity-80 hover:opacity-100">Load Sample</button>
+        <button id="btn-clear" class="px-2.5 py-1 text-xs rounded border border-[#1e2333] hover:border-[#10b981]/50 font-mono opacity-70 hover:opacity-100">Clear</button>
       </div>
     </div>
 
-    <!-- SEO Documentation -->
+    <!-- Status & Metrics Row -->
+    <div class="mt-3 flex items-center justify-between text-xs font-mono opacity-70 px-1">
+      <span id="metrics-input">Input: 0 chars, 0 bytes</span>
+      <span id="metrics-output">Output: 0 chars, 0 bytes</span>
+    </div>
+
+    <!-- Dual Editors -->
+    <div class="mt-3 grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div>
+        <label for="b64-input" id="lbl-input" class="block text-xs font-bold uppercase tracking-wider font-mono opacity-80 mb-1.5">Input (Plain Text)</label>
+        <textarea id="b64-input" rows="12" spellcheck="false" placeholder="Type or paste plain text here..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/10 dark:bg-black/30 p-3 text-xs sm:text-sm font-mono focus:outline-none transition leading-relaxed"></textarea>
+      </div>
+      <div>
+        <div class="flex items-center justify-between mb-1.5">
+          <label for="b64-output" id="lbl-output" class="text-xs font-bold uppercase tracking-wider font-mono opacity-80">Output (Base64)</label>
+          <button id="btn-copy" class="text-xs font-mono font-bold hover:underline opacity-80 hover:opacity-100" style="color: #10b981">Copy to Clipboard</button>
+        </div>
+        <textarea id="b64-output" rows="12" readonly spellcheck="false" placeholder="Result will appear here..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-black/20 p-3 text-xs sm:text-sm font-mono focus:outline-none transition leading-relaxed"></textarea>
+      </div>
+    </div>
+
+    <div class="mt-4 flex items-center gap-3">
+      <button id="btn-process" class="px-6 py-2.5 rounded-xl font-bold transition flex items-center space-x-2 text-xs sm:text-sm bg-[#10b981] hover:bg-[#059669] text-black font-bold tracking-tight shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+        <span id="btn-process-text">Encode to Base64</span>
+      </button>
+    </div>
+
+    
+    <!-- SEO & Capabilities Section -->
     <div class="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-[#1e2333] grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
       <div>
-        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">How to Use Base64 Encoder</h2>
+        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">About Base64 Encoder & Decoder</h2>
         <p class="text-xs opacity-75 leading-relaxed">
-          Enter your payload in the input console above and trigger execution. All parsing, validation, and transformation runs locally in your browser with zero latency and complete privacy.
+          Online, zero-latency browser utility for <strong>base64 encoder</strong>. All computing operations execute in real-time within your browser sandbox with zero telemetry or network calls.
         </p>
-        <h3 class="text-xs font-bold uppercase tracking-wider opacity-70 mt-3 sm:mt-4 mb-2">Indexed Search Capabilities</h3>
+        <h3 class="text-xs font-bold uppercase tracking-wider opacity-70 mt-3 sm:mt-4 mb-2">Supported Queries & Intent</h3>
         <ul class="space-y-0.5"><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>base64 decoder</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>base64 to text</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>encode string base64</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>base64 online</li></ul>
       </div>
       <div>
-        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">Architecture & Privacy</h2>
+        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">Architecture & Privacy Guarantees</h2>
         <div class="space-y-2">
           <div class="p-3 sm:p-3.5 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5">
-            <div class="text-xs font-bold">100% Client-Side Privacy</div>
-            <p class="text-[11px] opacity-60 mt-0.5">Your sensitive data never leaves your device. No analytics, tracking, or server-side logging.</p>
+            <div class="text-xs font-bold">100% Client-Side Computation</div>
+            <p class="text-[11px] opacity-60 mt-0.5">Your data never touches remote servers or analytics backends. Complete privacy guaranteed.</p>
           </div>
           <div class="p-3 sm:p-3.5 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5">
-            <div class="text-xs font-bold">Zero Dependencies & Offline Ready</div>
-            <p class="text-[11px] opacity-60 mt-0.5">Architected with native Web APIs for instantaneous processing under 1ms.</p>
+            <div class="text-xs font-bold">Edge Accelerated & Offline Ready</div>
+            <p class="text-[11px] opacity-60 mt-0.5">Powered by native browser Web APIs for instant sub-millisecond execution.</p>
           </div>
         </div>
       </div>
     </div>
+        
   </div>
 </div>
 
 <script>
 (function() {
-  const inputEl = document.getElementById('input-data');
-  const outputEl = document.getElementById('output-data');
+  let mode = 'encode';
+  const inputEl = document.getElementById('b64-input');
+  const outputEl = document.getElementById('b64-output');
+  const lblInput = document.getElementById('lbl-input');
+  const lblOutput = document.getElementById('lbl-output');
+  const btnModeEnc = document.getElementById('btn-mode-encode');
+  const btnModeDec = document.getElementById('btn-mode-decode');
   const btnProcess = document.getElementById('btn-process');
+  const btnProcessText = document.getElementById('btn-process-text');
+  const chkUrlSafe = document.getElementById('chk-urlsafe');
+  const btnSwap = document.getElementById('btn-swap');
   const btnClear = document.getElementById('btn-clear');
-  const btnCopy = document.getElementById('btn-copy');
   const btnSample = document.getElementById('btn-sample');
+  const btnCopy = document.getElementById('btn-copy');
+  const metIn = document.getElementById('metrics-input');
+  const metOut = document.getElementById('metrics-output');
 
-  function processData() {
-    const val = inputEl.value.trim();
-    if (!val) {
-      outputEl.value = 'Please provide input data above.';
-      return;
-    }
-    try {
-      // Auto-detect JSON formatting or utility transform
-      const parsed = JSON.parse(val);
-      outputEl.value = JSON.stringify(parsed, null, 2);
-    } catch(e) {
-      outputEl.value = '--- Processed Output (' + new Date().toLocaleTimeString() + ') ---
-' + val.toUpperCase();
-    }
-    if (window.showToast) window.showToast('Processed successfully!');
+  function utf8_to_b64(str) {
+    return window.btoa(unescape(encodeURIComponent(str)));
   }
 
-  btnProcess.addEventListener('click', processData);
+  function b64_to_utf8(str) {
+    return decodeURIComponent(escape(window.atob(str)));
+  }
 
-  inputEl.addEventListener('keydown', e => {
-    if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
-      e.preventDefault();
-      processData();
+  function setMode(m) {
+    mode = m;
+    if (mode === 'encode') {
+      btnModeEnc.className = 'px-3 py-1.5 text-xs rounded-lg font-bold font-mono border border-[#1e2333] hover:border-[#10b981]/50 bg-white/15';
+      btnModeDec.className = 'px-3 py-1.5 text-xs rounded-lg font-mono border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10';
+      lblInput.innerText = 'Input (Plain Text)';
+      lblOutput.innerText = 'Output (Base64)';
+      btnProcessText.innerText = 'Encode to Base64';
+      inputEl.placeholder = 'Type or paste plain text here...';
+    } else {
+      btnModeDec.className = 'px-3 py-1.5 text-xs rounded-lg font-bold font-mono border border-[#1e2333] hover:border-[#10b981]/50 bg-white/15';
+      btnModeEnc.className = 'px-3 py-1.5 text-xs rounded-lg font-mono border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10';
+      lblInput.innerText = 'Input (Base64 String)';
+      lblOutput.innerText = 'Output (Plain Text)';
+      btnProcessText.innerText = 'Decode from Base64';
+      inputEl.placeholder = 'Paste Base64 encoded string here...';
     }
+    processData();
+  }
+
+  btnModeEnc.addEventListener('click', () => setMode('encode'));
+  btnModeDec.addEventListener('click', () => setMode('decode'));
+
+  function processData() {
+    const val = inputEl.value;
+    if (!val) {
+      outputEl.value = '';
+      metIn.innerText = 'Input: 0 chars, 0 bytes';
+      metOut.innerText = 'Output: 0 chars, 0 bytes';
+      return;
+    }
+    const inBytes = new Blob([val]).size;
+    metIn.innerText = 'Input: ' + val.length + ' chars, ' + inBytes + ' bytes';
+
+    try {
+      let res = '';
+      if (mode === 'encode') {
+        res = utf8_to_b64(val);
+        if (chkUrlSafe.checked) {
+          res = res.replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+        }
+      } else {
+        let sanitized = val.trim();
+        if (chkUrlSafe.checked || sanitized.includes('-') || sanitized.includes('_')) {
+          sanitized = sanitized.replace(/-/g, '+').replace(/_/g, '/');
+          while (sanitized.length % 4) sanitized += '=';
+        }
+        res = b64_to_utf8(sanitized);
+      }
+      outputEl.value = res;
+      const outBytes = new Blob([res]).size;
+      metOut.innerText = 'Output: ' + res.length + ' chars, ' + outBytes + ' bytes';
+    } catch (e) {
+      outputEl.value = '[Error]: Invalid Base64 string (' + e.message + ')';
+    }
+  }
+
+  inputEl.addEventListener('input', processData);
+  btnProcess.addEventListener('click', () => {
+    processData();
+    if (window.showToast) window.showToast('Processed successfully!');
+  });
+  chkUrlSafe.addEventListener('change', processData);
+
+  btnSwap.addEventListener('click', () => {
+    const out = outputEl.value;
+    if (!out || out.startsWith('[Error]')) return;
+    inputEl.value = out;
+    setMode(mode === 'encode' ? 'decode' : 'encode');
+  });
+
+  btnSample.addEventListener('click', () => {
+    if (mode === 'encode') {
+      inputEl.value = 'Hello world! Powered by ' + "DevZen Tools" + ' (UTF-8: 🚀 安全高效)';
+    } else {
+      inputEl.value = 'SGVsbG8gd29ybGQhIFBvd2VyZWQgYnkgd2VidXRpbCAoVVRGLTg6IPCfmYAg5a6J5YWo6auY5pWIKQ==';
+    }
+    processData();
   });
 
   btnClear.addEventListener('click', () => {
     inputEl.value = '';
     outputEl.value = '';
-    if (window.showToast) window.showToast('Cleared input workspace');
-  });
-
-  btnSample.addEventListener('click', () => {
-    inputEl.value = JSON.stringify({ "service": "DevZen Tools", "topic": "base64 encoder", "status": "active", "timestamp": Date.now() }, null, 2);
-    processData();
+    metIn.innerText = 'Input: 0 chars, 0 bytes';
+    metOut.innerText = 'Output: 0 chars, 0 bytes';
   });
 
   btnCopy.addEventListener('click', () => {
     if (!outputEl.value) return;
     navigator.clipboard.writeText(outputEl.value).then(() => {
-      if (window.showToast) window.showToast('Copied to clipboard!');
+      if (window.showToast) window.showToast('Copied!');
     });
   });
 })();
 </script>
-
+        
   </main>
 
   <!-- Internal Linking Matrix -->
