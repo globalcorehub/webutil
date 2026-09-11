@@ -201,7 +201,7 @@
                 <span>すべて見る</span>
                 <span>&rarr;</span>
               </a>
-              <span class="text-[10px] opacity-40 font-mono">100% Client-Side</span>
+              <span class="text-[10px] opacity-40 font-mono">100% クライアント完結</span>
             </div>
           </div>
         </div>
@@ -217,11 +217,11 @@
       <!-- Action Items & Language Selector & Quick Search & Mobile Hamburger -->
       <div class="flex items-center space-x-2 sm:space-x-3">
         <!-- Quick Search Trigger in Header -->
-        <button id="global-search-btn" type="button" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-black/15 hover:bg-black/30 text-xs font-mono opacity-80 hover:opacity-100 transition" title="Search tools (Press /)">
+        <button id="global-search-btn" type="button" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-black/15 hover:bg-black/30 text-xs font-mono opacity-80 hover:opacity-100 transition" title="ツール名やキーワードで瞬時に絞り込み... (/ キーで検索)">
           <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
-          <span class="hidden sm:inline opacity-70">Search</span>
+          <span class="hidden sm:inline opacity-70">検索</span>
           <kbd class="hidden sm:inline text-[9px] px-1 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50 bg-black/20 font-mono">/</kbd>
         </button>
 
@@ -294,7 +294,7 @@
           <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
-          <span>Search utilities...</span>
+          <span>ツール名やキーワードで瞬時に絞り込み... (/ キーで検索)</span>
         </span>
         <kbd class="text-[10px] px-1.5 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50">/</kbd>
       </button>
@@ -352,9 +352,9 @@
     <div class="border-b border-[#1e2333] pb-4 sm:pb-6">
       <div class="flex items-center justify-between mb-2 sm:mb-3">
         <div class="inline-flex items-center px-2 py-0.5 rounded text-[11px] bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 font-mono">
-          <span>[ENGINE: High-Precision Temporal Epoch Engine]</span>
+          <span>高精度 Temporal タイムスタンプ時計</span>
         </div>
-        <span class="text-[10px] sm:text-[11px] font-mono opacity-50">Ticking Live &bull; Sub-second</span>
+        <span class="text-[10px] sm:text-[11px] font-mono opacity-50">リアルタイム秒刻み表示 • ミリ秒相互変換</span>
       </div>
       <h1 class="text-xl sm:text-2xl md:text-3xl font-black tracking-tight">Unix タイムスタンプ変換</h1>
       <p class="text-xs sm:text-sm opacity-70 mt-1.5 leading-relaxed">Unixエポック秒・ミリ秒を人間が読める日時形式（JST/UTC）に相互変換。</p>
@@ -366,7 +366,7 @@
         <div class="text-xs font-mono opacity-60 uppercase tracking-wider">現在 Unix タイムスタンプ</div>
         <div class="flex items-baseline space-x-3 mt-1">
           <span id="live-epoch-sec" class="text-2xl sm:text-4xl font-black font-mono tracking-tight" style="color: #10b981">0000000000</span>
-          <span class="text-xs font-mono opacity-50">seconds</span>
+          <span class="text-xs font-mono opacity-50">秒</span>
         </div>
         <div id="live-human-date" class="text-xs font-mono opacity-75 mt-1">UTC: -</div>
       </div>
@@ -379,12 +379,12 @@
     <div class="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
       <!-- A: Timestamp to Date -->
       <div class="p-4 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5 space-y-3">
-        <div class="text-xs font-bold font-mono uppercase tracking-wider opacity-80">Timestamp &rarr; Human Date</div>
+        <div class="text-xs font-bold font-mono uppercase tracking-wider opacity-80">タイムスタンプ → 日時変換</div>
         <div>
-          <label for="ts-input" class="text-[11px] font-mono opacity-70 block mb-1">Unix Epoch (Seconds or Milliseconds)</label>
+          <label for="ts-input" class="text-[11px] font-mono opacity-70 block mb-1">Unix エポック値 (秒またはミリ秒)</label>
           <div class="flex gap-2">
             <input type="number" id="ts-input" class="flex-1 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-black/20 px-3 py-1.5 text-xs font-mono focus:outline-none">
-            <button id="btn-ts-now" class="px-2.5 py-1 text-xs rounded border border-[#1e2333] hover:border-[#10b981]/50 font-mono hover:bg-white/10">Now</button>
+            <button id="btn-ts-now" class="px-2.5 py-1 text-xs rounded border border-[#1e2333] hover:border-[#10b981]/50 font-mono hover:bg-white/10">現在時刻</button>
           </div>
         </div>
 
@@ -406,24 +406,24 @@
 
       <!-- B: Date to Timestamp -->
       <div class="p-4 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5 space-y-3">
-        <div class="text-xs font-bold font-mono uppercase tracking-wider opacity-80">Human Date &rarr; Timestamp</div>
+        <div class="text-xs font-bold font-mono uppercase tracking-wider opacity-80">日時 → タイムスタンプ変換</div>
         <div>
-          <label for="date-input" class="text-[11px] font-mono opacity-70 block mb-1">Pick Date & Time (Local)</label>
+          <label for="date-input" class="text-[11px] font-mono opacity-70 block mb-1">日時を選択 (現地時刻)</label>
           <input type="datetime-local" id="date-input" class="w-full rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-black/20 px-3 py-1.5 text-xs font-mono focus:outline-none">
         </div>
 
         <div class="pt-2 border-t border-[#1e2333] hover:border-[#10b981]/50/50 space-y-2 font-mono text-xs">
           <div>
-            <div class="text-[11px] opacity-60">Epoch in Seconds:</div>
+            <div class="text-[11px] opacity-60">秒単位エポック:</div>
             <div class="flex items-center justify-between mt-1">
               <span id="date-out-sec" class="font-bold text-sm" style="color: #10b981">-</span>
               <button id="btn-copy-date-sec" class="px-2 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 text-[11px] hover:bg-white/10">クリップボードにコピー</button>
             </div>
           </div>
           <div>
-            <div class="text-[11px] opacity-60">Epoch in Milliseconds:</div>
+            <div class="text-[11px] opacity-60">ミリ秒単位エポック:</div>
             <div class="flex items-center justify-between mt-1">
-              <span id="date-out-ms" class="font-bold text-sm">-</span>
+              <span id="date-out-ms" class="font-bold text-sm" style="color: #10b981">-</span>
               <button id="btn-copy-date-ms" class="px-2 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 text-[11px] hover:bg-white/10">クリップボードにコピー</button>
             </div>
           </div>
@@ -435,23 +435,23 @@
     <!-- SEO & Capabilities Section -->
     <div class="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-[#1e2333] grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
       <div>
-        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">About Unix タイムスタンプ変換</h2>
+        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">Unix タイムスタンプ変換 について</h2>
         <p class="text-xs opacity-75 leading-relaxed">
-          Online, zero-latency browser utility for <strong>タイムスタンプ変換</strong>. All computing operations execute in real-time within your browser sandbox with zero telemetry or network calls.
+          <strong>タイムスタンプ変換</strong> のための高速ブラウザ完結型オンラインツール。すべての演算は端末内のローカルメモリで実行され、外部サーバーへの通信は一切発生しません。
         </p>
-        <h3 class="text-xs font-bold uppercase tracking-wider opacity-70 mt-3 sm:mt-4 mb-2">Supported Queries & Intent</h3>
+        <h3 class="text-xs font-bold uppercase tracking-wider opacity-70 mt-3 sm:mt-4 mb-2">対応する主な検索クエリとユースケース</h3>
         <ul class="space-y-0.5"><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>unix時間変換</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>エポック秒変換</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>日付からタイムスタンプ</li></ul>
       </div>
       <div>
-        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">Architecture & Privacy Guarantees</h2>
+        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">アーキテクチャとプライバシー保護の仕組み</h2>
         <div class="space-y-2">
           <div class="p-3 sm:p-3.5 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5">
-            <div class="text-xs font-bold">100% Client-Side Computation</div>
-            <p class="text-[11px] opacity-60 mt-0.5">Your data never touches remote servers or analytics backends. Complete privacy guaranteed.</p>
+            <div class="text-xs font-bold">100% クライアント側処理</div>
+            <p class="text-[11px] opacity-60 mt-0.5">お客様の機密データが外部サーバーや解析基盤に送信されることはありません。完全なプライバシーを保証します。</p>
           </div>
           <div class="p-3 sm:p-3.5 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5">
-            <div class="text-xs font-bold">Edge Accelerated & Offline Ready</div>
-            <p class="text-[11px] opacity-60 mt-0.5">Powered by native browser Web APIs for instant sub-millisecond execution.</p>
+            <div class="text-xs font-bold">Cloudflare Edge 配信 & オフライン対応</div>
+            <p class="text-[11px] opacity-60 mt-0.5">ブラウザ標準の Web API を直接活用することで、1ミリ秒未満の超高速処理を実現しています。</p>
           </div>
         </div>
       </div>
@@ -465,108 +465,122 @@
   const liveSec = document.getElementById('live-epoch-sec');
   const liveHuman = document.getElementById('live-human-date');
   const btnCopyLive = document.getElementById('btn-copy-live-sec');
-  const tsInput = document.getElementById('ts-input');
-  const btnTsNow = document.getElementById('btn-ts-now');
-  const tsOutLocal = document.getElementById('ts-out-local');
-  const tsOutUtc = document.getElementById('ts-out-utc');
-  const tsOutIso = document.getElementById('ts-out-iso');
-  const tsOutRel = document.getElementById('ts-out-relative');
-  const dateInput = document.getElementById('date-input');
-  const dateOutSec = document.getElementById('date-out-sec');
-  const dateOutMs = document.getElementById('date-out-ms');
-  const btnCopyDateSec = document.getElementById('btn-copy-date-sec');
-  const btnCopyDateMs = document.getElementById('btn-copy-date-ms');
 
-  // Digital clock tick
   function tick() {
     const now = new Date();
     const sec = Math.floor(now.getTime() / 1000);
     liveSec.innerText = sec;
-    liveHuman.innerText = 'UTC: ' + now.toUTCString() + ' | Local: ' + now.toLocaleTimeString();
+    liveHuman.innerText = now.toUTCString();
   }
-  setInterval(tick, 1000);
   tick();
+  setInterval(tick, 1000);
 
   btnCopyLive.addEventListener('click', () => {
-    navigator.clipboard.writeText(liveSec.innerText).then(() => {
-      if (window.showToast) window.showToast('Copied current epoch ' + liveSec.innerText);
+    const sec = liveSec.innerText;
+    navigator.clipboard.writeText(sec).then(() => {
+      if (window.showToast) window.showToast('現在エポック秒をコピーしました: {sec}'.replace('{sec}', sec));
     });
   });
 
+  // Part A: Timestamp to Date
+  const tsInput = document.getElementById('ts-input');
+  const tsOutLocal = document.getElementById('ts-out-local');
+  const tsOutUtc = document.getElementById('ts-out-utc');
+  const tsOutIso = document.getElementById('ts-out-iso');
+  const tsOutRel = document.getElementById('ts-out-relative');
+  const btnTsNow = document.getElementById('btn-ts-now');
+
   function getRelativeTime(d) {
-    const diffSec = Math.round((d.getTime() - Date.now()) / 1000);
-    const absSec = Math.abs(diffSec);
-    const suffix = diffSec > 0 ? 'from now' : 'ago';
-    if (absSec < 5) return 'Just now';
-    if (absSec < 60) return absSec + 's ' + suffix;
-    if (absSec < 3600) return Math.round(absSec / 60) + 'm ' + suffix;
-    if (absSec < 86400) return Math.round(absSec / 3600) + 'h ' + suffix;
-    return Math.round(absSec / 86400) + 'd ' + suffix;
+    const diffSec = Math.floor((d.getTime() - Date.now()) / 1000);
+    const absDiff = Math.abs(diffSec);
+    if (absDiff < 5) return 'たった今';
+    let unitStr = '';
+    if (absDiff < 60) unitStr = absDiff + 's';
+    else if (absDiff < 3600) unitStr = Math.floor(absDiff / 60) + 'm';
+    else if (absDiff < 86400) unitStr = Math.floor(absDiff / 3600) + 'h';
+    else unitStr = Math.floor(absDiff / 86400) + 'd';
+    return diffSec < 0 ? (unitStr + ' 前') : (unitStr + ' 後');
   }
 
-  function updateTsConverter() {
+  function convertTs() {
     let raw = tsInput.value.trim();
-    if (!raw) return;
+    if (!raw) {
+      tsOutLocal.innerText = '-';
+      tsOutUtc.innerText = '-';
+      tsOutIso.innerText = '-';
+      tsOutRel.innerText = '-';
+      return;
+    }
     let num = parseInt(raw, 10);
     if (isNaN(num)) return;
-    // Auto detect ms vs sec
-    const isMs = num > 9999999999;
-    const date = new Date(isMs ? num : num * 1000);
+    if (raw.length <= 10) num *= 1000;
 
-    tsOutLocal.innerText = date.toLocaleString();
-    tsOutUtc.innerText = date.toUTCString();
-    tsOutIso.innerText = date.toISOString();
-    tsOutRel.innerText = getRelativeTime(date);
+    const d = new Date(num);
+    tsOutLocal.innerText = d.toLocaleString();
+    tsOutUtc.innerText = d.toUTCString();
+    tsOutIso.innerText = d.toISOString();
+    tsOutRel.innerText = getRelativeTime(d);
   }
 
-  tsInput.addEventListener('input', updateTsConverter);
+  tsInput.addEventListener('input', convertTs);
 
   btnTsNow.addEventListener('click', () => {
     tsInput.value = Math.floor(Date.now() / 1000);
-    updateTsConverter();
+    convertTs();
   });
 
   document.querySelectorAll('.btn-ts-offset').forEach(btn => {
     btn.addEventListener('click', () => {
-      const diff = parseInt(btn.getAttribute('data-diff'), 10);
       let cur = parseInt(tsInput.value, 10) || Math.floor(Date.now() / 1000);
+      const diff = parseInt(btn.getAttribute('data-diff'), 10);
       tsInput.value = cur + diff;
-      updateTsConverter();
+      convertTs();
     });
   });
 
-  // Date to Timestamp Converter
-  function updateDateConverter() {
-    if (!dateInput.value) return;
-    const date = new Date(dateInput.value);
-    if (isNaN(date.getTime())) return;
-    const ms = date.getTime();
-    const sec = Math.floor(ms / 1000);
-    dateOutSec.innerText = sec;
+  // Part B: Date to Timestamp
+  const dateInput = document.getElementById('date-input');
+  const dateOutSec = document.getElementById('date-out-sec');
+  const dateOutMs = document.getElementById('date-out-ms');
+  const btnCopySec = document.getElementById('btn-copy-date-sec');
+  const btnCopyMs = document.getElementById('btn-copy-date-ms');
+
+  function convertDate() {
+    const val = dateInput.value;
+    if (!val) {
+      dateOutSec.innerText = '-';
+      dateOutMs.innerText = '-';
+      return;
+    }
+    const d = new Date(val);
+    const ms = d.getTime();
+    dateOutSec.innerText = Math.floor(ms / 1000);
     dateOutMs.innerText = ms;
   }
 
-  dateInput.addEventListener('input', updateDateConverter);
+  dateInput.addEventListener('input', convertDate);
 
-  btnCopyDateSec.addEventListener('click', () => {
+  btnCopySec.addEventListener('click', () => {
+    if (dateOutSec.innerText === '-') return;
     navigator.clipboard.writeText(dateOutSec.innerText).then(() => {
-      if (window.showToast) window.showToast('Copied seconds timestamp');
+      if (window.showToast) window.showToast('秒単位タイムスタンプをコピーしました');
     });
   });
 
-  btnCopyDateMs.addEventListener('click', () => {
+  btnCopyMs.addEventListener('click', () => {
+    if (dateOutMs.innerText === '-') return;
     navigator.clipboard.writeText(dateOutMs.innerText).then(() => {
-      if (window.showToast) window.showToast('Copied milliseconds timestamp');
+      if (window.showToast) window.showToast('ミリ秒単位タイムスタンプをコピーしました');
     });
   });
 
-  // Initialize with now
+  // Initial populate
   tsInput.value = Math.floor(Date.now() / 1000);
-  updateTsConverter();
+  convertTs();
 
-  const nowIso = new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 16);
-  dateInput.value = nowIso;
-  updateDateConverter();
+  const nowLocal = new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 16);
+  dateInput.value = nowLocal;
+  convertDate();
 })();
 </script>
         

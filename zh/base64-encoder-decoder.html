@@ -201,7 +201,7 @@
                 <span>浏览全部</span>
                 <span>&rarr;</span>
               </a>
-              <span class="text-[10px] opacity-40 font-mono">100% Client-Side</span>
+              <span class="text-[10px] opacity-40 font-mono">100% 纯前端</span>
             </div>
           </div>
         </div>
@@ -217,11 +217,11 @@
       <!-- Action Items & Language Selector & Quick Search & Mobile Hamburger -->
       <div class="flex items-center space-x-2 sm:space-x-3">
         <!-- Quick Search Trigger in Header -->
-        <button id="global-search-btn" type="button" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-black/15 hover:bg-black/30 text-xs font-mono opacity-80 hover:opacity-100 transition" title="Search tools (Press /)">
+        <button id="global-search-btn" type="button" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-black/15 hover:bg-black/30 text-xs font-mono opacity-80 hover:opacity-100 transition" title="按工具名称、关键词即时过滤... (按 / 聚焦)">
           <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
-          <span class="hidden sm:inline opacity-70">Search</span>
+          <span class="hidden sm:inline opacity-70">搜索</span>
           <kbd class="hidden sm:inline text-[9px] px-1 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50 bg-black/20 font-mono">/</kbd>
         </button>
 
@@ -294,7 +294,7 @@
           <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
-          <span>Search utilities...</span>
+          <span>按工具名称、关键词即时过滤... (按 / 聚焦)</span>
         </span>
         <kbd class="text-[10px] px-1.5 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50">/</kbd>
       </button>
@@ -352,9 +352,9 @@
     <div class="border-b border-[#1e2333] pb-4 sm:pb-6">
       <div class="flex items-center justify-between mb-2 sm:mb-3">
         <div class="inline-flex items-center px-2 py-0.5 rounded text-[11px] bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 font-mono">
-          <span>[ENGINE: Web Standard UTF-8 Base64 Engine]</span>
+          <span>Web 标准 UTF-8 Base64 编解码引擎</span>
         </div>
-        <span class="text-[10px] sm:text-[11px] font-mono opacity-50">UTF-8 &bull; URL-Safe &bull; Instant</span>
+        <span class="text-[10px] sm:text-[11px] font-mono opacity-50">UTF-8 字符集 • URL 安全 • 毫秒即时</span>
       </div>
       <h1 class="text-xl sm:text-2xl md:text-3xl font-black tracking-tight">Base64 快速编码与解码</h1>
       <p class="text-xs sm:text-sm opacity-70 mt-1.5 leading-relaxed">支持 UTF-8 字符集与二进制数据的纯前端 Base64 快速编码、反向解码工具。</p>
@@ -367,7 +367,7 @@
         <button id="btn-mode-decode" class="px-3 py-1.5 text-xs rounded-lg font-mono border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10">Base64 解码</button>
         <label class="flex items-center space-x-1.5 text-xs font-mono ml-2 cursor-pointer opacity-80 hover:opacity-100">
           <input type="checkbox" id="chk-urlsafe" class="rounded accent-emerald-500">
-          <span>URL-Safe (- / _)</span>
+          <span>URL 安全模式 (- / _)</span>
         </label>
       </div>
       <div class="flex items-center gap-2">
@@ -379,22 +379,22 @@
 
     <!-- Status & Metrics Row -->
     <div class="mt-3 flex items-center justify-between text-xs font-mono opacity-70 px-1">
-      <span id="metrics-input">Input: 0 chars, 0 bytes</span>
-      <span id="metrics-output">Output: 0 chars, 0 bytes</span>
+      <span id="metrics-input">输入: {chars} 字符, {bytes} 字节</span>
+      <span id="metrics-output">输出: {chars} 字符, {bytes} 字节</span>
     </div>
 
     <!-- Dual Editors -->
     <div class="mt-3 grid grid-cols-1 lg:grid-cols-2 gap-4">
       <div>
-        <label for="b64-input" id="lbl-input" class="block text-xs font-bold uppercase tracking-wider font-mono opacity-80 mb-1.5">输入内容 (Plain Text)</label>
-        <textarea id="b64-input" rows="12" spellcheck="false" placeholder="Type or paste plain text here..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/10 dark:bg-black/30 p-3 text-xs sm:text-sm font-mono focus:outline-none transition leading-relaxed"></textarea>
+        <label for="b64-input" id="lbl-input" class="block text-xs font-bold uppercase tracking-wider font-mono opacity-80 mb-1.5">输入内容 (纯文本明文)</label>
+        <textarea id="b64-input" rows="12" spellcheck="false" placeholder="在此输入或粘贴纯文本内容..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/10 dark:bg-black/30 p-3 text-xs sm:text-sm font-mono focus:outline-none transition leading-relaxed"></textarea>
       </div>
       <div>
         <div class="flex items-center justify-between mb-1.5">
-          <label for="b64-output" id="lbl-output" class="text-xs font-bold uppercase tracking-wider font-mono opacity-80">输出结果 (Base64)</label>
+          <label for="b64-output" id="lbl-output" class="text-xs font-bold uppercase tracking-wider font-mono opacity-80">输出结果 (Base64 编码字符串)</label>
           <button id="btn-copy" class="text-xs font-mono font-bold hover:underline opacity-80 hover:opacity-100" style="color: #10b981">复制到剪贴板</button>
         </div>
-        <textarea id="b64-output" rows="12" readonly spellcheck="false" placeholder="Result will appear here..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-black/20 p-3 text-xs sm:text-sm font-mono focus:outline-none transition leading-relaxed"></textarea>
+        <textarea id="b64-output" rows="12" readonly spellcheck="false" placeholder="转换结果将实时展示在此处..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-black/20 p-3 text-xs sm:text-sm font-mono focus:outline-none transition leading-relaxed"></textarea>
       </div>
     </div>
 
@@ -408,23 +408,23 @@
     <!-- SEO & Capabilities Section -->
     <div class="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-[#1e2333] grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
       <div>
-        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">About Base64 快速编码与解码</h2>
+        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">关于 Base64 快速编码与解码</h2>
         <p class="text-xs opacity-75 leading-relaxed">
-          Online, zero-latency browser utility for <strong>base64编码</strong>. All computing operations execute in real-time within your browser sandbox with zero telemetry or network calls.
+          针对 <strong>base64编码</strong> 的高可靠纯前端在线工具。所有数据处理均在浏览器沙箱内存中即时完成，绝无任何数据上传或外部网络调用。
         </p>
-        <h3 class="text-xs font-bold uppercase tracking-wider opacity-70 mt-3 sm:mt-4 mb-2">Supported Queries & Intent</h3>
+        <h3 class="text-xs font-bold uppercase tracking-wider opacity-70 mt-3 sm:mt-4 mb-2">支持的长尾特性与检索场景</h3>
         <ul class="space-y-0.5"><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>base64解码</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>base64在线转换</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>base64解密工具</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>base64转文本</li></ul>
       </div>
       <div>
-        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">Architecture & Privacy Guarantees</h2>
+        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">底层架构与隐私安全保障</h2>
         <div class="space-y-2">
           <div class="p-3 sm:p-3.5 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5">
-            <div class="text-xs font-bold">100% Client-Side Computation</div>
-            <p class="text-[11px] opacity-60 mt-0.5">Your data never touches remote servers or analytics backends. Complete privacy guaranteed.</p>
+            <div class="text-xs font-bold">100% 纯前端本地运算</div>
+            <p class="text-[11px] opacity-60 mt-0.5">您的敏感数据绝不上传至任何远程服务器或分析系统，全方位保障隐私安全。</p>
           </div>
           <div class="p-3 sm:p-3.5 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5">
-            <div class="text-xs font-bold">Edge Accelerated & Offline Ready</div>
-            <p class="text-[11px] opacity-60 mt-0.5">Powered by native browser Web APIs for instant sub-millisecond execution.</p>
+            <div class="text-xs font-bold">边缘网络极速加速 & 离线即用</div>
+            <p class="text-[11px] opacity-60 mt-0.5">依托现代浏览器原生 Web API 毫秒级极速运行，无网环境顺畅运行。</p>
           </div>
         </div>
       </div>
@@ -465,17 +465,17 @@
     if (mode === 'encode') {
       btnModeEnc.className = 'px-3 py-1.5 text-xs rounded-lg font-bold font-mono border border-[#1e2333] hover:border-[#10b981]/50 bg-white/15';
       btnModeDec.className = 'px-3 py-1.5 text-xs rounded-lg font-mono border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10';
-      lblInput.innerText = '输入内容 (Plain Text)';
-      lblOutput.innerText = '输出结果 (Base64)';
+      lblInput.innerText = '输入内容 (纯文本明文)';
+      lblOutput.innerText = '输出结果 (Base64 编码字符串)';
       btnProcessText.innerText = 'Base64 编码';
-      inputEl.placeholder = 'Type or paste plain text here...';
+      inputEl.placeholder = '在此输入或粘贴纯文本内容...';
     } else {
       btnModeDec.className = 'px-3 py-1.5 text-xs rounded-lg font-bold font-mono border border-[#1e2333] hover:border-[#10b981]/50 bg-white/15';
       btnModeEnc.className = 'px-3 py-1.5 text-xs rounded-lg font-mono border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10';
-      lblInput.innerText = '输入内容 (Base64 String)';
-      lblOutput.innerText = '输出结果 (Plain Text)';
+      lblInput.innerText = '输入内容 (Base64 编码字符串)';
+      lblOutput.innerText = '输出结果 (纯文本明文)';
       btnProcessText.innerText = 'Base64 解码';
-      inputEl.placeholder = 'Paste Base64 encoded string here...';
+      inputEl.placeholder = '在此输入待解码的 Base64 字符串...';
     }
     processData();
   }
@@ -487,12 +487,12 @@
     const val = inputEl.value;
     if (!val) {
       outputEl.value = '';
-      metIn.innerText = 'Input: 0 chars, 0 bytes';
-      metOut.innerText = 'Output: 0 chars, 0 bytes';
+      metIn.innerText = '输入: {chars} 字符, {bytes} 字节'.replace('{chars}', '0').replace('{bytes}', '0');
+      metOut.innerText = '输出: {chars} 字符, {bytes} 字节'.replace('{chars}', '0').replace('{bytes}', '0');
       return;
     }
     const inBytes = new Blob([val]).size;
-    metIn.innerText = 'Input: ' + val.length + ' chars, ' + inBytes + ' bytes';
+    metIn.innerText = '输入: {chars} 字符, {bytes} 字节'.replace('{chars}', val.length).replace('{bytes}', inBytes);
 
     try {
       let res = '';
@@ -511,31 +511,32 @@
       }
       outputEl.value = res;
       const outBytes = new Blob([res]).size;
-      metOut.innerText = 'Output: ' + res.length + ' chars, ' + outBytes + ' bytes';
-    } catch (e) {
-      outputEl.value = '[Error]: Invalid Base64 string (' + e.message + ')';
+      metOut.innerText = '输出: {chars} 字符, {bytes} 字节'.replace('{chars}', res.length).replace('{bytes}', outBytes);
+    } catch (err) {
+      outputEl.value = '[语法错误] ' + err.message;
     }
   }
 
-  inputEl.addEventListener('input', processData);
   btnProcess.addEventListener('click', () => {
     processData();
-    if (window.showToast) window.showToast('Processed successfully!');
+    if (window.showToast) window.showToast('处理成功！');
   });
+
+  inputEl.addEventListener('input', processData);
   chkUrlSafe.addEventListener('change', processData);
 
   btnSwap.addEventListener('click', () => {
-    const out = outputEl.value;
-    if (!out || out.startsWith('[Error]')) return;
-    inputEl.value = out;
+    const curOut = outputEl.value;
+    if (!curOut || curOut.startsWith('[语法错误]')) return;
+    inputEl.value = curOut;
     setMode(mode === 'encode' ? 'decode' : 'encode');
   });
 
   btnSample.addEventListener('click', () => {
     if (mode === 'encode') {
-      inputEl.value = 'Hello world! Powered by ' + "DevZen Tools" + ' (UTF-8: 🚀 安全高效)';
+      inputEl.value = "Hello World! GlobalCoreHub Developer Suite 2026. 🚀";
     } else {
-      inputEl.value = 'SGVsbG8gd29ybGQhIFBvd2VyZWQgYnkgd2VidXRpbCAoVVRGLTg6IPCfmYAg5a6J5YWo6auY5pWIKQ==';
+      inputEl.value = "SGVsbG8gV29ybGQhIEdsb2JhbENvcmVIdWIgRGV2ZWxvcGVyIFN1aXRlIDIwMjYuIPCfmYA=";
     }
     processData();
   });
@@ -543,8 +544,9 @@
   btnClear.addEventListener('click', () => {
     inputEl.value = '';
     outputEl.value = '';
-    metIn.innerText = 'Input: 0 chars, 0 bytes';
-    metOut.innerText = 'Output: 0 chars, 0 bytes';
+    metIn.innerText = '输入: {chars} 字符, {bytes} 字节'.replace('{chars}', '0').replace('{bytes}', '0');
+    metOut.innerText = '输出: {chars} 字符, {bytes} 字节'.replace('{chars}', '0').replace('{bytes}', '0');
+    if (window.showToast) window.showToast('已清空工作区');
   });
 
   btnCopy.addEventListener('click', () => {
@@ -553,6 +555,8 @@
       if (window.showToast) window.showToast('已复制！');
     });
   });
+
+  processData();
 })();
 </script>
         

@@ -217,7 +217,7 @@
       <!-- Action Items & Language Selector & Quick Search & Mobile Hamburger -->
       <div class="flex items-center space-x-2 sm:space-x-3">
         <!-- Quick Search Trigger in Header -->
-        <button id="global-search-btn" type="button" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-black/15 hover:bg-black/30 text-xs font-mono opacity-80 hover:opacity-100 transition" title="Search tools (Press /)">
+        <button id="global-search-btn" type="button" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-black/15 hover:bg-black/30 text-xs font-mono opacity-80 hover:opacity-100 transition" title="Search tools by keyword, format... (Press / to focus)">
           <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
@@ -294,7 +294,7 @@
           <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
-          <span>Search utilities...</span>
+          <span>Search tools by keyword, format... (Press / to focus)</span>
         </span>
         <kbd class="text-[10px] px-1.5 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50">/</kbd>
       </button>
@@ -352,9 +352,9 @@
     <div class="border-b border-[#1e2333] pb-4 sm:pb-6">
       <div class="flex items-center justify-between mb-2 sm:mb-3">
         <div class="inline-flex items-center px-2 py-0.5 rounded text-[11px] bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 font-mono">
-          <span>[ENGINE: Web Standard UTF-8 Base64 Engine]</span>
+          <span>Web Standard UTF-8 Base64 Engine</span>
         </div>
-        <span class="text-[10px] sm:text-[11px] font-mono opacity-50">UTF-8 &bull; URL-Safe &bull; Instant</span>
+        <span class="text-[10px] sm:text-[11px] font-mono opacity-50">UTF-8 • URL-Safe • Instant</span>
       </div>
       <h1 class="text-xl sm:text-2xl md:text-3xl font-black tracking-tight">Base64 Encoder & Decoder</h1>
       <p class="text-xs sm:text-sm opacity-70 mt-1.5 leading-relaxed">Encode plain text and UTF-8 characters to Base64 or decode Base64 strings instantly with zero server lag.</p>
@@ -379,8 +379,8 @@
 
     <!-- Status & Metrics Row -->
     <div class="mt-3 flex items-center justify-between text-xs font-mono opacity-70 px-1">
-      <span id="metrics-input">Input: 0 chars, 0 bytes</span>
-      <span id="metrics-output">Output: 0 chars, 0 bytes</span>
+      <span id="metrics-input">Input: {chars} chars, {bytes} bytes</span>
+      <span id="metrics-output">Output: {chars} chars, {bytes} bytes</span>
     </div>
 
     <!-- Dual Editors -->
@@ -391,7 +391,7 @@
       </div>
       <div>
         <div class="flex items-center justify-between mb-1.5">
-          <label for="b64-output" id="lbl-output" class="text-xs font-bold uppercase tracking-wider font-mono opacity-80">Output (Base64)</label>
+          <label for="b64-output" id="lbl-output" class="text-xs font-bold uppercase tracking-wider font-mono opacity-80">Output (Base64 String)</label>
           <button id="btn-copy" class="text-xs font-mono font-bold hover:underline opacity-80 hover:opacity-100" style="color: #10b981">Copy to Clipboard</button>
         </div>
         <textarea id="b64-output" rows="12" readonly spellcheck="false" placeholder="Result will appear here..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-black/20 p-3 text-xs sm:text-sm font-mono focus:outline-none transition leading-relaxed"></textarea>
@@ -466,7 +466,7 @@
       btnModeEnc.className = 'px-3 py-1.5 text-xs rounded-lg font-bold font-mono border border-[#1e2333] hover:border-[#10b981]/50 bg-white/15';
       btnModeDec.className = 'px-3 py-1.5 text-xs rounded-lg font-mono border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10';
       lblInput.innerText = 'Input (Plain Text)';
-      lblOutput.innerText = 'Output (Base64)';
+      lblOutput.innerText = 'Output (Base64 String)';
       btnProcessText.innerText = 'Encode to Base64';
       inputEl.placeholder = 'Type or paste plain text here...';
     } else {
@@ -487,12 +487,12 @@
     const val = inputEl.value;
     if (!val) {
       outputEl.value = '';
-      metIn.innerText = 'Input: 0 chars, 0 bytes';
-      metOut.innerText = 'Output: 0 chars, 0 bytes';
+      metIn.innerText = 'Input: {chars} chars, {bytes} bytes'.replace('{chars}', '0').replace('{bytes}', '0');
+      metOut.innerText = 'Output: {chars} chars, {bytes} bytes'.replace('{chars}', '0').replace('{bytes}', '0');
       return;
     }
     const inBytes = new Blob([val]).size;
-    metIn.innerText = 'Input: ' + val.length + ' chars, ' + inBytes + ' bytes';
+    metIn.innerText = 'Input: {chars} chars, {bytes} bytes'.replace('{chars}', val.length).replace('{bytes}', inBytes);
 
     try {
       let res = '';
@@ -511,31 +511,32 @@
       }
       outputEl.value = res;
       const outBytes = new Blob([res]).size;
-      metOut.innerText = 'Output: ' + res.length + ' chars, ' + outBytes + ' bytes';
-    } catch (e) {
-      outputEl.value = '[Error]: Invalid Base64 string (' + e.message + ')';
+      metOut.innerText = 'Output: {chars} chars, {bytes} bytes'.replace('{chars}', res.length).replace('{bytes}', outBytes);
+    } catch (err) {
+      outputEl.value = '[Syntax Error] ' + err.message;
     }
   }
 
-  inputEl.addEventListener('input', processData);
   btnProcess.addEventListener('click', () => {
     processData();
     if (window.showToast) window.showToast('Processed successfully!');
   });
+
+  inputEl.addEventListener('input', processData);
   chkUrlSafe.addEventListener('change', processData);
 
   btnSwap.addEventListener('click', () => {
-    const out = outputEl.value;
-    if (!out || out.startsWith('[Error]')) return;
-    inputEl.value = out;
+    const curOut = outputEl.value;
+    if (!curOut || curOut.startsWith('[Syntax Error]')) return;
+    inputEl.value = curOut;
     setMode(mode === 'encode' ? 'decode' : 'encode');
   });
 
   btnSample.addEventListener('click', () => {
     if (mode === 'encode') {
-      inputEl.value = 'Hello world! Powered by ' + "DevZen Tools" + ' (UTF-8: 🚀 安全高效)';
+      inputEl.value = "Hello World! GlobalCoreHub Developer Suite 2026. 🚀";
     } else {
-      inputEl.value = 'SGVsbG8gd29ybGQhIFBvd2VyZWQgYnkgd2VidXRpbCAoVVRGLTg6IPCfmYAg5a6J5YWo6auY5pWIKQ==';
+      inputEl.value = "SGVsbG8gV29ybGQhIEdsb2JhbENvcmVIdWIgRGV2ZWxvcGVyIFN1aXRlIDIwMjYuIPCfmYA=";
     }
     processData();
   });
@@ -543,8 +544,9 @@
   btnClear.addEventListener('click', () => {
     inputEl.value = '';
     outputEl.value = '';
-    metIn.innerText = 'Input: 0 chars, 0 bytes';
-    metOut.innerText = 'Output: 0 chars, 0 bytes';
+    metIn.innerText = 'Input: {chars} chars, {bytes} bytes'.replace('{chars}', '0').replace('{bytes}', '0');
+    metOut.innerText = 'Output: {chars} chars, {bytes} bytes'.replace('{chars}', '0').replace('{bytes}', '0');
+    if (window.showToast) window.showToast('Cleared workspace');
   });
 
   btnCopy.addEventListener('click', () => {
@@ -553,6 +555,8 @@
       if (window.showToast) window.showToast('Copied!');
     });
   });
+
+  processData();
 })();
 </script>
         

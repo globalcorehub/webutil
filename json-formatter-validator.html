@@ -217,7 +217,7 @@
       <!-- Action Items & Language Selector & Quick Search & Mobile Hamburger -->
       <div class="flex items-center space-x-2 sm:space-x-3">
         <!-- Quick Search Trigger in Header -->
-        <button id="global-search-btn" type="button" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-black/15 hover:bg-black/30 text-xs font-mono opacity-80 hover:opacity-100 transition" title="Search tools (Press /)">
+        <button id="global-search-btn" type="button" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-black/15 hover:bg-black/30 text-xs font-mono opacity-80 hover:opacity-100 transition" title="Search tools by keyword, format... (Press / to focus)">
           <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
@@ -294,7 +294,7 @@
           <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
-          <span>Search utilities...</span>
+          <span>Search tools by keyword, format... (Press / to focus)</span>
         </span>
         <kbd class="text-[10px] px-1.5 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50">/</kbd>
       </button>
@@ -352,9 +352,9 @@
     <div class="border-b border-[#1e2333] pb-4 sm:pb-6">
       <div class="flex items-center justify-between mb-2 sm:mb-3">
         <div class="inline-flex items-center px-2 py-0.5 rounded text-[11px] bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 font-mono">
-          <span>[ENGINE: V8 Native JSON Parser]</span>
+          <span>V8 Native JSON Parser</span>
         </div>
-        <span class="text-[10px] sm:text-[11px] font-mono opacity-50">100% Client-Side &bull; 0ms Latency</span>
+        <span class="text-[10px] sm:text-[11px] font-mono opacity-50">100% Client-Side • 0ms Latency</span>
       </div>
       <h1 class="text-xl sm:text-2xl md:text-3xl font-black tracking-tight">JSON Formatter & Validator</h1>
       <p class="text-xs sm:text-sm opacity-70 mt-1.5 leading-relaxed">Format, beautify, validate, and minify JSON payloads with syntax highlighting and instant error detection.</p>
@@ -385,10 +385,10 @@
     <div class="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
       <div>
         <div class="flex items-center justify-between mb-1.5">
-          <label for="json-input" class="text-xs font-bold uppercase tracking-wider font-mono opacity-80">Input (JSON / Object)</label>
+          <label for="json-input" class="text-xs font-bold uppercase tracking-wider font-mono opacity-80">Input (JSON)</label>
           <span id="input-stats" class="text-[11px] font-mono opacity-50">0 chars</span>
         </div>
-        <textarea id="json-input" rows="14" spellcheck="false" placeholder='Paste raw or unformatted JSON here (or press Ctrl+Enter to format)...' class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/10 dark:bg-black/30 p-3 text-xs sm:text-sm font-mono focus:outline-none transition leading-relaxed"></textarea>
+        <textarea id="json-input" rows="14" spellcheck="false" placeholder="Paste raw or unformatted JSON here (or press Ctrl+Enter to format)..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/10 dark:bg-black/30 p-3 text-xs sm:text-sm font-mono focus:outline-none transition leading-relaxed"></textarea>
       </div>
       <div>
         <div class="flex items-center justify-between mb-1.5">
@@ -492,7 +492,8 @@
       const keysCount = typeof parsed === 'object' && parsed !== null ? Object.keys(parsed).length : 1;
       const bytes = new Blob([formatted]).size;
       statusEl.className = 'mt-3 p-2.5 rounded-xl text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20';
-      statusEl.innerHTML = '&#x2713; <strong>Valid:</strong> ' + keysCount + ' root nodes, ' + bytes + ' bytes output.';
+      const validMsg = '✓ <strong>Valid:</strong> {keys} root nodes, {bytes} bytes output.'.replace('{keys}', keysCount).replace('{bytes}', bytes);
+      statusEl.innerHTML = '&#x2713; <strong>Valid:</strong> ' + validMsg;
       statusEl.classList.remove('hidden');
       if (window.showToast) window.showToast('Formatted successfully!');
     } catch (err) {
@@ -535,7 +536,7 @@
     outputEl.value = '';
     statsEl.innerText = '0 chars';
     statusEl.classList.add('hidden');
-    if (window.showToast) window.showToast('Cleared');
+    if (window.showToast) window.showToast('Cleared workspace');
   });
 
   btnCopy.addEventListener('click', () => {

@@ -201,7 +201,7 @@
                 <span>Explorar Todas</span>
                 <span>&rarr;</span>
               </a>
-              <span class="text-[10px] opacity-40 font-mono">100% Client-Side</span>
+              <span class="text-[10px] opacity-40 font-mono">100% no Navegador</span>
             </div>
           </div>
         </div>
@@ -217,11 +217,11 @@
       <!-- Action Items & Language Selector & Quick Search & Mobile Hamburger -->
       <div class="flex items-center space-x-2 sm:space-x-3">
         <!-- Quick Search Trigger in Header -->
-        <button id="global-search-btn" type="button" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-black/15 hover:bg-black/30 text-xs font-mono opacity-80 hover:opacity-100 transition" title="Search tools (Press /)">
+        <button id="global-search-btn" type="button" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-black/15 hover:bg-black/30 text-xs font-mono opacity-80 hover:opacity-100 transition" title="Filtrar ferramentas por palavra-chave... (Pressione /)">
           <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
-          <span class="hidden sm:inline opacity-70">Search</span>
+          <span class="hidden sm:inline opacity-70">Pesquisar</span>
           <kbd class="hidden sm:inline text-[9px] px-1 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50 bg-black/20 font-mono">/</kbd>
         </button>
 
@@ -294,7 +294,7 @@
           <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
-          <span>Search utilities...</span>
+          <span>Filtrar ferramentas por palavra-chave... (Pressione /)</span>
         </span>
         <kbd class="text-[10px] px-1.5 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50">/</kbd>
       </button>
@@ -352,9 +352,9 @@
     <div class="border-b border-[#1e2333] pb-4 sm:pb-6">
       <div class="flex items-center justify-between mb-2 sm:mb-3">
         <div class="inline-flex items-center px-2 py-0.5 rounded text-[11px] bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 font-mono">
-          <span>[ENGINE: V8 Native JSON Parser]</span>
+          <span>Parser JSON Nativo V8</span>
         </div>
-        <span class="text-[10px] sm:text-[11px] font-mono opacity-50">100% Client-Side &bull; 0ms Latency</span>
+        <span class="text-[10px] sm:text-[11px] font-mono opacity-50">100% Lado do Cliente • Latência 0ms</span>
       </div>
       <h1 class="text-xl sm:text-2xl md:text-3xl font-black tracking-tight">Formatador e Validador JSON</h1>
       <p class="text-xs sm:text-sm opacity-70 mt-1.5 leading-relaxed">Formate, embeleze e valide payloads JSON instantaneamente no navegador.</p>
@@ -363,17 +363,17 @@
     <!-- JSON Controls Bar -->
     <div class="mt-6 flex flex-wrap items-center justify-between gap-3 p-3 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5">
       <div class="flex items-center flex-wrap gap-2">
-        <span class="text-xs font-mono opacity-70">Indent:</span>
-        <button id="btn-indent-2" class="px-2.5 py-1 text-xs rounded border border-[#1e2333] hover:border-[#10b981]/50 font-mono font-bold bg-white/10">2 Spaces</button>
-        <button id="btn-indent-4" class="px-2.5 py-1 text-xs rounded border border-[#1e2333] hover:border-[#10b981]/50 font-mono hover:bg-white/10">4 Spaces</button>
+        <span class="text-xs font-mono opacity-70">Recuo:</span>
+        <button id="btn-indent-2" class="px-2.5 py-1 text-xs rounded border border-[#1e2333] hover:border-[#10b981]/50 font-mono font-bold bg-white/10">2 Espaços</button>
+        <button id="btn-indent-4" class="px-2.5 py-1 text-xs rounded border border-[#1e2333] hover:border-[#10b981]/50 font-mono hover:bg-white/10">4 Espaços</button>
         <button id="btn-indent-0" class="px-2.5 py-1 text-xs rounded border border-[#1e2333] hover:border-[#10b981]/50 font-mono hover:bg-white/10">Minificar</button>
         <label class="flex items-center space-x-1.5 text-xs font-mono ml-2 cursor-pointer opacity-80 hover:opacity-100">
           <input type="checkbox" id="chk-sort-keys" class="rounded accent-emerald-500">
-          <span>Sort Keys</span>
+          <span>Ordenar Chaves A-Z</span>
         </label>
       </div>
       <div class="flex items-center gap-2">
-        <button id="btn-sample" class="px-3 py-1 text-xs rounded border border-[#1e2333] hover:border-[#10b981]/50 font-mono opacity-80 hover:opacity-100">Carregar Amostra</button>
+        <button id="btn-sample" class="px-3 py-1 text-xs rounded border border-[#1e2333] hover:border-[#10b981]/50 font-mono opacity-80 hover:opacity-100">Carregar Exemplo</button>
         <button id="btn-clear" class="px-3 py-1 text-xs rounded border border-[#1e2333] hover:border-[#10b981]/50 font-mono opacity-70 hover:opacity-100">Limpar</button>
       </div>
     </div>
@@ -385,27 +385,27 @@
     <div class="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
       <div>
         <div class="flex items-center justify-between mb-1.5">
-          <label for="json-input" class="text-xs font-bold uppercase tracking-wider font-mono opacity-80">Entrada (JSON / Object)</label>
-          <span id="input-stats" class="text-[11px] font-mono opacity-50">0 chars</span>
+          <label for="json-input" class="text-xs font-bold uppercase tracking-wider font-mono opacity-80">Entrada (JSON)</label>
+          <span id="input-stats" class="text-[11px] font-mono opacity-50">0 caracteres</span>
         </div>
-        <textarea id="json-input" rows="14" spellcheck="false" placeholder='Paste raw or unformatted JSON here (or press Ctrl+Enter to format)...' class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/10 dark:bg-black/30 p-3 text-xs sm:text-sm font-mono focus:outline-none transition leading-relaxed"></textarea>
+        <textarea id="json-input" rows="14" spellcheck="false" placeholder="Cole JSON bruto aqui (ou pressione Ctrl+Enter para formatar)..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/10 dark:bg-black/30 p-3 text-xs sm:text-sm font-mono focus:outline-none transition leading-relaxed"></textarea>
       </div>
       <div>
         <div class="flex items-center justify-between mb-1.5">
           <label for="json-output" class="text-xs font-bold uppercase tracking-wider font-mono opacity-80">Resultado</label>
-          <button id="btn-copy" class="text-xs font-mono font-bold hover:underline opacity-80 hover:opacity-100" style="color: #10b981">Copiar</button>
+          <button id="btn-copy" class="text-xs font-mono font-bold hover:underline opacity-80 hover:opacity-100" style="color: #10b981">Copiar para a Área de Transferência</button>
         </div>
-        <textarea id="json-output" rows="14" readonly spellcheck="false" placeholder="Formatted output will appear here..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-black/20 p-3 text-xs sm:text-sm font-mono focus:outline-none transition leading-relaxed"></textarea>
+        <textarea id="json-output" rows="14" readonly spellcheck="false" placeholder="O JSON formatado aparecerá aqui..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-black/20 p-3 text-xs sm:text-sm font-mono focus:outline-none transition leading-relaxed"></textarea>
       </div>
     </div>
 
     <!-- Primary Action Button -->
     <div class="mt-4 flex items-center gap-3">
       <button id="btn-format" class="px-6 py-2.5 rounded-xl font-bold transition flex items-center space-x-2 text-xs sm:text-sm bg-[#10b981] hover:bg-[#059669] text-black font-bold tracking-tight shadow-[0_0_15px_rgba(16,185,129,0.3)]">
-        <span>Formatar (Ctrl+Enter)</span>
+        <span>Formatar / Embelezar (Ctrl+Enter)</span>
       </button>
       <button id="btn-validate" class="px-4 py-2.5 rounded-xl font-semibold border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/5 transition text-xs font-mono">
-        Validar
+        Validar Sintaxe
       </button>
     </div>
 
@@ -413,23 +413,23 @@
     <!-- SEO & Capabilities Section -->
     <div class="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-[#1e2333] grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
       <div>
-        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">About Formatador e Validador JSON</h2>
+        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">Sobre Formatador e Validador JSON</h2>
         <p class="text-xs opacity-75 leading-relaxed">
-          Online, zero-latency browser utility for <strong>formatador json online</strong>. All computing operations execute in real-time within your browser sandbox with zero telemetry or network calls.
+          Utilitário online de latência zero para <strong>formatador json online</strong>. Todas as transformações são executadas localmente no navegador, sem telemetria.
         </p>
-        <h3 class="text-xs font-bold uppercase tracking-wider opacity-70 mt-3 sm:mt-4 mb-2">Supported Queries & Intent</h3>
+        <h3 class="text-xs font-bold uppercase tracking-wider opacity-70 mt-3 sm:mt-4 mb-2">Consultas e Recursos Cobertos</h3>
         <ul class="space-y-0.5"><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>validar json</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>embelezar json gratis</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>parser json</li></ul>
       </div>
       <div>
-        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">Architecture & Privacy Guarantees</h2>
+        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">Arquitetura e Garantias de Privacidade</h2>
         <div class="space-y-2">
           <div class="p-3 sm:p-3.5 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5">
-            <div class="text-xs font-bold">100% Client-Side Computation</div>
-            <p class="text-[11px] opacity-60 mt-0.5">Your data never touches remote servers or analytics backends. Complete privacy guaranteed.</p>
+            <div class="text-xs font-bold">Computação 100% no Lado do Cliente</div>
+            <p class="text-[11px] opacity-60 mt-0.5">Seus dados confidenciais nunca são transmitidos para servidores remotos.</p>
           </div>
           <div class="p-3 sm:p-3.5 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5">
-            <div class="text-xs font-bold">Edge Accelerated & Offline Ready</div>
-            <p class="text-[11px] opacity-60 mt-0.5">Powered by native browser Web APIs for instant sub-millisecond execution.</p>
+            <div class="text-xs font-bold">Acelerado na Borda e Pronto Offline</div>
+            <p class="text-[11px] opacity-60 mt-0.5">Desenvolvido com APIs Web nativas para execução instantânea em menos de 1 ms.</p>
           </div>
         </div>
       </div>
@@ -492,9 +492,10 @@
       const keysCount = typeof parsed === 'object' && parsed !== null ? Object.keys(parsed).length : 1;
       const bytes = new Blob([formatted]).size;
       statusEl.className = 'mt-3 p-2.5 rounded-xl text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20';
-      statusEl.innerHTML = '&#x2713; <strong>Válido:</strong> ' + keysCount + ' root nodes, ' + bytes + ' bytes output.';
+      const validMsg = '✓ <strong>Válido:</strong> {keys} nós raiz, {bytes} bytes gerados.'.replace('{keys}', keysCount).replace('{bytes}', bytes);
+      statusEl.innerHTML = '&#x2713; <strong>Válido:</strong> ' + validMsg;
       statusEl.classList.remove('hidden');
-      if (window.showToast) window.showToast('Formatted successfully!');
+      if (window.showToast) window.showToast('Formatado com sucesso!');
     } catch (err) {
       statusEl.className = 'mt-3 p-2.5 rounded-xl text-xs font-mono bg-rose-500/10 text-rose-400 border border-rose-500/20';
       statusEl.innerHTML = '&#x2717; <strong>Erro de Sintaxe:</strong> ' + err.message;
@@ -503,7 +504,7 @@
   }
 
   inputEl.addEventListener('input', () => {
-    statsEl.innerText = inputEl.value.length + ' chars';
+    statsEl.innerText = inputEl.value.length + ' caracteres';
   });
 
   inputEl.addEventListener('keydown', e => {
@@ -526,16 +527,16 @@
       features: ["zero-latency", "100% client-side", "responsive-ui", "privacy-first"],
       metadata: { author: "Autonomous Webmaster", timestamp: Date.now() }
     }, null, 2);
-    statsEl.innerText = inputEl.value.length + ' chars';
+    statsEl.innerText = inputEl.value.length + ' caracteres';
     processJSON();
   });
 
   btnClear.addEventListener('click', () => {
     inputEl.value = '';
     outputEl.value = '';
-    statsEl.innerText = '0 chars';
+    statsEl.innerText = '0 caracteres';
     statusEl.classList.add('hidden');
-    if (window.showToast) window.showToast('Cleared');
+    if (window.showToast) window.showToast('Área limpa');
   });
 
   btnCopy.addEventListener('click', () => {

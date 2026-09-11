@@ -201,7 +201,7 @@
                 <span>浏览全部</span>
                 <span>&rarr;</span>
               </a>
-              <span class="text-[10px] opacity-40 font-mono">100% Client-Side</span>
+              <span class="text-[10px] opacity-40 font-mono">100% 纯前端</span>
             </div>
           </div>
         </div>
@@ -217,11 +217,11 @@
       <!-- Action Items & Language Selector & Quick Search & Mobile Hamburger -->
       <div class="flex items-center space-x-2 sm:space-x-3">
         <!-- Quick Search Trigger in Header -->
-        <button id="global-search-btn" type="button" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-black/15 hover:bg-black/30 text-xs font-mono opacity-80 hover:opacity-100 transition" title="Search tools (Press /)">
+        <button id="global-search-btn" type="button" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-black/15 hover:bg-black/30 text-xs font-mono opacity-80 hover:opacity-100 transition" title="按工具名称、关键词即时过滤... (按 / 聚焦)">
           <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
-          <span class="hidden sm:inline opacity-70">Search</span>
+          <span class="hidden sm:inline opacity-70">搜索</span>
           <kbd class="hidden sm:inline text-[9px] px-1 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50 bg-black/20 font-mono">/</kbd>
         </button>
 
@@ -294,7 +294,7 @@
           <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
-          <span>Search utilities...</span>
+          <span>按工具名称、关键词即时过滤... (按 / 聚焦)</span>
         </span>
         <kbd class="text-[10px] px-1.5 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50">/</kbd>
       </button>
@@ -352,9 +352,9 @@
     <div class="border-b border-[#1e2333] pb-4 sm:pb-6">
       <div class="flex items-center justify-between mb-2 sm:mb-3">
         <div class="inline-flex items-center px-2 py-0.5 rounded text-[11px] bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 font-mono">
-          <span>[ENGINE: Client-Side JOSE Token Inspector]</span>
+          <span>纯前端 JOSE 令牌无泄漏查看器</span>
         </div>
-        <span class="text-[10px] sm:text-[11px] font-mono opacity-50">Zero Secret Leaks &bull; 100% Local</span>
+        <span class="text-[10px] sm:text-[11px] font-mono opacity-50">密钥绝不离机 • 100% 本地运算</span>
       </div>
       <h1 class="text-xl sm:text-2xl md:text-3xl font-black tracking-tight">JWT 令牌查看与解码</h1>
       <p class="text-xs sm:text-sm opacity-70 mt-1.5 leading-relaxed">本地解析 JSON Web Token 的 Header 标头、Payload 有效负载与过期时间戳，密钥绝不离机。</p>
@@ -363,16 +363,16 @@
     <!-- Action Toolbar -->
     <div class="mt-6 flex flex-wrap items-center justify-between gap-3 p-3 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5">
       <div class="flex items-center gap-2">
-        <button id="btn-sample-active" class="px-3 py-1.5 text-xs rounded-lg font-mono border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10">Active JWT Sample</button>
-        <button id="btn-sample-expired" class="px-3 py-1.5 text-xs rounded-lg font-mono border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10">Expired JWT Sample</button>
+        <button id="btn-sample-active" class="px-3 py-1.5 text-xs rounded-lg font-mono border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10">有效 JWT 样例</button>
+        <button id="btn-sample-expired" class="px-3 py-1.5 text-xs rounded-lg font-mono border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10">过期 JWT 样例</button>
       </div>
       <button id="btn-clear" class="px-3 py-1 text-xs rounded border border-[#1e2333] hover:border-[#10b981]/50 font-mono opacity-70 hover:opacity-100">清空</button>
     </div>
 
     <!-- Raw JWT Input Box -->
     <div class="mt-4">
-      <label for="jwt-input" class="block text-xs font-bold uppercase tracking-wider font-mono opacity-80 mb-1.5">Encoded JWT Token (header.payload.signature)</label>
-      <textarea id="jwt-input" rows="4" spellcheck="false" placeholder="Paste your eyJ... token here..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/10 dark:bg-black/30 p-3 text-xs sm:text-sm font-mono focus:outline-none transition leading-relaxed"></textarea>
+      <label for="jwt-input" class="block text-xs font-bold uppercase tracking-wider font-mono opacity-80 mb-1.5">已编码的 JWT 令牌 (header.payload.signature)</label>
+      <textarea id="jwt-input" rows="4" spellcheck="false" placeholder="在此粘贴您的 eyJ... 令牌字符串..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/10 dark:bg-black/30 p-3 text-xs sm:text-sm font-mono focus:outline-none transition leading-relaxed"></textarea>
     </div>
 
     <!-- Token Metadata & Status Banner -->
@@ -389,19 +389,19 @@
       <!-- Header -->
       <div class="p-4 rounded-xl border border-rose-500/30 bg-rose-500/5">
         <div class="flex items-center justify-between mb-2">
-          <span class="text-xs font-mono font-bold text-rose-400 uppercase tracking-wider">Header (Algorithm & Typ)</span>
+          <span class="text-xs font-mono font-bold text-rose-400 uppercase tracking-wider">Header 标头 (签名算法与令牌类型)</span>
           <button id="btn-copy-hdr" class="text-xs font-mono hover:underline text-rose-400">复制到剪贴板</button>
         </div>
-        <pre id="jwt-hdr-out" class="text-xs font-mono overflow-x-auto p-2.5 rounded bg-black/40 text-rose-200">Waiting for token...</pre>
+        <pre id="jwt-hdr-out" class="text-xs font-mono overflow-x-auto p-2.5 rounded bg-black/40 text-rose-200">等待输入 JWT 令牌...</pre>
       </div>
 
       <!-- Payload -->
       <div class="p-4 rounded-xl border border-violet-500/30 bg-violet-500/5">
         <div class="flex items-center justify-between mb-2">
-          <span class="text-xs font-mono font-bold text-violet-400 uppercase tracking-wider">Payload (Claims & Exp)</span>
+          <span class="text-xs font-mono font-bold text-violet-400 uppercase tracking-wider">Payload 有效负载 (声明与过期时间)</span>
           <button id="btn-copy-pay" class="text-xs font-mono hover:underline text-violet-400">复制到剪贴板</button>
         </div>
-        <pre id="jwt-pay-out" class="text-xs font-mono overflow-x-auto p-2.5 rounded bg-black/40 text-violet-200">Waiting for token...</pre>
+        <pre id="jwt-pay-out" class="text-xs font-mono overflow-x-auto p-2.5 rounded bg-black/40 text-violet-200">等待输入 JWT 令牌...</pre>
       </div>
     </div>
 
@@ -409,23 +409,23 @@
     <!-- SEO & Capabilities Section -->
     <div class="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-[#1e2333] grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
       <div>
-        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">About JWT 令牌查看与解码</h2>
+        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">关于 JWT 令牌查看与解码</h2>
         <p class="text-xs opacity-75 leading-relaxed">
-          Online, zero-latency browser utility for <strong>jwt解码</strong>. All computing operations execute in real-time within your browser sandbox with zero telemetry or network calls.
+          针对 <strong>jwt解码</strong> 的高可靠纯前端在线工具。所有数据处理均在浏览器沙箱内存中即时完成，绝无任何数据上传或外部网络调用。
         </p>
-        <h3 class="text-xs font-bold uppercase tracking-wider opacity-70 mt-3 sm:mt-4 mb-2">Supported Queries & Intent</h3>
+        <h3 class="text-xs font-bold uppercase tracking-wider opacity-70 mt-3 sm:mt-4 mb-2">支持的长尾特性与检索场景</h3>
         <ul class="space-y-0.5"><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>jwt在线解析</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>jwt token查看</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>json web token解码器</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>jwt有效时间解析</li></ul>
       </div>
       <div>
-        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">Architecture & Privacy Guarantees</h2>
+        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">底层架构与隐私安全保障</h2>
         <div class="space-y-2">
           <div class="p-3 sm:p-3.5 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5">
-            <div class="text-xs font-bold">100% Client-Side Computation</div>
-            <p class="text-[11px] opacity-60 mt-0.5">Your data never touches remote servers or analytics backends. Complete privacy guaranteed.</p>
+            <div class="text-xs font-bold">100% 纯前端本地运算</div>
+            <p class="text-[11px] opacity-60 mt-0.5">您的敏感数据绝不上传至任何远程服务器或分析系统，全方位保障隐私安全。</p>
           </div>
           <div class="p-3 sm:p-3.5 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5">
-            <div class="text-xs font-bold">Edge Accelerated & Offline Ready</div>
-            <p class="text-[11px] opacity-60 mt-0.5">Powered by native browser Web APIs for instant sub-millisecond execution.</p>
+            <div class="text-xs font-bold">边缘网络极速加速 & 离线即用</div>
+            <p class="text-[11px] opacity-60 mt-0.5">依托现代浏览器原生 Web API 毫秒级极速运行，无网环境顺畅运行。</p>
           </div>
         </div>
       </div>
@@ -449,105 +449,105 @@
   const btnCopyHdr = document.getElementById('btn-copy-hdr');
   const btnCopyPay = document.getElementById('btn-copy-pay');
 
-  function decodeSegment(str) {
-    let b64 = str.replace(/-/g, '+').replace(/_/g, '/');
-    while (b64.length % 4) b64 += '=';
-    return decodeURIComponent(escape(window.atob(b64)));
+  function b64url_decode(str) {
+    let base64 = str.replace(/-/g, '+').replace(/_/g, '/');
+    while (base64.length % 4) base64 += '=';
+    return decodeURIComponent(escape(window.atob(base64)));
   }
 
-  function parseJWT() {
-    const val = inputEl.value.trim();
-    if (!val) {
+  function parseJwt() {
+    const token = inputEl.value.trim();
+    if (!token) {
       banner.classList.add('hidden');
-      hdrOut.innerText = 'Waiting for token...';
-      payOut.innerText = 'Waiting for token...';
+      hdrOut.innerText = '等待输入 JWT 令牌...';
+      payOut.innerText = '等待输入 JWT 令牌...';
       return;
     }
-    const parts = val.split('.');
+
+    const parts = token.split('.');
     if (parts.length < 2) {
+      banner.className = 'mt-4 p-3 rounded-xl border border-rose-500/30 bg-rose-500/10 font-mono text-xs flex items-center text-rose-400';
+      banner.innerHTML = '&#x2717; JWT 格式错误：必须包含由点号(.)分隔的标头与有效负载';
       banner.classList.remove('hidden');
-      statusBadge.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-rose-500 text-white';
-      statusBadge.innerText = 'Malformed';
-      statusText.innerText = 'JWT must contain at least Header and Payload separated by dot (.)';
-      algInfo.innerText = '';
       return;
     }
 
     try {
-      const header = JSON.parse(decodeSegment(parts[0]));
-      const payload = JSON.parse(decodeSegment(parts[1]));
+      const headerObj = JSON.parse(b64url_decode(parts[0]));
+      const payloadObj = JSON.parse(b64url_decode(parts[1]));
 
-      hdrOut.innerText = JSON.stringify(header, null, 2);
-      payOut.innerText = JSON.stringify(payload, null, 2);
+      hdrOut.innerText = JSON.stringify(headerObj, null, 2);
+      payOut.innerText = JSON.stringify(payloadObj, null, 2);
 
-      // Check Expiration
-      banner.classList.remove('hidden');
-      algInfo.innerText = 'Algorithm: ' + (header.alg || 'none') + ' | Typ: ' + (header.typ || 'JWT');
+      algInfo.innerText = 'Algorithm: ' + (headerObj.alg || 'none') + ' • Typ: ' + (headerObj.typ || 'JWT');
 
-      if (payload.exp) {
-        const expDate = new Date(payload.exp * 1000);
+      if (payloadObj.exp) {
+        const expDate = new Date(payloadObj.exp * 1000);
         const now = new Date();
         if (now > expDate) {
-          statusBadge.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-rose-500/20 text-rose-400 border border-rose-500/40';
-          statusBadge.innerText = 'Expired';
-          statusText.innerText = 'Expired on ' + expDate.toLocaleString();
+          statusBadge.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-rose-500 text-white';
+          statusBadge.innerText = '已过期 (Expired)';
+          statusText.innerText = '已于 {date} 过期: ' + expDate.toLocaleString();
         } else {
-          statusBadge.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/40';
-          statusBadge.innerText = 'Active';
-          statusText.innerText = 'Valid until ' + expDate.toLocaleString();
+          statusBadge.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500 text-white';
+          statusBadge.innerText = '有效 (Active)';
+          statusText.innerText = '有效期至 {date}: ' + expDate.toLocaleString();
         }
       } else {
-        statusBadge.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-sky-500/20 text-sky-400 border border-sky-500/40';
-        statusBadge.innerText = 'No Expiration';
-        statusText.innerText = 'Token does not contain an "exp" claim.';
+        statusBadge.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-blue-500 text-white';
+        statusBadge.innerText = '无过期限制';
+        statusText.innerText = '该令牌未包含 exp 过期时间声明。';
       }
-    } catch (e) {
+
+      banner.className = 'mt-4 p-3 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-white/5 font-mono text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-2';
       banner.classList.remove('hidden');
-      statusBadge.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-rose-500 text-white';
-      statusBadge.innerText = 'Parse Error';
-      statusText.innerText = e.message;
+    } catch (err) {
+      banner.className = 'mt-4 p-3 rounded-xl border border-rose-500/30 bg-rose-500/10 font-mono text-xs flex items-center text-rose-400';
+      banner.innerHTML = '&#x2717; ' + err.message;
+      banner.classList.remove('hidden');
     }
   }
 
-  inputEl.addEventListener('input', parseJWT);
-
   btnSampleAct.addEventListener('click', () => {
-    const futureExp = Math.floor(Date.now() / 1000) + 86400 * 7;
-    const h = window.btoa(JSON.stringify({ alg: "HS256", typ: "JWT" }));
-    const p = window.btoa(JSON.stringify({ sub: "usr_9981", name: "Alex Chen", role: "developer", site: "webutil", exp: futureExp }));
-    inputEl.value = h + '.' + p + '.dummy_signature_hash_preview';
-    parseJWT();
-    if (window.showToast) window.showToast('Loaded active JWT sample');
+    const exp = Math.floor(Date.now() / 1000) + 86400 * 7;
+    const h = btoa(JSON.stringify({ alg: "HS256", typ: "JWT" })).replace(/=/g, '');
+    const p = btoa(JSON.stringify({ sub: "dev_9981", name: "GlobalCoreHub Engineer", role: "admin", exp: exp, iat: Math.floor(Date.now() / 1000) })).replace(/=/g, '');
+    const s = "dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk";
+    inputEl.value = h + '.' + p + '.' + s;
+    parseJwt();
+    if (window.showToast) window.showToast('已加载有效 JWT 样例');
   });
 
   btnSampleExp.addEventListener('click', () => {
-    const pastExp = 1600000000;
-    const h = window.btoa(JSON.stringify({ alg: "HS256", typ: "JWT" }));
-    const p = window.btoa(JSON.stringify({ sub: "usr_expired", role: "guest", exp: pastExp }));
-    inputEl.value = h + '.' + p + '.expired_mock_signature';
-    parseJWT();
-    if (window.showToast) window.showToast('Loaded expired JWT sample');
+    const exp = Math.floor(Date.now() / 1000) - 86400 * 30;
+    const h = btoa(JSON.stringify({ alg: "RS256", typ: "JWT" })).replace(/=/g, '');
+    const p = btoa(JSON.stringify({ sub: "legacy_user", session: "expired_session_token", exp: exp })).replace(/=/g, '');
+    const s = "G5y1u01p91W89z_sample_sig";
+    inputEl.value = h + '.' + p + '.' + s;
+    parseJwt();
+    if (window.showToast) window.showToast('已加载过期 JWT 样例');
   });
 
   btnClear.addEventListener('click', () => {
     inputEl.value = '';
-    parseJWT();
+    parseJwt();
+    if (window.showToast) window.showToast('已清空工作区');
   });
 
   btnCopyHdr.addEventListener('click', () => {
     navigator.clipboard.writeText(hdrOut.innerText).then(() => {
-      if (window.showToast) window.showToast('Header copied!');
+      if (window.showToast) window.showToast('已复制 Header 标头内容！');
     });
   });
 
   btnCopyPay.addEventListener('click', () => {
     navigator.clipboard.writeText(payOut.innerText).then(() => {
-      if (window.showToast) window.showToast('Payload copied!');
+      if (window.showToast) window.showToast('已复制 Payload 载荷内容！');
     });
   });
 
-  // Initial load sample
-  btnSampleAct.click();
+  inputEl.addEventListener('input', parseJwt);
+  parseJwt();
 })();
 </script>
         

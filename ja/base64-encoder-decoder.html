@@ -201,7 +201,7 @@
                 <span>すべて見る</span>
                 <span>&rarr;</span>
               </a>
-              <span class="text-[10px] opacity-40 font-mono">100% Client-Side</span>
+              <span class="text-[10px] opacity-40 font-mono">100% クライアント完結</span>
             </div>
           </div>
         </div>
@@ -217,11 +217,11 @@
       <!-- Action Items & Language Selector & Quick Search & Mobile Hamburger -->
       <div class="flex items-center space-x-2 sm:space-x-3">
         <!-- Quick Search Trigger in Header -->
-        <button id="global-search-btn" type="button" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-black/15 hover:bg-black/30 text-xs font-mono opacity-80 hover:opacity-100 transition" title="Search tools (Press /)">
+        <button id="global-search-btn" type="button" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-black/15 hover:bg-black/30 text-xs font-mono opacity-80 hover:opacity-100 transition" title="ツール名やキーワードで瞬時に絞り込み... (/ キーで検索)">
           <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
-          <span class="hidden sm:inline opacity-70">Search</span>
+          <span class="hidden sm:inline opacity-70">検索</span>
           <kbd class="hidden sm:inline text-[9px] px-1 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50 bg-black/20 font-mono">/</kbd>
         </button>
 
@@ -294,7 +294,7 @@
           <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
-          <span>Search utilities...</span>
+          <span>ツール名やキーワードで瞬時に絞り込み... (/ キーで検索)</span>
         </span>
         <kbd class="text-[10px] px-1.5 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50">/</kbd>
       </button>
@@ -352,9 +352,9 @@
     <div class="border-b border-[#1e2333] pb-4 sm:pb-6">
       <div class="flex items-center justify-between mb-2 sm:mb-3">
         <div class="inline-flex items-center px-2 py-0.5 rounded text-[11px] bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 font-mono">
-          <span>[ENGINE: Web Standard UTF-8 Base64 Engine]</span>
+          <span>Web 標準 UTF-8 Base64 変換エンジン</span>
         </div>
-        <span class="text-[10px] sm:text-[11px] font-mono opacity-50">UTF-8 &bull; URL-Safe &bull; Instant</span>
+        <span class="text-[10px] sm:text-[11px] font-mono opacity-50">UTF-8 対応 • URL セーフ • 即時変換</span>
       </div>
       <h1 class="text-xl sm:text-2xl md:text-3xl font-black tracking-tight">Base64 エンコード & デコード</h1>
       <p class="text-xs sm:text-sm opacity-70 mt-1.5 leading-relaxed">テキストやUTF-8文字列のBase64相互変換をローカル環境で高速処理します。</p>
@@ -367,11 +367,11 @@
         <button id="btn-mode-decode" class="px-3 py-1.5 text-xs rounded-lg font-mono border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10">Base64 デコード</button>
         <label class="flex items-center space-x-1.5 text-xs font-mono ml-2 cursor-pointer opacity-80 hover:opacity-100">
           <input type="checkbox" id="chk-urlsafe" class="rounded accent-emerald-500">
-          <span>URL-Safe (- / _)</span>
+          <span>URL セーフ形式 (- / _)</span>
         </label>
       </div>
       <div class="flex items-center gap-2">
-        <button id="btn-swap" class="px-2.5 py-1 text-xs rounded border border-[#1e2333] hover:border-[#10b981]/50 font-mono opacity-80 hover:opacity-100">&#8645; 入力を入れ替え</button>
+        <button id="btn-swap" class="px-2.5 py-1 text-xs rounded border border-[#1e2333] hover:border-[#10b981]/50 font-mono opacity-80 hover:opacity-100">&#8645; 入出力を反転</button>
         <button id="btn-sample" class="px-2.5 py-1 text-xs rounded border border-[#1e2333] hover:border-[#10b981]/50 font-mono opacity-80 hover:opacity-100">サンプル読込</button>
         <button id="btn-clear" class="px-2.5 py-1 text-xs rounded border border-[#1e2333] hover:border-[#10b981]/50 font-mono opacity-70 hover:opacity-100">クリア</button>
       </div>
@@ -379,22 +379,22 @@
 
     <!-- Status & Metrics Row -->
     <div class="mt-3 flex items-center justify-between text-xs font-mono opacity-70 px-1">
-      <span id="metrics-input">Input: 0 chars, 0 bytes</span>
-      <span id="metrics-output">Output: 0 chars, 0 bytes</span>
+      <span id="metrics-input">入力: {chars} 文字, {bytes} バイト</span>
+      <span id="metrics-output">出力: {chars} 文字, {bytes} バイト</span>
     </div>
 
     <!-- Dual Editors -->
     <div class="mt-3 grid grid-cols-1 lg:grid-cols-2 gap-4">
       <div>
-        <label for="b64-input" id="lbl-input" class="block text-xs font-bold uppercase tracking-wider font-mono opacity-80 mb-1.5">入力エリア (Plain Text)</label>
-        <textarea id="b64-input" rows="12" spellcheck="false" placeholder="Type or paste plain text here..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/10 dark:bg-black/30 p-3 text-xs sm:text-sm font-mono focus:outline-none transition leading-relaxed"></textarea>
+        <label for="b64-input" id="lbl-input" class="block text-xs font-bold uppercase tracking-wider font-mono opacity-80 mb-1.5">入力エリア (プレーンテキスト)</label>
+        <textarea id="b64-input" rows="12" spellcheck="false" placeholder="テキストを入力または貼り付け..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/10 dark:bg-black/30 p-3 text-xs sm:text-sm font-mono focus:outline-none transition leading-relaxed"></textarea>
       </div>
       <div>
         <div class="flex items-center justify-between mb-1.5">
-          <label for="b64-output" id="lbl-output" class="text-xs font-bold uppercase tracking-wider font-mono opacity-80">出力結果 (Base64)</label>
+          <label for="b64-output" id="lbl-output" class="text-xs font-bold uppercase tracking-wider font-mono opacity-80">出力結果 (Base64 文字列)</label>
           <button id="btn-copy" class="text-xs font-mono font-bold hover:underline opacity-80 hover:opacity-100" style="color: #10b981">クリップボードにコピー</button>
         </div>
-        <textarea id="b64-output" rows="12" readonly spellcheck="false" placeholder="Result will appear here..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-black/20 p-3 text-xs sm:text-sm font-mono focus:outline-none transition leading-relaxed"></textarea>
+        <textarea id="b64-output" rows="12" readonly spellcheck="false" placeholder="変換結果がここに表示されます..." class="w-full rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-black/20 p-3 text-xs sm:text-sm font-mono focus:outline-none transition leading-relaxed"></textarea>
       </div>
     </div>
 
@@ -408,23 +408,23 @@
     <!-- SEO & Capabilities Section -->
     <div class="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-[#1e2333] grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
       <div>
-        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">About Base64 エンコード & デコード</h2>
+        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">Base64 エンコード & デコード について</h2>
         <p class="text-xs opacity-75 leading-relaxed">
-          Online, zero-latency browser utility for <strong>base64エンコード</strong>. All computing operations execute in real-time within your browser sandbox with zero telemetry or network calls.
+          <strong>base64エンコード</strong> のための高速ブラウザ完結型オンラインツール。すべての演算は端末内のローカルメモリで実行され、外部サーバーへの通信は一切発生しません。
         </p>
-        <h3 class="text-xs font-bold uppercase tracking-wider opacity-70 mt-3 sm:mt-4 mb-2">Supported Queries & Intent</h3>
+        <h3 class="text-xs font-bold uppercase tracking-wider opacity-70 mt-3 sm:mt-4 mb-2">対応する主な検索クエリとユースケース</h3>
         <ul class="space-y-0.5"><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>base64デコード</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>base64変換</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>base64文字列</li></ul>
       </div>
       <div>
-        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">Architecture & Privacy Guarantees</h2>
+        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">アーキテクチャとプライバシー保護の仕組み</h2>
         <div class="space-y-2">
           <div class="p-3 sm:p-3.5 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5">
-            <div class="text-xs font-bold">100% Client-Side Computation</div>
-            <p class="text-[11px] opacity-60 mt-0.5">Your data never touches remote servers or analytics backends. Complete privacy guaranteed.</p>
+            <div class="text-xs font-bold">100% クライアント側処理</div>
+            <p class="text-[11px] opacity-60 mt-0.5">お客様の機密データが外部サーバーや解析基盤に送信されることはありません。完全なプライバシーを保証します。</p>
           </div>
           <div class="p-3 sm:p-3.5 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5">
-            <div class="text-xs font-bold">Edge Accelerated & Offline Ready</div>
-            <p class="text-[11px] opacity-60 mt-0.5">Powered by native browser Web APIs for instant sub-millisecond execution.</p>
+            <div class="text-xs font-bold">Cloudflare Edge 配信 & オフライン対応</div>
+            <p class="text-[11px] opacity-60 mt-0.5">ブラウザ標準の Web API を直接活用することで、1ミリ秒未満の超高速処理を実現しています。</p>
           </div>
         </div>
       </div>
@@ -465,17 +465,17 @@
     if (mode === 'encode') {
       btnModeEnc.className = 'px-3 py-1.5 text-xs rounded-lg font-bold font-mono border border-[#1e2333] hover:border-[#10b981]/50 bg-white/15';
       btnModeDec.className = 'px-3 py-1.5 text-xs rounded-lg font-mono border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10';
-      lblInput.innerText = '入力エリア (Plain Text)';
-      lblOutput.innerText = '出力結果 (Base64)';
+      lblInput.innerText = '入力エリア (プレーンテキスト)';
+      lblOutput.innerText = '出力結果 (Base64 文字列)';
       btnProcessText.innerText = 'Base64 エンコード';
-      inputEl.placeholder = 'Type or paste plain text here...';
+      inputEl.placeholder = 'テキストを入力または貼り付け...';
     } else {
       btnModeDec.className = 'px-3 py-1.5 text-xs rounded-lg font-bold font-mono border border-[#1e2333] hover:border-[#10b981]/50 bg-white/15';
       btnModeEnc.className = 'px-3 py-1.5 text-xs rounded-lg font-mono border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10';
-      lblInput.innerText = '入力エリア (Base64 String)';
-      lblOutput.innerText = '出力結果 (Plain Text)';
+      lblInput.innerText = '入力エリア (Base64 文字列)';
+      lblOutput.innerText = '出力結果 (プレーンテキスト)';
       btnProcessText.innerText = 'Base64 デコード';
-      inputEl.placeholder = 'Paste Base64 encoded string here...';
+      inputEl.placeholder = 'デコード対象の Base64 文字列を貼り付け...';
     }
     processData();
   }
@@ -487,12 +487,12 @@
     const val = inputEl.value;
     if (!val) {
       outputEl.value = '';
-      metIn.innerText = 'Input: 0 chars, 0 bytes';
-      metOut.innerText = 'Output: 0 chars, 0 bytes';
+      metIn.innerText = '入力: {chars} 文字, {bytes} バイト'.replace('{chars}', '0').replace('{bytes}', '0');
+      metOut.innerText = '出力: {chars} 文字, {bytes} バイト'.replace('{chars}', '0').replace('{bytes}', '0');
       return;
     }
     const inBytes = new Blob([val]).size;
-    metIn.innerText = 'Input: ' + val.length + ' chars, ' + inBytes + ' bytes';
+    metIn.innerText = '入力: {chars} 文字, {bytes} バイト'.replace('{chars}', val.length).replace('{bytes}', inBytes);
 
     try {
       let res = '';
@@ -511,31 +511,32 @@
       }
       outputEl.value = res;
       const outBytes = new Blob([res]).size;
-      metOut.innerText = 'Output: ' + res.length + ' chars, ' + outBytes + ' bytes';
-    } catch (e) {
-      outputEl.value = '[Error]: Invalid Base64 string (' + e.message + ')';
+      metOut.innerText = '出力: {chars} 文字, {bytes} バイト'.replace('{chars}', res.length).replace('{bytes}', outBytes);
+    } catch (err) {
+      outputEl.value = '[構文エラー] ' + err.message;
     }
   }
 
-  inputEl.addEventListener('input', processData);
   btnProcess.addEventListener('click', () => {
     processData();
-    if (window.showToast) window.showToast('Processed successfully!');
+    if (window.showToast) window.showToast('正常に変換しました！');
   });
+
+  inputEl.addEventListener('input', processData);
   chkUrlSafe.addEventListener('change', processData);
 
   btnSwap.addEventListener('click', () => {
-    const out = outputEl.value;
-    if (!out || out.startsWith('[Error]')) return;
-    inputEl.value = out;
+    const curOut = outputEl.value;
+    if (!curOut || curOut.startsWith('[構文エラー]')) return;
+    inputEl.value = curOut;
     setMode(mode === 'encode' ? 'decode' : 'encode');
   });
 
   btnSample.addEventListener('click', () => {
     if (mode === 'encode') {
-      inputEl.value = 'Hello world! Powered by ' + "DevZen Tools" + ' (UTF-8: 🚀 安全高效)';
+      inputEl.value = "Hello World! GlobalCoreHub Developer Suite 2026. 🚀";
     } else {
-      inputEl.value = 'SGVsbG8gd29ybGQhIFBvd2VyZWQgYnkgd2VidXRpbCAoVVRGLTg6IPCfmYAg5a6J5YWo6auY5pWIKQ==';
+      inputEl.value = "SGVsbG8gV29ybGQhIEdsb2JhbENvcmVIdWIgRGV2ZWxvcGVyIFN1aXRlIDIwMjYuIPCfmYA=";
     }
     processData();
   });
@@ -543,8 +544,9 @@
   btnClear.addEventListener('click', () => {
     inputEl.value = '';
     outputEl.value = '';
-    metIn.innerText = 'Input: 0 chars, 0 bytes';
-    metOut.innerText = 'Output: 0 chars, 0 bytes';
+    metIn.innerText = '入力: {chars} 文字, {bytes} バイト'.replace('{chars}', '0').replace('{bytes}', '0');
+    metOut.innerText = '出力: {chars} 文字, {bytes} バイト'.replace('{chars}', '0').replace('{bytes}', '0');
+    if (window.showToast) window.showToast('ワークスペースをクリアしました');
   });
 
   btnCopy.addEventListener('click', () => {
@@ -553,6 +555,8 @@
       if (window.showToast) window.showToast('コピー完了！');
     });
   });
+
+  processData();
 })();
 </script>
         
