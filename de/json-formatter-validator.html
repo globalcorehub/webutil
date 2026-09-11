@@ -7,6 +7,9 @@
   <meta name="description" content="JSON-Dateien online formatieren, verschönern, validieren und minimieren. 100% im Browser ausgeführt mit sofortiger Syntaxfehler-Erkennung.">
   <link rel="canonical" href="https://webutil.globalcorehub.com/de/json-formatter-validator">
 
+  <!-- Dynamic Zero-Latency SVG Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2310b981'/><text y='70' x='18' font-size='65' font-family='monospace' font-weight='bold' fill='%230c0e14'>&gt;_</text></svg>">
+
   <!-- International SEO hreflang tags (7 Languages) -->
   <link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/json-formatter-validator" />
   <link rel="alternate" hreflang="zh-CN" href="https://webutil.globalcorehub.com/zh/json-formatter-validator" />
@@ -17,13 +20,18 @@
   <link rel="alternate" hreflang="ja" href="https://webutil.globalcorehub.com/ja/json-formatter-validator" />
   <link rel="alternate" hreflang="x-default" href="https://webutil.globalcorehub.com/json-formatter-validator" />
 
-  <!-- Open Graph / Social -->
+  <!-- Open Graph & Social Cards -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://webutil.globalcorehub.com/de/json-formatter-validator">
   <meta property="og:title" content="JSON Formatierer, Beautifier & Syntax-Validator Online | DevZen Tools">
   <meta property="og:description" content="JSON-Dateien online formatieren, verschönern, validieren und minimieren. 100% im Browser ausgeführt mit sofortiger Syntaxfehler-Erkennung.">
   <meta property="og:site_name" content="DevZen Tools">
   <meta property="og:locale" content="de">
+
+  <!-- Twitter Social Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="JSON Formatierer, Beautifier & Syntax-Validator Online | DevZen Tools">
+  <meta name="twitter:description" content="JSON-Dateien online formatieren, verschönern, validieren und minimieren. 100% im Browser ausgeführt mit sofortiger Syntaxfehler-Erkennung.">
 
   <!-- Theme Specific Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -58,7 +66,7 @@
         
   </style>
 
-  <!-- Structured Data JSON-LD -->
+  <!-- Structured Data JSON-LD (WebApplication) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -75,6 +83,35 @@
     }
   }
   </script>
+  
+  <!-- BreadcrumbList Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Startseite",
+        "item": "/de/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Alle Werkzeuge",
+        "item": "/de/#tools-grid"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "JSON Formatierer, Beautifier & Syntax-Validator Online",
+        "item": "https://webutil.globalcorehub.com/de/json-formatter-validator"
+      }
+    ]
+  }
+  </script>
+  
 
   <!-- Tech Stack Scripts (Alpine.js / Canvas loop / Terminal runtime) -->
   
@@ -222,7 +259,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
           <span class="hidden sm:inline opacity-70">Suchen</span>
-          <kbd class="hidden sm:inline text-[9px] px-1 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50 bg-black/20 font-mono">/</kbd>
+          <kbd class="hidden sm:inline text-[9px] px-1 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50 bg-black/20 font-mono">Ctrl+K</kbd>
         </button>
 
         <!-- 7-Language International Dropdown -->
@@ -345,7 +382,23 @@
   </header>
 
   <!-- Main Content Area -->
-  <main class="flex-grow py-8 px-4 sm:px-6 lg:px-8">
+  <main class="flex-grow py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
+    
+    <!-- Semantic Visual Breadcrumb Navigation -->
+    <nav class="max-w-5xl mx-auto mb-4 sm:mb-6 flex items-center space-x-2 text-xs font-mono opacity-70" aria-label="Breadcrumb">
+      <a href="/de/" class="hover:underline opacity-80 hover:opacity-100 flex items-center space-x-1">
+        <svg class="w-3.5 h-3.5 inline-block opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+        </svg>
+        <span>Startseite</span>
+      </a>
+      <span class="opacity-40">/</span>
+      <a href="/de/#tools-grid" class="hover:underline opacity-80 hover:opacity-100">Alle Werkzeuge</a>
+      <span class="opacity-40">/</span>
+      <span class="font-semibold text-brand truncate max-w-[200px] sm:max-w-xs" aria-current="page">JSON Formatierer, Beautifier & Syntax-Validator Online</span>
+    </nav>
+    
+
     
 <div class="max-w-5xl mx-auto">
   <div class="bg-[#11141d] rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.5)] border border-[#1e2333] hover:border-[#10b981]/50 p-4 sm:p-6 md:p-8">
@@ -542,8 +595,40 @@
   btnCopy.addEventListener('click', () => {
     if (!outputEl.value) return;
     navigator.clipboard.writeText(outputEl.value).then(() => {
+      const origHtml = btnCopy.innerHTML;
+      btnCopy.innerHTML = '<span>✓</span> <span>Kopiert!</span>';
+      setTimeout(() => { btnCopy.innerHTML = origHtml; }, 1500);
       if (window.showToast) window.showToast('Kopiert!');
     });
+  });
+
+  // Native Drag and Drop file upload (.json, .txt)
+  ['dragenter', 'dragover'].forEach(evtName => {
+    inputEl.addEventListener(evtName, (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      inputEl.classList.add('border-emerald-500', 'ring-2', 'ring-emerald-500/30');
+    }, false);
+  });
+  ['dragleave', 'drop'].forEach(evtName => {
+    inputEl.addEventListener(evtName, (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      inputEl.classList.remove('border-emerald-500', 'ring-2', 'ring-emerald-500/30');
+    }, false);
+  });
+  inputEl.addEventListener('drop', (e) => {
+    const dt = e.dataTransfer;
+    if (dt && dt.files && dt.files.length > 0) {
+      const file = dt.files[0];
+      const reader = new FileReader();
+      reader.onload = (readEvt) => {
+        inputEl.value = readEvt.target.result;
+        statsEl.innerText = inputEl.value.length + ' Zeichen';
+        processJSON();
+      };
+      reader.readAsText(file);
+    }
   });
 })();
 </script>
@@ -643,6 +728,13 @@
     </div>
   </footer>
 
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top-btn" type="button" class="fixed bottom-6 right-6 p-2.5 rounded-full bg-[#11141d] border border-[#1e2333] hover:border-[#10b981]/50 shadow-xl opacity-0 pointer-events-none transition-all duration-300 z-40 hover:scale-110 focus:outline-none" aria-label="Back to top" title="Back to top">
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+    </svg>
+  </button>
+
   <script>
   (function() {
     // 0. Tools Dropdown Toggle
@@ -668,6 +760,7 @@
       const searchInput = document.getElementById('tool-search');
       if (searchInput) {
         searchInput.focus();
+        searchInput.select();
         searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } else {
         window.location.href = '/de/#tool-search';
@@ -677,6 +770,33 @@
     const mobileSearchBtn = document.getElementById('mobile-search-trigger');
     if (globalSearchBtn) globalSearchBtn.addEventListener('click', triggerSearchFocus);
     if (mobileSearchBtn) mobileSearchBtn.addEventListener('click', triggerSearchFocus);
+
+    // 0.2 Global Keyboard Shortcuts (Ctrl+K / Cmd+K or /)
+    document.addEventListener('keydown', (e) => {
+      const isSearchShortcut = (e.key.toLowerCase() === 'k' && (e.ctrlKey || e.metaKey)) ||
+                               (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName));
+      if (isSearchShortcut) {
+        e.preventDefault();
+        triggerSearchFocus();
+      }
+    });
+
+    // 0.3 Floating Back to Top Button
+    const bttBtn = document.getElementById('back-to-top-btn');
+    if (bttBtn) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          bttBtn.classList.remove('opacity-0', 'pointer-events-none');
+          bttBtn.classList.add('opacity-90');
+        } else {
+          bttBtn.classList.add('opacity-0', 'pointer-events-none');
+          bttBtn.classList.remove('opacity-90');
+        }
+      }, { passive: true });
+      bttBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
 
     if (window.location.hash === '#tool-search') {
       setTimeout(() => {

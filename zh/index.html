@@ -7,6 +7,9 @@
   <meta name="description" content="专为程序员打造的现代在线工具箱。纯浏览器端毫秒级处理，无数据上传，安全、极速、永久免费。">
   <link rel="canonical" href="https://webutil.globalcorehub.com/zh/">
 
+  <!-- Dynamic Zero-Latency SVG Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2310b981'/><text y='70' x='18' font-size='65' font-family='monospace' font-weight='bold' fill='%230c0e14'>&gt;_</text></svg>">
+
   <!-- International SEO hreflang tags (7 Languages) -->
   <link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/" />
   <link rel="alternate" hreflang="zh-CN" href="https://webutil.globalcorehub.com/zh" />
@@ -17,13 +20,18 @@
   <link rel="alternate" hreflang="ja" href="https://webutil.globalcorehub.com/ja" />
   <link rel="alternate" hreflang="x-default" href="https://webutil.globalcorehub.com/" />
 
-  <!-- Open Graph / Social -->
+  <!-- Open Graph & Social Cards -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://webutil.globalcorehub.com/zh/">
   <meta property="og:title" content="DevZen Tools - 纯前端本地开发者工具箱">
   <meta property="og:description" content="专为程序员打造的现代在线工具箱。纯浏览器端毫秒级处理，无数据上传，安全、极速、永久免费。">
   <meta property="og:site_name" content="DevZen Tools">
   <meta property="og:locale" content="zh-CN">
+
+  <!-- Twitter Social Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DevZen Tools - 纯前端本地开发者工具箱">
+  <meta name="twitter:description" content="专为程序员打造的现代在线工具箱。纯浏览器端毫秒级处理，无数据上传，安全、极速、永久免费。">
 
   <!-- Theme Specific Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -58,7 +66,7 @@
         
   </style>
 
-  <!-- Structured Data JSON-LD -->
+  <!-- Structured Data JSON-LD (WebApplication) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -75,6 +83,7 @@
     }
   }
   </script>
+  
 
   <!-- Tech Stack Scripts (Alpine.js / Canvas loop / Terminal runtime) -->
   
@@ -222,7 +231,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
           <span class="hidden sm:inline opacity-70">搜索</span>
-          <kbd class="hidden sm:inline text-[9px] px-1 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50 bg-black/20 font-mono">/</kbd>
+          <kbd class="hidden sm:inline text-[9px] px-1 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50 bg-black/20 font-mono">Ctrl+K</kbd>
         </button>
 
         <!-- 7-Language International Dropdown -->
@@ -345,7 +354,9 @@
   </header>
 
   <!-- Main Content Area -->
-  <main class="flex-grow py-8 px-4 sm:px-6 lg:px-8">
+  <main class="flex-grow py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
+    
+
     
         <div class="max-w-7xl mx-auto">
           <!-- Hero Banner (Mobile & Desktop Responsive) -->
@@ -371,7 +382,7 @@
               </div>
               <input type="text" id="tool-search" placeholder="按工具名称、长尾关键词或文件格式快速查找... (按 / 聚焦)" class="w-full pl-11 pr-20 py-3 sm:py-3.5 rounded-2xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/10 dark:bg-black/30 text-xs sm:text-sm font-mono focus:outline-none focus:ring-2 focus:ring-emerald-500/50 transition">
               <div class="absolute right-3.5 flex items-center space-x-1.5">
-                <kbd class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-mono rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50 bg-black/20">/</kbd>
+                <kbd class="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-mono rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50 bg-black/20">Ctrl+K</kbd>
                 <button id="btn-clear-search" class="hidden text-xs opacity-60 hover:opacity-100 font-mono px-1">&times;</button>
               </div>
             </div>
@@ -436,9 +447,12 @@
             searchInput.addEventListener('input', filterCards);
 
             document.addEventListener('keydown', e => {
-              if (e.key === '/' && document.activeElement !== searchInput && document.activeElement.tagName !== 'TEXTAREA' && document.activeElement.tagName !== 'INPUT') {
+              const isSearchKey = (e.key === '/' && document.activeElement !== searchInput && document.activeElement.tagName !== 'TEXTAREA' && document.activeElement.tagName !== 'INPUT') ||
+                                  (e.key.toLowerCase() === 'k' && (e.ctrlKey || e.metaKey));
+              if (isSearchKey) {
                 e.preventDefault();
                 searchInput.focus();
+                searchInput.select();
               }
               if (e.key === 'Escape' && document.activeElement === searchInput) {
                 searchInput.value = '';
@@ -560,6 +574,13 @@
     </div>
   </footer>
 
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top-btn" type="button" class="fixed bottom-6 right-6 p-2.5 rounded-full bg-[#11141d] border border-[#1e2333] hover:border-[#10b981]/50 shadow-xl opacity-0 pointer-events-none transition-all duration-300 z-40 hover:scale-110 focus:outline-none" aria-label="Back to top" title="Back to top">
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+    </svg>
+  </button>
+
   <script>
   (function() {
     // 0. Tools Dropdown Toggle
@@ -585,6 +606,7 @@
       const searchInput = document.getElementById('tool-search');
       if (searchInput) {
         searchInput.focus();
+        searchInput.select();
         searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } else {
         window.location.href = '/zh/#tool-search';
@@ -594,6 +616,33 @@
     const mobileSearchBtn = document.getElementById('mobile-search-trigger');
     if (globalSearchBtn) globalSearchBtn.addEventListener('click', triggerSearchFocus);
     if (mobileSearchBtn) mobileSearchBtn.addEventListener('click', triggerSearchFocus);
+
+    // 0.2 Global Keyboard Shortcuts (Ctrl+K / Cmd+K or /)
+    document.addEventListener('keydown', (e) => {
+      const isSearchShortcut = (e.key.toLowerCase() === 'k' && (e.ctrlKey || e.metaKey)) ||
+                               (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName));
+      if (isSearchShortcut) {
+        e.preventDefault();
+        triggerSearchFocus();
+      }
+    });
+
+    // 0.3 Floating Back to Top Button
+    const bttBtn = document.getElementById('back-to-top-btn');
+    if (bttBtn) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          bttBtn.classList.remove('opacity-0', 'pointer-events-none');
+          bttBtn.classList.add('opacity-90');
+        } else {
+          bttBtn.classList.add('opacity-0', 'pointer-events-none');
+          bttBtn.classList.remove('opacity-90');
+        }
+      }, { passive: true });
+      bttBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
 
     if (window.location.hash === '#tool-search') {
       setTimeout(() => {
