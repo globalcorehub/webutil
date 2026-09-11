@@ -1,26 +1,34 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DevZen Tools - Free Online Developer & Web Utility Hub Utilities & Hub | DevZen Tools</title>
-  <meta name="description" content="Welcome to DevZen Tools. Explore our free, client-side Developer & Web Utility Hub tools and games. Fast, responsive, and private.">
+  <title>DevZen Tools - 100% Client-Side Privacy & Instant Execution | DevZen Tools</title>
+  <meta name="description" content="Fast, privacy-focused online developer utilities. 100% browser-based with zero server lag.">
   <link rel="canonical" href="https://webutil.globalcorehub.com/">
 
-  <!-- Open Graph / Facebook -->
+  <!-- International SEO hreflang tags (7 Languages) -->
+  <link rel="alternate" hreflang="x-default" href="https://webutil.globalcorehub.com/">
+  <link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/">
+  <link rel="alternate" hreflang="zh-CN" href="https://webutil.globalcorehub.com/zh/">
+  <link rel="alternate" hreflang="es" href="https://webutil.globalcorehub.com/es/">
+  <link rel="alternate" hreflang="pt" href="https://webutil.globalcorehub.com/pt/">
+  <link rel="alternate" hreflang="de" href="https://webutil.globalcorehub.com/de/">
+  <link rel="alternate" hreflang="fr" href="https://webutil.globalcorehub.com/fr/">
+  <link rel="alternate" hreflang="ja" href="https://webutil.globalcorehub.com/ja/">
+
+  <!-- Open Graph / Social -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://webutil.globalcorehub.com/">
-  <meta property="og:title" content="DevZen Tools - Free Online Developer & Web Utility Hub Utilities & Hub | DevZen Tools">
-  <meta property="og:description" content="Welcome to DevZen Tools. Explore our free, client-side Developer & Web Utility Hub tools and games. Fast, responsive, and private.">
+  <meta property="og:title" content="DevZen Tools - 100% Client-Side Privacy & Instant Execution | DevZen Tools">
+  <meta property="og:description" content="Fast, privacy-focused online developer utilities. 100% browser-based with zero server lag.">
   <meta property="og:site_name" content="DevZen Tools">
+  <meta property="og:locale" content="en">
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://webutil.globalcorehub.com/">
-  <meta property="twitter:title" content="DevZen Tools - Free Online Developer & Web Utility Hub Utilities & Hub">
-  <meta property="twitter:description" content="Welcome to DevZen Tools. Explore our free, client-side Developer & Web Utility Hub tools and games. Fast, responsive, and private.">
+  <!-- Theme Specific Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS -->
+  <!-- Tailwind CSS Core -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -28,21 +36,36 @@
       theme: {
         extend: {
           colors: {
-            brand: { 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca' }
+            brand: '#10b981'
           }
         }
       }
     }
   </script>
 
+  <!-- Theme Specific Styles -->
+  <style>
+    body { font-family: 'JetBrains Mono', monospace; }
+    
+        pre, code, kbd { font-family: 'JetBrains Mono', monospace; }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #0c0e14; }
+        ::-webkit-scrollbar-thumb { background: #1e2333; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #10b981; }
+        .terminal-dot-red { background-color: #ff5f56; }
+        .terminal-dot-yellow { background-color: #ffbd2e; }
+        .terminal-dot-green { background-color: #27c93f; }
+        
+  </style>
+
   <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "DevZen Tools - Free Online Developer & Web Utility Hub Utilities & Hub",
+    "name": "DevZen Tools - 100% Client-Side Privacy & Instant Execution",
     "url": "https://webutil.globalcorehub.com/",
-    "description": "Welcome to DevZen Tools. Explore our free, client-side Developer & Web Utility Hub tools and games. Fast, responsive, and private.",
+    "description": "Fast, privacy-focused online developer utilities. 100% browser-based with zero server lag.",
     "applicationCategory": "UtilitiesApplication",
     "operatingSystem": "All",
     "offers": {
@@ -52,42 +75,115 @@
     }
   }
   </script>
+
+  <!-- Tech Stack Scripts (Alpine.js / Canvas loop / Terminal runtime) -->
+  
+        <script>
+        // Terminal Keyboard Shortcut (Ctrl+K or /) & Toast Notification Runtime
+        window.showToast = function(msg) {
+            const toast = document.createElement('div');
+            toast.className = 'fixed bottom-6 right-6 z-50 bg-[#10b981] text-black font-mono text-xs px-4 py-2.5 rounded-lg shadow-2xl font-bold flex items-center space-x-2 animate-bounce';
+            toast.innerHTML = '<span>></span><span>' + msg + '</span>';
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 2500);
+        };
+        </script>
+        
 </head>
-<body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-sans transition-colors duration-200">
+<body class="bg-[#0c0e14] text-[#e2e8f0] min-h-screen flex flex-col transition-colors duration-200">
+
+  
 
   <!-- Header Navigation -->
-  <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800">
+  <header class="sticky top-0 z-50 bg-[#11141d]/90 backdrop-blur-md border-b border-[#1e2333]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <a href="/" class="flex items-center space-x-3 group">
-        <div class="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center text-white font-bold text-xl shadow-md group-hover:scale-105 transition transform">
-          D
+      
+      <div class="flex items-center space-x-3">
+        
+        <div class="flex items-center space-x-1.5 mr-2">
+          <span class="w-3 h-3 rounded-full terminal-dot-red inline-block"></span>
+          <span class="w-3 h-3 rounded-full terminal-dot-yellow inline-block"></span>
+          <span class="w-3 h-3 rounded-full terminal-dot-green inline-block"></span>
         </div>
-        <span class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-violet-500 bg-clip-text text-transparent">
-          DevZen Tools
-        </span>
-      </a>
+        
 
+        <a href="/" class="flex items-center space-x-3 group">
+          <div class="w-9 h-9 rounded-lg flex items-center justify-center font-black text-lg bg-[#10b981] hover:bg-[#059669] text-black font-bold tracking-tight shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+            D
+          </div>
+          <span class="text-lg font-extrabold tracking-tight">
+            DevZen Tools
+          </span>
+        </a>
+      </div>
+
+      <!-- Navigation Links -->
       <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
-        <a href="/" class="text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Home</a>
+        <a href="/" class="hover:opacity-80 transition opacity-90">Home</a>
         
-        <a href="/developer-web-utility-hub-free-online" class="text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Developer & Web Utility </a>
+        <a href="/json-formatter-validator" class="hover:opacity-80 transition opacity-70 hover:opacity-100 truncate max-w-[160px]">JSON Formatter & Valid</a>
         
-        <a href="/developer-web-utility-hub-without-watermark" class="text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Developer & Web Utility </a>
+        <a href="/base64-encoder-decoder" class="hover:opacity-80 transition opacity-70 hover:opacity-100 truncate max-w-[160px]">Base64 Encoder & Decod</a>
         
-        <a href="/developer-web-utility-hub-validator-2" class="text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Developer & Web Utility </a>
+        <a href="/regex-tester-debugger" class="hover:opacity-80 transition opacity-70 hover:opacity-100 truncate max-w-[160px]">Regular Expression (Re</a>
         
-        <a href="/developer-web-utility-hub-instant-3" class="text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Developer & Web Utility </a>
+        <a href="/jwt-token-decoder" class="hover:opacity-80 transition opacity-70 hover:opacity-100 truncate max-w-[160px]">JWT Token Decoder & In</a>
         
-        <a href="/developer-web-utility-hub-open-source-3" class="text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Developer & Web Utility </a>
+        <a href="/hash-generator-md5-sha256" class="hover:opacity-80 transition opacity-70 hover:opacity-100 truncate max-w-[160px]">Cryptographic Hash Gen</a>
         
       </nav>
 
+      <!-- Action Items & Language Selector -->
       <div class="flex items-center space-x-3">
-        <button id="theme-toggle" class="p-2 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
-          ??
-        </button>
-        <a href="/" class="px-4 py-2 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl shadow transition">
-          All Tools
+        <!-- 7-Language International Dropdown -->
+        <div class="relative inline-block text-left" id="lang-container">
+          <button id="lang-toggle-btn" type="button" class="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-lg text-xs font-mono border border-[#1e2333] hover:border-[#10b981]/50 hover:opacity-90 transition bg-black/20">
+            <span>[EN]</span>
+            <span class="font-bold">EN</span>
+            <span class="text-[9px] opacity-60">&darr;</span>
+          </button>
+          <div id="lang-dropdown-menu" class="hidden absolute right-0 mt-2 w-36 rounded-xl bg-[#11141d] border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] z-50 py-1.5 font-mono text-xs shadow-2xl">
+            
+            <a href="/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition font-bold text-emerald-400">
+              <span>[EN] English</span>
+              <span class="text-[10px] opacity-50 uppercase">en</span>
+            </a>
+            
+            <a href="/zh/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
+              <span>[ZH] 简体中文</span>
+              <span class="text-[10px] opacity-50 uppercase">zh</span>
+            </a>
+            
+            <a href="/es/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
+              <span>[ES] Español</span>
+              <span class="text-[10px] opacity-50 uppercase">es</span>
+            </a>
+            
+            <a href="/pt/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
+              <span>[PT] Português</span>
+              <span class="text-[10px] opacity-50 uppercase">pt</span>
+            </a>
+            
+            <a href="/de/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
+              <span>[DE] Deutsch</span>
+              <span class="text-[10px] opacity-50 uppercase">de</span>
+            </a>
+            
+            <a href="/fr/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
+              <span>[FR] Français</span>
+              <span class="text-[10px] opacity-50 uppercase">fr</span>
+            </a>
+            
+            <a href="/ja/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
+              <span>[JA] 日本語</span>
+              <span class="text-[10px] opacity-50 uppercase">ja</span>
+            </a>
+            
+          </div>
+        </div>
+
+        <a href="/" class="px-3.5 py-1.5 text-xs font-bold rounded-lg transition bg-[#10b981] hover:bg-[#059669] text-black font-bold tracking-tight shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+          Browse All
         </a>
       </div>
     </div>
@@ -99,169 +195,103 @@
         <div class="max-w-7xl mx-auto">
           <!-- Hero Banner -->
           <div class="text-center py-12 md:py-20">
-            <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800/60 text-indigo-600 dark:text-indigo-400 text-xs font-semibold mb-6">
-              <span>?? 100% Free ? Client-Side ? Zero Latency</span>
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs font-mono mb-6">
+              <span>100% Client-Side Privacy & Instant Execution</span>
             </div>
-            <h1 class="text-4xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tight">
-              Essential <span class="bg-gradient-to-r from-indigo-600 to-violet-500 bg-clip-text text-transparent">Developer & Web Utility Hub</span> Online
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
+              DevZen Tools
             </h1>
-            <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-500 dark:text-slate-400">
-              Powerful, instant utilities and interactive games designed for creators, developers, and productivity enthusiasts. Covering over 200+ specialized search solutions.
+            <p class="max-w-2xl mx-auto text-sm md:text-base opacity-75 leading-relaxed">
+              Fast, privacy-focused online developer utilities. 100% browser-based with zero server lag.
             </p>
           </div>
 
-          <!-- Grid of Tools / Modules -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            <a href="/developer-web-utility-hub-free-online" class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-indigo-500/50 transition-all flex flex-col justify-between group"><div><div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-2xl font-bold mb-4 group-hover:scale-110 transition transform">?</div><h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition mb-2">Developer & Web Utility Hub Free Online - Free Online Tool</h3><p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2 mb-4">Use the best online Developer & Web Utility Hub free online tool. Fast, accurate, and completely free in your browser.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub best</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub fast</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub instant</span></div><div class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 flex items-center space-x-1 group-hover:translate-x-1 transition transform"><span>Open Tool</span><span>?</span></div></div></a>
-<a href="/developer-web-utility-hub-without-watermark" class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-indigo-500/50 transition-all flex flex-col justify-between group"><div><div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-2xl font-bold mb-4 group-hover:scale-110 transition transform">?</div><h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition mb-2">Developer & Web Utility Hub Without Watermark - Free Online Tool</h3><p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2 mb-4">Use the best online Developer & Web Utility Hub without watermark tool. Fast, accurate, and completely free in your browser.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub for beginners</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub interactive</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub open source</span></div><div class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 flex items-center space-x-1 group-hover:translate-x-1 transition transform"><span>Open Tool</span><span>?</span></div></div></a>
-<a href="/developer-web-utility-hub-validator-2" class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-indigo-500/50 transition-all flex flex-col justify-between group"><div><div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-2xl font-bold mb-4 group-hover:scale-110 transition transform">?</div><h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition mb-2">Developer & Web Utility Hub Validator 2 - Free Online Tool</h3><p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2 mb-4">Use the best online Developer & Web Utility Hub validator 2 tool. Fast, accurate, and completely free in your browser.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub viewer 2</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub simple 2</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub how to use 2</span></div><div class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 flex items-center space-x-1 group-hover:translate-x-1 transition transform"><span>Open Tool</span><span>?</span></div></div></a>
-<a href="/developer-web-utility-hub-instant-3" class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-indigo-500/50 transition-all flex flex-col justify-between group"><div><div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-2xl font-bold mb-4 group-hover:scale-110 transition transform">?</div><h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition mb-2">Developer & Web Utility Hub Instant 3 - Free Online Tool</h3><p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2 mb-4">Use the best online Developer & Web Utility Hub instant 3 tool. Fast, accurate, and completely free in your browser.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub calculator 3</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub generator 3</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub converter 3</span></div><div class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 flex items-center space-x-1 group-hover:translate-x-1 transition transform"><span>Open Tool</span><span>?</span></div></div></a>
-<a href="/developer-web-utility-hub-open-source-3" class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-indigo-500/50 transition-all flex flex-col justify-between group"><div><div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-2xl font-bold mb-4 group-hover:scale-110 transition transform">?</div><h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition mb-2">Developer & Web Utility Hub Open Source 3 - Free Online Tool</h3><p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2 mb-4">Use the best online Developer & Web Utility Hub open source 3 tool. Fast, accurate, and completely free in your browser.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub tips 3</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub vs alternatives 3</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub free online 4</span></div><div class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 flex items-center space-x-1 group-hover:translate-x-1 transition transform"><span>Open Tool</span><span>?</span></div></div></a>
-<a href="/developer-web-utility-hub-how-to-use-4" class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-indigo-500/50 transition-all flex flex-col justify-between group"><div><div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-2xl font-bold mb-4 group-hover:scale-110 transition transform">?</div><h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition mb-2">Developer & Web Utility Hub How To Use 4 - Free Online Tool</h3><p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2 mb-4">Use the best online Developer & Web Utility Hub how to use 4 tool. Fast, accurate, and completely free in your browser.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub guide 4</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub download 4</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub without watermark 4</span></div><div class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 flex items-center space-x-1 group-hover:translate-x-1 transition transform"><span>Open Tool</span><span>?</span></div></div></a>
-<a href="/developer-web-utility-hub-converter-5" class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-indigo-500/50 transition-all flex flex-col justify-between group"><div><div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-2xl font-bold mb-4 group-hover:scale-110 transition transform">?</div><h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition mb-2">Developer & Web Utility Hub Converter 5 - Free Online Tool</h3><p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2 mb-4">Use the best online Developer & Web Utility Hub converter 5 tool. Fast, accurate, and completely free in your browser.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub checker 5</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub formatter 5</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub validator 5</span></div><div class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 flex items-center space-x-1 group-hover:translate-x-1 transition transform"><span>Open Tool</span><span>?</span></div></div></a>
-<a href="/developer-web-utility-hub-free-online-6" class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-indigo-500/50 transition-all flex flex-col justify-between group"><div><div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-2xl font-bold mb-4 group-hover:scale-110 transition transform">?</div><h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition mb-2">Developer & Web Utility Hub Free Online 6 - Free Online Tool</h3><p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2 mb-4">Use the best online Developer & Web Utility Hub free online 6 tool. Fast, accurate, and completely free in your browser.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub best 6</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub fast 6</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub instant 6</span></div><div class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 flex items-center space-x-1 group-hover:translate-x-1 transition transform"><span>Open Tool</span><span>?</span></div></div></a>
-<a href="/developer-web-utility-hub-without-watermark-6" class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-indigo-500/50 transition-all flex flex-col justify-between group"><div><div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-2xl font-bold mb-4 group-hover:scale-110 transition transform">?</div><h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition mb-2">Developer & Web Utility Hub Without Watermark 6 - Free Online Tool</h3><p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2 mb-4">Use the best online Developer & Web Utility Hub without watermark 6 tool. Fast, accurate, and completely free in your browser.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub for beginners 6</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub interactive 6</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub open source 6</span></div><div class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 flex items-center space-x-1 group-hover:translate-x-1 transition transform"><span>Open Tool</span><span>?</span></div></div></a>
-<a href="/developer-web-utility-hub-validator-7" class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-indigo-500/50 transition-all flex flex-col justify-between group"><div><div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-2xl font-bold mb-4 group-hover:scale-110 transition transform">?</div><h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition mb-2">Developer & Web Utility Hub Validator 7 - Free Online Tool</h3><p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2 mb-4">Use the best online Developer & Web Utility Hub validator 7 tool. Fast, accurate, and completely free in your browser.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub viewer 7</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub simple 7</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub how to use 7</span></div><div class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 flex items-center space-x-1 group-hover:translate-x-1 transition transform"><span>Open Tool</span><span>?</span></div></div></a>
-<a href="/developer-web-utility-hub-instant-8" class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-indigo-500/50 transition-all flex flex-col justify-between group"><div><div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-2xl font-bold mb-4 group-hover:scale-110 transition transform">?</div><h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition mb-2">Developer & Web Utility Hub Instant 8 - Free Online Tool</h3><p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2 mb-4">Use the best online Developer & Web Utility Hub instant 8 tool. Fast, accurate, and completely free in your browser.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub calculator 8</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub generator 8</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub converter 8</span></div><div class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 flex items-center space-x-1 group-hover:translate-x-1 transition transform"><span>Open Tool</span><span>?</span></div></div></a>
-<a href="/developer-web-utility-hub-open-source-8" class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-indigo-500/50 transition-all flex flex-col justify-between group"><div><div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-2xl font-bold mb-4 group-hover:scale-110 transition transform">?</div><h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition mb-2">Developer & Web Utility Hub Open Source 8 - Free Online Tool</h3><p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2 mb-4">Use the best online Developer & Web Utility Hub open source 8 tool. Fast, accurate, and completely free in your browser.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub tips 8</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub vs alternatives 8</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub free online 9</span></div><div class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 flex items-center space-x-1 group-hover:translate-x-1 transition transform"><span>Open Tool</span><span>?</span></div></div></a>
-<a href="/developer-web-utility-hub-how-to-use-9" class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-indigo-500/50 transition-all flex flex-col justify-between group"><div><div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-2xl font-bold mb-4 group-hover:scale-110 transition transform">?</div><h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition mb-2">Developer & Web Utility Hub How To Use 9 - Free Online Tool</h3><p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2 mb-4">Use the best online Developer & Web Utility Hub how to use 9 tool. Fast, accurate, and completely free in your browser.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub guide 9</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub download 9</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub without watermark 9</span></div><div class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 flex items-center space-x-1 group-hover:translate-x-1 transition transform"><span>Open Tool</span><span>?</span></div></div></a>
-<a href="/developer-web-utility-hub-converter-10" class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-indigo-500/50 transition-all flex flex-col justify-between group"><div><div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-2xl font-bold mb-4 group-hover:scale-110 transition transform">?</div><h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition mb-2">Developer & Web Utility Hub Converter 10 - Free Online Tool</h3><p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2 mb-4">Use the best online Developer & Web Utility Hub converter 10 tool. Fast, accurate, and completely free in your browser.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub checker 10</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub formatter 10</span><span class='inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 text-xs px-2 py-0.5 rounded-md mr-1.5 mb-1.5'>#Developer & Web Utility Hub validator 10</span></div><div class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 flex items-center space-x-1 group-hover:translate-x-1 transition transform"><span>Open Tool</span><span>?</span></div></div></a>
+          <!-- Grid of Tools -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-16">
+            <a href="/json-formatter-validator" class="bg-[#11141d] rounded-xl p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-4"><span class="text-xs font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-xs opacity-50 font-mono">100% Local</span></div><h3 class="text-lg font-bold group-hover:underline transition mb-2">JSON Formatter & Validator Online</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Format, beautify, validate, and minify JSON payloads with syntax highlighting and instant error detection.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#json beautifier</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#json validator online</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#minify json</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>Launch Tool</span><span>&rarr;</span></div></div></a>
+<a href="/base64-encoder-decoder" class="bg-[#11141d] rounded-xl p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-4"><span class="text-xs font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-xs opacity-50 font-mono">100% Local</span></div><h3 class="text-lg font-bold group-hover:underline transition mb-2">Base64 Encoder & Decoder Tool</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Encode plain text and UTF-8 characters to Base64 or decode Base64 strings instantly with zero server lag.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#base64 decoder</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#base64 to text</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#encode string base64</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>Launch Tool</span><span>&rarr;</span></div></div></a>
+<a href="/regex-tester-debugger" class="bg-[#11141d] rounded-xl p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-4"><span class="text-xs font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-xs opacity-50 font-mono">100% Local</span></div><h3 class="text-lg font-bold group-hover:underline transition mb-2">Regular Expression (RegEx) Tester & Builder</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Test, debug, and optimize regular expressions in real-time with capture groups and multi-flag regex support.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#regex debugger</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#regular expression online</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#test regex javascript</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>Launch Tool</span><span>&rarr;</span></div></div></a>
+<a href="/jwt-token-decoder" class="bg-[#11141d] rounded-xl p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-4"><span class="text-xs font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-xs opacity-50 font-mono">100% Local</span></div><h3 class="text-lg font-bold group-hover:underline transition mb-2">JWT Token Decoder & Inspector</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Inspect header, payload claims, and expiration timestamps of JSON Web Tokens without disclosing private secrets.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#decode jwt online</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#inspect jwt token</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#json web token viewer</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>Launch Tool</span><span>&rarr;</span></div></div></a>
+<a href="/hash-generator-md5-sha256" class="bg-[#11141d] rounded-xl p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-4"><span class="text-xs font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-xs opacity-50 font-mono">100% Local</span></div><h3 class="text-lg font-bold group-hover:underline transition mb-2">Cryptographic Hash Generator (MD5, SHA-256, SHA-512)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Compute cryptographic message digests using MD5, SHA-1, SHA-256, and SHA-512 directly with Web Crypto API.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#sha256 generator online</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#md5 hash online</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#sha512 calculator</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>Launch Tool</span><span>&rarr;</span></div></div></a>
+<a href="/unix-timestamp-epoch-converter" class="bg-[#11141d] rounded-xl p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-4"><span class="text-xs font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-xs opacity-50 font-mono">100% Local</span></div><h3 class="text-lg font-bold group-hover:underline transition mb-2">Unix Timestamp & Epoch Time Converter</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Convert Unix epoch timestamps in seconds or milliseconds to human-readable ISO-8601 dates and vice versa.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#epoch converter</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#timestamp to date</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#epoch time to utc</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>Launch Tool</span><span>&rarr;</span></div></div></a>
+<a href="/uuid-guid-v4-generator" class="bg-[#11141d] rounded-xl p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-4"><span class="text-xs font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-xs opacity-50 font-mono">100% Local</span></div><h3 class="text-lg font-bold group-hover:underline transition mb-2">UUID / GUID v4 Bulk Generator Online</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Generate cryptographically strong random UUID v4 and GUID identifiers in bulk with uppercase or lowercase formatting.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#guid generator online</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#uuid v4 bulk</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#random uuid</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>Launch Tool</span><span>&rarr;</span></div></div></a>
           </div>
         </div>
         
   </main>
 
-  <!-- Internal Linking / Related Modules Matrix -->
-  <section class="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 py-12 px-4 sm:px-6 lg:px-8">
+  <!-- Internal Linking Matrix -->
+  <section class="border-t border-[#1e2333] py-12 px-4 sm:px-6 lg:px-8 opacity-95">
     <div class="max-w-7xl mx-auto">
-      <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-6 flex items-center space-x-2">
-        <span>?? Explore Related Keyword Pages & Tools</span>
-      </h3>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="text-sm font-bold uppercase tracking-wider opacity-80 font-mono">
+          [+] Global Utility Matrix & Pillar Tools
+        </h3>
+        <span class="text-xs opacity-60 font-mono">7 All Tools</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
         
-        <a href="/developer-web-utility-hub-free-online" class="p-4 rounded-xl border border-slate-100 dark:border-slate-800/80 hover:border-indigo-500/50 hover:bg-indigo-50/20 dark:hover:bg-indigo-950/20 transition group">
-          <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
-            Developer & Web Utility Hub Free Online - Free Online Tool
+        <a href="/json-formatter-validator" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+          <div class="text-xs font-bold truncate group-hover:underline">
+            JSON Formatter & Validator Online
           </div>
-          <p class="text-xs text-slate-400 mt-1 line-clamp-2">
-            Use the best online Developer & Web Utility Hub free online tool. Fast, accurate, and completely free in your browser.
+          <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
+            Format, beautify, validate, and minify JSON payloads with syntax highlighting and instant error detection.
           </p>
         </a>
         
-        <a href="/developer-web-utility-hub-without-watermark" class="p-4 rounded-xl border border-slate-100 dark:border-slate-800/80 hover:border-indigo-500/50 hover:bg-indigo-50/20 dark:hover:bg-indigo-950/20 transition group">
-          <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
-            Developer & Web Utility Hub Without Watermark - Free Online Tool
+        <a href="/base64-encoder-decoder" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+          <div class="text-xs font-bold truncate group-hover:underline">
+            Base64 Encoder & Decoder Tool
           </div>
-          <p class="text-xs text-slate-400 mt-1 line-clamp-2">
-            Use the best online Developer & Web Utility Hub without watermark tool. Fast, accurate, and completely free in your browser.
+          <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
+            Encode plain text and UTF-8 characters to Base64 or decode Base64 strings instantly with zero server lag.
           </p>
         </a>
         
-        <a href="/developer-web-utility-hub-validator-2" class="p-4 rounded-xl border border-slate-100 dark:border-slate-800/80 hover:border-indigo-500/50 hover:bg-indigo-50/20 dark:hover:bg-indigo-950/20 transition group">
-          <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
-            Developer & Web Utility Hub Validator 2 - Free Online Tool
+        <a href="/regex-tester-debugger" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+          <div class="text-xs font-bold truncate group-hover:underline">
+            Regular Expression (RegEx) Tester & Builder
           </div>
-          <p class="text-xs text-slate-400 mt-1 line-clamp-2">
-            Use the best online Developer & Web Utility Hub validator 2 tool. Fast, accurate, and completely free in your browser.
+          <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
+            Test, debug, and optimize regular expressions in real-time with capture groups and multi-flag regex support.
           </p>
         </a>
         
-        <a href="/developer-web-utility-hub-instant-3" class="p-4 rounded-xl border border-slate-100 dark:border-slate-800/80 hover:border-indigo-500/50 hover:bg-indigo-50/20 dark:hover:bg-indigo-950/20 transition group">
-          <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
-            Developer & Web Utility Hub Instant 3 - Free Online Tool
+        <a href="/jwt-token-decoder" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+          <div class="text-xs font-bold truncate group-hover:underline">
+            JWT Token Decoder & Inspector
           </div>
-          <p class="text-xs text-slate-400 mt-1 line-clamp-2">
-            Use the best online Developer & Web Utility Hub instant 3 tool. Fast, accurate, and completely free in your browser.
+          <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
+            Inspect header, payload claims, and expiration timestamps of JSON Web Tokens without disclosing private secrets.
           </p>
         </a>
         
-        <a href="/developer-web-utility-hub-open-source-3" class="p-4 rounded-xl border border-slate-100 dark:border-slate-800/80 hover:border-indigo-500/50 hover:bg-indigo-50/20 dark:hover:bg-indigo-950/20 transition group">
-          <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
-            Developer & Web Utility Hub Open Source 3 - Free Online Tool
+        <a href="/hash-generator-md5-sha256" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+          <div class="text-xs font-bold truncate group-hover:underline">
+            Cryptographic Hash Generator (MD5, SHA-256, SHA-512)
           </div>
-          <p class="text-xs text-slate-400 mt-1 line-clamp-2">
-            Use the best online Developer & Web Utility Hub open source 3 tool. Fast, accurate, and completely free in your browser.
+          <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
+            Compute cryptographic message digests using MD5, SHA-1, SHA-256, and SHA-512 directly with Web Crypto API.
           </p>
         </a>
         
-        <a href="/developer-web-utility-hub-how-to-use-4" class="p-4 rounded-xl border border-slate-100 dark:border-slate-800/80 hover:border-indigo-500/50 hover:bg-indigo-50/20 dark:hover:bg-indigo-950/20 transition group">
-          <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
-            Developer & Web Utility Hub How To Use 4 - Free Online Tool
+        <a href="/unix-timestamp-epoch-converter" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+          <div class="text-xs font-bold truncate group-hover:underline">
+            Unix Timestamp & Epoch Time Converter
           </div>
-          <p class="text-xs text-slate-400 mt-1 line-clamp-2">
-            Use the best online Developer & Web Utility Hub how to use 4 tool. Fast, accurate, and completely free in your browser.
+          <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
+            Convert Unix epoch timestamps in seconds or milliseconds to human-readable ISO-8601 dates and vice versa.
           </p>
         </a>
         
-        <a href="/developer-web-utility-hub-converter-5" class="p-4 rounded-xl border border-slate-100 dark:border-slate-800/80 hover:border-indigo-500/50 hover:bg-indigo-50/20 dark:hover:bg-indigo-950/20 transition group">
-          <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
-            Developer & Web Utility Hub Converter 5 - Free Online Tool
+        <a href="/uuid-guid-v4-generator" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+          <div class="text-xs font-bold truncate group-hover:underline">
+            UUID / GUID v4 Bulk Generator Online
           </div>
-          <p class="text-xs text-slate-400 mt-1 line-clamp-2">
-            Use the best online Developer & Web Utility Hub converter 5 tool. Fast, accurate, and completely free in your browser.
-          </p>
-        </a>
-        
-        <a href="/developer-web-utility-hub-free-online-6" class="p-4 rounded-xl border border-slate-100 dark:border-slate-800/80 hover:border-indigo-500/50 hover:bg-indigo-50/20 dark:hover:bg-indigo-950/20 transition group">
-          <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
-            Developer & Web Utility Hub Free Online 6 - Free Online Tool
-          </div>
-          <p class="text-xs text-slate-400 mt-1 line-clamp-2">
-            Use the best online Developer & Web Utility Hub free online 6 tool. Fast, accurate, and completely free in your browser.
-          </p>
-        </a>
-        
-        <a href="/developer-web-utility-hub-without-watermark-6" class="p-4 rounded-xl border border-slate-100 dark:border-slate-800/80 hover:border-indigo-500/50 hover:bg-indigo-50/20 dark:hover:bg-indigo-950/20 transition group">
-          <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
-            Developer & Web Utility Hub Without Watermark 6 - Free Online Tool
-          </div>
-          <p class="text-xs text-slate-400 mt-1 line-clamp-2">
-            Use the best online Developer & Web Utility Hub without watermark 6 tool. Fast, accurate, and completely free in your browser.
-          </p>
-        </a>
-        
-        <a href="/developer-web-utility-hub-validator-7" class="p-4 rounded-xl border border-slate-100 dark:border-slate-800/80 hover:border-indigo-500/50 hover:bg-indigo-50/20 dark:hover:bg-indigo-950/20 transition group">
-          <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
-            Developer & Web Utility Hub Validator 7 - Free Online Tool
-          </div>
-          <p class="text-xs text-slate-400 mt-1 line-clamp-2">
-            Use the best online Developer & Web Utility Hub validator 7 tool. Fast, accurate, and completely free in your browser.
-          </p>
-        </a>
-        
-        <a href="/developer-web-utility-hub-instant-8" class="p-4 rounded-xl border border-slate-100 dark:border-slate-800/80 hover:border-indigo-500/50 hover:bg-indigo-50/20 dark:hover:bg-indigo-950/20 transition group">
-          <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
-            Developer & Web Utility Hub Instant 8 - Free Online Tool
-          </div>
-          <p class="text-xs text-slate-400 mt-1 line-clamp-2">
-            Use the best online Developer & Web Utility Hub instant 8 tool. Fast, accurate, and completely free in your browser.
-          </p>
-        </a>
-        
-        <a href="/developer-web-utility-hub-open-source-8" class="p-4 rounded-xl border border-slate-100 dark:border-slate-800/80 hover:border-indigo-500/50 hover:bg-indigo-50/20 dark:hover:bg-indigo-950/20 transition group">
-          <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
-            Developer & Web Utility Hub Open Source 8 - Free Online Tool
-          </div>
-          <p class="text-xs text-slate-400 mt-1 line-clamp-2">
-            Use the best online Developer & Web Utility Hub open source 8 tool. Fast, accurate, and completely free in your browser.
-          </p>
-        </a>
-        
-        <a href="/developer-web-utility-hub-how-to-use-9" class="p-4 rounded-xl border border-slate-100 dark:border-slate-800/80 hover:border-indigo-500/50 hover:bg-indigo-50/20 dark:hover:bg-indigo-950/20 transition group">
-          <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
-            Developer & Web Utility Hub How To Use 9 - Free Online Tool
-          </div>
-          <p class="text-xs text-slate-400 mt-1 line-clamp-2">
-            Use the best online Developer & Web Utility Hub how to use 9 tool. Fast, accurate, and completely free in your browser.
-          </p>
-        </a>
-        
-        <a href="/developer-web-utility-hub-converter-10" class="p-4 rounded-xl border border-slate-100 dark:border-slate-800/80 hover:border-indigo-500/50 hover:bg-indigo-50/20 dark:hover:bg-indigo-950/20 transition group">
-          <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
-            Developer & Web Utility Hub Converter 10 - Free Online Tool
-          </div>
-          <p class="text-xs text-slate-400 mt-1 line-clamp-2">
-            Use the best online Developer & Web Utility Hub converter 10 tool. Fast, accurate, and completely free in your browser.
+          <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
+            Generate cryptographically strong random UUID v4 and GUID identifiers in bulk with uppercase or lowercase formatting.
           </p>
         </a>
         
@@ -270,39 +300,33 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-slate-900 text-slate-400 border-t border-slate-800 py-8 text-center text-xs">
+  <footer class="border-t border-[#1e2333] py-8 text-center text-xs opacity-75">
     <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
       <div>
-        ? 2026 <strong>DevZen Tools</strong>. Fast, Client-Side & Free forever.
+        &copy; 2026 <strong>DevZen Tools</strong>. Fast, Client-Side Privacy & Edge Accelerated.
       </div>
-      <div class="flex space-x-4">
-        <a href="/sitemap.xml" class="hover:text-white transition">Sitemap</a>
-        <a href="/robots.txt" class="hover:text-white transition">Robots.txt</a>
-        <a href="https://globalcorehub.com" target="_blank" class="hover:text-white transition">GlobalCoreHub</a>
+      <div class="flex space-x-4 font-mono text-[11px]">
+        <a href="/sitemap.xml" class="hover:underline">sitemap.xml</a>
+        <a href="/robots.txt" class="hover:underline">robots.txt</a>
+        <a href="https://globalcorehub.com" target="_blank" class="hover:underline">globalcorehub</a>
       </div>
     </div>
   </footer>
 
   <script>
-    const themeBtn = document.getElementById('theme-toggle');
-    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark');
-      themeBtn.innerText = '??';
-    } else {
-      document.documentElement.classList.remove('dark');
-      themeBtn.innerText = '??';
+  (function() {
+    const btn = document.getElementById('lang-toggle-btn');
+    const menu = document.getElementById('lang-dropdown-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        menu.classList.toggle('hidden');
+      });
+      document.addEventListener('click', () => {
+        if (!menu.classList.contains('hidden')) menu.classList.add('hidden');
+      });
     }
-    themeBtn.addEventListener('click', () => {
-      if (document.documentElement.classList.contains('dark')) {
-        document.documentElement.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-        themeBtn.innerText = '??';
-      } else {
-        document.documentElement.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-        themeBtn.innerText = '??';
-      }
-    });
+  })();
   </script>
 </body>
 </html>

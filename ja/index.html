@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevZen Tools - 完全クライアント側処理 & 高速プライベート環境 | DevZen Tools</title>
+  <meta name="description" content="Webエンジニアのための高機能オンライン開発者ツール。サーバー送信なし、完全無料・安全に利用可能。">
+  <link rel="canonical" href="https://webutil.globalcorehub.com/ja/">
+
+  <!-- International SEO hreflang tags (7 Languages) -->
+  <link rel="alternate" hreflang="x-default" href="https://webutil.globalcorehub.com/">
+  <link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/">
+  <link rel="alternate" hreflang="zh-CN" href="https://webutil.globalcorehub.com/zh/">
+  <link rel="alternate" hreflang="es" href="https://webutil.globalcorehub.com/es/">
+  <link rel="alternate" hreflang="pt" href="https://webutil.globalcorehub.com/pt/">
+  <link rel="alternate" hreflang="de" href="https://webutil.globalcorehub.com/de/">
+  <link rel="alternate" hreflang="fr" href="https://webutil.globalcorehub.com/fr/">
+  <link rel="alternate" hreflang="ja" href="https://webutil.globalcorehub.com/ja/">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://webutil.globalcorehub.com/ja/">
+  <meta property="og:title" content="DevZen Tools - 完全クライアント側処理 & 高速プライベート環境 | DevZen Tools">
+  <meta property="og:description" content="Webエンジニアのための高機能オンライン開発者ツール。サーバー送信なし、完全無料・安全に利用可能。">
+  <meta property="og:site_name" content="DevZen Tools">
+  <meta property="og:locale" content="ja">
+
+  <!-- Theme Specific Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS Core -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: '#10b981'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Theme Specific Styles -->
+  <style>
+    body { font-family: 'JetBrains Mono', monospace; }
+    
+        pre, code, kbd { font-family: 'JetBrains Mono', monospace; }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #0c0e14; }
+        ::-webkit-scrollbar-thumb { background: #1e2333; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #10b981; }
+        .terminal-dot-red { background-color: #ff5f56; }
+        .terminal-dot-yellow { background-color: #ffbd2e; }
+        .terminal-dot-green { background-color: #27c93f; }
+        
+  </style>
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "DevZen Tools - 完全クライアント側処理 & 高速プライベート環境",
+    "url": "https://webutil.globalcorehub.com/ja/",
+    "description": "Webエンジニアのための高機能オンライン開発者ツール。サーバー送信なし、完全無料・安全に利用可能。",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <!-- Tech Stack Scripts (Alpine.js / Canvas loop / Terminal runtime) -->
+  
+        <script>
+        // Terminal Keyboard Shortcut (Ctrl+K or /) & Toast Notification Runtime
+        window.showToast = function(msg) {
+            const toast = document.createElement('div');
+            toast.className = 'fixed bottom-6 right-6 z-50 bg-[#10b981] text-black font-mono text-xs px-4 py-2.5 rounded-lg shadow-2xl font-bold flex items-center space-x-2 animate-bounce';
+            toast.innerHTML = '<span>></span><span>' + msg + '</span>';
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 2500);
+        };
+        </script>
+        
+</head>
+<body class="bg-[#0c0e14] text-[#e2e8f0] min-h-screen flex flex-col transition-colors duration-200">
+
+  
+
+  <!-- Header Navigation -->
+  <header class="sticky top-0 z-50 bg-[#11141d]/90 backdrop-blur-md border-b border-[#1e2333]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <div class="flex items-center space-x-3">
+        
+        <div class="flex items-center space-x-1.5 mr-2">
+          <span class="w-3 h-3 rounded-full terminal-dot-red inline-block"></span>
+          <span class="w-3 h-3 rounded-full terminal-dot-yellow inline-block"></span>
+          <span class="w-3 h-3 rounded-full terminal-dot-green inline-block"></span>
+        </div>
+        
+
+        <a href="/ja/" class="flex items-center space-x-3 group">
+          <div class="w-9 h-9 rounded-lg flex items-center justify-center font-black text-lg bg-[#10b981] hover:bg-[#059669] text-black font-bold tracking-tight shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+            D
+          </div>
+          <span class="text-lg font-extrabold tracking-tight">
+            DevZen Tools
+          </span>
+        </a>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+        <a href="/ja/" class="hover:opacity-80 transition opacity-90">ホーム</a>
+        
+        <a href="/ja/json-formatter-validator" class="hover:opacity-80 transition opacity-70 hover:opacity-100 truncate max-w-[160px]">JSON オンライン整形・構文バリデータ</a>
+        
+        <a href="/ja/base64-encoder-decoder" class="hover:opacity-80 transition opacity-70 hover:opacity-100 truncate max-w-[160px]">Base64 エンコード & デコード オン</a>
+        
+        <a href="/ja/regex-tester-debugger" class="hover:opacity-80 transition opacity-70 hover:opacity-100 truncate max-w-[160px]">正規表現（RegEx）オンライントレーナー </a>
+        
+        <a href="/ja/jwt-token-decoder" class="hover:opacity-80 transition opacity-70 hover:opacity-100 truncate max-w-[160px]">JWT（JSON Web Token）オンラ</a>
+        
+        <a href="/ja/hash-generator-md5-sha256" class="hover:opacity-80 transition opacity-70 hover:opacity-100 truncate max-w-[160px]">ハッシュ生成ツール（MD5, SHA-256</a>
+        
+      </nav>
+
+      <!-- Action Items & Language Selector -->
+      <div class="flex items-center space-x-3">
+        <!-- 7-Language International Dropdown -->
+        <div class="relative inline-block text-left" id="lang-container">
+          <button id="lang-toggle-btn" type="button" class="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-lg text-xs font-mono border border-[#1e2333] hover:border-[#10b981]/50 hover:opacity-90 transition bg-black/20">
+            <span>[JA]</span>
+            <span class="font-bold">JA</span>
+            <span class="text-[9px] opacity-60">&darr;</span>
+          </button>
+          <div id="lang-dropdown-menu" class="hidden absolute right-0 mt-2 w-36 rounded-xl bg-[#11141d] border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] z-50 py-1.5 font-mono text-xs shadow-2xl">
+            
+            <a href="/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
+              <span>[EN] English</span>
+              <span class="text-[10px] opacity-50 uppercase">en</span>
+            </a>
+            
+            <a href="/zh/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
+              <span>[ZH] 简体中文</span>
+              <span class="text-[10px] opacity-50 uppercase">zh</span>
+            </a>
+            
+            <a href="/es/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
+              <span>[ES] Español</span>
+              <span class="text-[10px] opacity-50 uppercase">es</span>
+            </a>
+            
+            <a href="/pt/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
+              <span>[PT] Português</span>
+              <span class="text-[10px] opacity-50 uppercase">pt</span>
+            </a>
+            
+            <a href="/de/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
+              <span>[DE] Deutsch</span>
+              <span class="text-[10px] opacity-50 uppercase">de</span>
+            </a>
+            
+            <a href="/fr/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
+              <span>[FR] Français</span>
+              <span class="text-[10px] opacity-50 uppercase">fr</span>
+            </a>
+            
+            <a href="/ja/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition font-bold text-emerald-400">
+              <span>[JA] 日本語</span>
+              <span class="text-[10px] opacity-50 uppercase">ja</span>
+            </a>
+            
+          </div>
+        </div>
+
+        <a href="/ja/" class="px-3.5 py-1.5 text-xs font-bold rounded-lg transition bg-[#10b981] hover:bg-[#059669] text-black font-bold tracking-tight shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+          すべて見る
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="flex-grow py-8 px-4 sm:px-6 lg:px-8">
+    
+        <div class="max-w-7xl mx-auto">
+          <!-- Hero Banner -->
+          <div class="text-center py-12 md:py-20">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs font-mono mb-6">
+              <span>完全クライアント側処理 & 高速プライベート環境</span>
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
+              DevZen Tools
+            </h1>
+            <p class="max-w-2xl mx-auto text-sm md:text-base opacity-75 leading-relaxed">
+              Webエンジニアのための高機能オンライン開発者ツール。サーバー送信なし、完全無料・安全に利用可能。
+            </p>
+          </div>
+
+          <!-- Grid of Tools -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-16">
+            <a href="/ja/json-formatter-validator" class="bg-[#11141d] rounded-xl p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-4"><span class="text-xs font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-xs opacity-50 font-mono">100% Local</span></div><h3 class="text-lg font-bold group-hover:underline transition mb-2">JSON オンライン整形・構文バリデータ</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">JSONの構文チェック、整形、圧縮をブラウザ上で安全かつ高速に実行できます。</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#jsonバリデータ</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#jsonフォーマッタ</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#json圧縮</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>ツールを開く</span><span>&rarr;</span></div></div></a>
+<a href="/ja/base64-encoder-decoder" class="bg-[#11141d] rounded-xl p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-4"><span class="text-xs font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-xs opacity-50 font-mono">100% Local</span></div><h3 class="text-lg font-bold group-hover:underline transition mb-2">Base64 エンコード & デコード オンライン</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">テキストやUTF-8文字列のBase64相互変換をローカル環境で高速処理します。</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#base64デコード</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#base64変換</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#base64文字列</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>ツールを開く</span><span>&rarr;</span></div></div></a>
+<a href="/ja/regex-tester-debugger" class="bg-[#11141d] rounded-xl p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-4"><span class="text-xs font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-xs opacity-50 font-mono">100% Local</span></div><h3 class="text-lg font-bold group-hover:underline transition mb-2">正規表現（RegEx）オンライントレーナー & テスター</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">正規表現パターンの一致判定、グループ抽出、置換シミュレーションをリアルタイム表示。</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#regexテスター</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#正規表現チェッカー</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#正規表現マッチ</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>ツールを開く</span><span>&rarr;</span></div></div></a>
+<a href="/ja/jwt-token-decoder" class="bg-[#11141d] rounded-xl p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-4"><span class="text-xs font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-xs opacity-50 font-mono">100% Local</span></div><h3 class="text-lg font-bold group-hover:underline transition mb-2">JWT（JSON Web Token）オンラインデコーダ</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">JWTトークンのヘッダー、ペイロード、有効期限タイムスタンプを安全にデコードして表示します。</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#jwtトークン解析</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#jwtオンライン</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#jwtペイロード確認</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>ツールを開く</span><span>&rarr;</span></div></div></a>
+<a href="/ja/hash-generator-md5-sha256" class="bg-[#11141d] rounded-xl p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-4"><span class="text-xs font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-xs opacity-50 font-mono">100% Local</span></div><h3 class="text-lg font-bold group-hover:underline transition mb-2">ハッシュ生成ツール（MD5, SHA-256, SHA-512）</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Web Crypto APIを利用してMD5やSHA-256などの暗号化ハッシュを瞬時に算出します。</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#sha256計算</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#md5生成ツール</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#暗号化ハッシュ</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>ツールを開く</span><span>&rarr;</span></div></div></a>
+<a href="/ja/unix-timestamp-epoch-converter" class="bg-[#11141d] rounded-xl p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-4"><span class="text-xs font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-xs opacity-50 font-mono">100% Local</span></div><h3 class="text-lg font-bold group-hover:underline transition mb-2">Unix タイムスタンプ・日付相互変換ツール</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Unixエポック秒・ミリ秒を人間が読める日時形式（JST/UTC）に相互変換。</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#unix時間変換</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#エポック秒変換</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#日付からタイムスタンプ</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>ツールを開く</span><span>&rarr;</span></div></div></a>
+<a href="/ja/uuid-guid-v4-generator" class="bg-[#11141d] rounded-xl p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-4"><span class="text-xs font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-xs opacity-50 font-mono">100% Local</span></div><h3 class="text-lg font-bold group-hover:underline transition mb-2">UUID / GUID v4 オンライン一括生成ツール</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">暗号学的に安全な乱数でUUID v4 / GUIDを一括生成。大文字小文字ハイフンなし対応。</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#guid生成</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#一括uuid作成</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#一意識別子生成</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>ツールを開く</span><span>&rarr;</span></div></div></a>
+          </div>
+        </div>
+        
+  </main>
+
+  <!-- Internal Linking Matrix -->
+  <section class="border-t border-[#1e2333] py-12 px-4 sm:px-6 lg:px-8 opacity-95">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="text-sm font-bold uppercase tracking-wider opacity-80 font-mono">
+          [+] 開発者向けピラーツール & リファレンス索引
+        </h3>
+        <span class="text-xs opacity-60 font-mono">7 全ツール一覧</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+        
+        <a href="/ja/json-formatter-validator" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+          <div class="text-xs font-bold truncate group-hover:underline">
+            JSON オンライン整形・構文バリデータ
+          </div>
+          <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
+            JSONの構文チェック、整形、圧縮をブラウザ上で安全かつ高速に実行できます。
+          </p>
+        </a>
+        
+        <a href="/ja/base64-encoder-decoder" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+          <div class="text-xs font-bold truncate group-hover:underline">
+            Base64 エンコード & デコード オンライン
+          </div>
+          <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
+            テキストやUTF-8文字列のBase64相互変換をローカル環境で高速処理します。
+          </p>
+        </a>
+        
+        <a href="/ja/regex-tester-debugger" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+          <div class="text-xs font-bold truncate group-hover:underline">
+            正規表現（RegEx）オンライントレーナー & テスター
+          </div>
+          <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
+            正規表現パターンの一致判定、グループ抽出、置換シミュレーションをリアルタイム表示。
+          </p>
+        </a>
+        
+        <a href="/ja/jwt-token-decoder" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+          <div class="text-xs font-bold truncate group-hover:underline">
+            JWT（JSON Web Token）オンラインデコーダ
+          </div>
+          <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
+            JWTトークンのヘッダー、ペイロード、有効期限タイムスタンプを安全にデコードして表示します。
+          </p>
+        </a>
+        
+        <a href="/ja/hash-generator-md5-sha256" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+          <div class="text-xs font-bold truncate group-hover:underline">
+            ハッシュ生成ツール（MD5, SHA-256, SHA-512）
+          </div>
+          <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
+            Web Crypto APIを利用してMD5やSHA-256などの暗号化ハッシュを瞬時に算出します。
+          </p>
+        </a>
+        
+        <a href="/ja/unix-timestamp-epoch-converter" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+          <div class="text-xs font-bold truncate group-hover:underline">
+            Unix タイムスタンプ・日付相互変換ツール
+          </div>
+          <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
+            Unixエポック秒・ミリ秒を人間が読める日時形式（JST/UTC）に相互変換。
+          </p>
+        </a>
+        
+        <a href="/ja/uuid-guid-v4-generator" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+          <div class="text-xs font-bold truncate group-hover:underline">
+            UUID / GUID v4 オンライン一括生成ツール
+          </div>
+          <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
+            暗号学的に安全な乱数でUUID v4 / GUIDを一括生成。大文字小文字ハイフンなし対応。
+          </p>
+        </a>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-[#1e2333] py-8 text-center text-xs opacity-75">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        &copy; 2026 <strong>DevZen Tools</strong>. 完全ブラウザ内処理・Cloudflareエッジ高速配信。
+      </div>
+      <div class="flex space-x-4 font-mono text-[11px]">
+        <a href="/sitemap.xml" class="hover:underline">sitemap.xml</a>
+        <a href="/robots.txt" class="hover:underline">robots.txt</a>
+        <a href="https://globalcorehub.com" target="_blank" class="hover:underline">globalcorehub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+    const btn = document.getElementById('lang-toggle-btn');
+    const menu = document.getElementById('lang-dropdown-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        menu.classList.toggle('hidden');
+      });
+      document.addEventListener('click', () => {
+        if (!menu.classList.contains('hidden')) menu.classList.add('hidden');
+      });
+    }
+  })();
+  </script>
+</body>
+</html>
