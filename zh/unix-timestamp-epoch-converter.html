@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unix 时间戳在线转换与实时数字时钟 (秒 / 毫秒) | DevZen Tools</title>
+  <title>Unix 时间戳在线转换与实时数字时钟 (秒 / 毫秒) | WebUtil Hub</title>
   <meta name="description" content="毫秒/秒级 Unix 时间戳与北京时间、UTC、ISO-8601 标准日期双向互转，自带实时跳动的数字时钟与常用增减快捷键。">
   <link rel="canonical" href="https://webutil.globalcorehub.com/zh/unix-timestamp-epoch-converter">
 
@@ -23,18 +23,18 @@
   <!-- Open Graph & Social Cards -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://webutil.globalcorehub.com/zh/unix-timestamp-epoch-converter">
-  <meta property="og:title" content="Unix 时间戳在线转换与实时数字时钟 (秒 / 毫秒) | DevZen Tools">
+  <meta property="og:title" content="Unix 时间戳在线转换与实时数字时钟 (秒 / 毫秒) | WebUtil Hub">
   <meta property="og:description" content="毫秒/秒级 Unix 时间戳与北京时间、UTC、ISO-8601 标准日期双向互转，自带实时跳动的数字时钟与常用增减快捷键。">
-  <meta property="og:site_name" content="DevZen Tools">
+  <meta property="og:site_name" content="WebUtil Hub">
   <meta property="og:locale" content="zh-CN">
 
   <!-- Twitter Social Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Unix 时间戳在线转换与实时数字时钟 (秒 / 毫秒) | DevZen Tools">
+  <meta name="twitter:title" content="Unix 时间戳在线转换与实时数字时钟 (秒 / 毫秒) | WebUtil Hub">
   <meta name="twitter:description" content="毫秒/秒级 Unix 时间戳与北京时间、UTC、ISO-8601 标准日期双向互转，自带实时跳动的数字时钟与常用增减快捷键。">
 
   <!-- Theme Specific Typography -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS Core -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -44,7 +44,7 @@
       theme: {
         extend: {
           colors: {
-            brand: '#10b981'
+            brand: '#2563eb'
           }
         }
       }
@@ -53,16 +53,11 @@
 
   <!-- Theme Specific Styles -->
   <style>
-    body { font-family: 'JetBrains Mono', monospace; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
     
-        pre, code, kbd { font-family: 'JetBrains Mono', monospace; }
-        ::-webkit-scrollbar { width: 6px; height: 6px; }
-        ::-webkit-scrollbar-track { background: #0c0e14; }
-        ::-webkit-scrollbar-thumb { background: #1e2333; border-radius: 3px; }
-        ::-webkit-scrollbar-thumb:hover { background: #10b981; }
-        .terminal-dot-red { background-color: #ff5f56; }
-        .terminal-dot-yellow { background-color: #ffbd2e; }
-        .terminal-dot-green { background-color: #27c93f; }
+        body { letter-spacing: -0.015em; }
+        .glass-panel { backdrop-filter: blur(16px); background: rgba(255,255,255,0.7); }
+        .dark .glass-panel { background: rgba(15,23,42,0.7); }
         
   </style>
 
@@ -116,41 +111,34 @@
   <!-- Tech Stack Scripts (Alpine.js / Canvas loop / Terminal runtime) -->
   
         <script>
-        // Terminal Keyboard Shortcut (Ctrl+K or /) & Toast Notification Runtime
         window.showToast = function(msg) {
             const toast = document.createElement('div');
-            toast.className = 'fixed bottom-6 right-6 z-50 bg-[#10b981] text-black font-mono text-xs px-4 py-2.5 rounded-lg shadow-2xl font-bold flex items-center space-x-2 animate-bounce';
-            toast.innerHTML = '<span>></span><span>' + msg + '</span>';
+            toast.className = 'fixed bottom-6 right-6 z-50 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm px-5 py-3 rounded-xl shadow-xl font-medium transition-all duration-300 transform translate-y-0';
+            toast.textContent = msg;
             document.body.appendChild(toast);
-            setTimeout(() => toast.remove(), 2500);
+            setTimeout(() => { toast.classList.add('opacity-0', 'translate-y-2'); setTimeout(() => toast.remove(), 300); }, 2200);
         };
         </script>
         
 </head>
-<body class="bg-[#0c0e14] text-[#e2e8f0] min-h-screen flex flex-col transition-colors duration-200">
+<body class="bg-[#fafaf9] dark:bg-[#0f172a] text-[#1c1917] dark:text-[#f8fafc] min-h-screen flex flex-col transition-colors duration-200">
 
   
 
   <!-- Header Navigation (Responsive Desktop & Mobile) -->
-  <header class="sticky top-0 z-50 bg-[#11141d]/90 backdrop-blur-md border-b border-[#1e2333]">
+  <header class="sticky top-0 z-50 bg-white/80 dark:bg-[#0f172a]/80 backdrop-blur-lg border-b border-[#e7e5e4] dark:border-[#334155]">
     <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       
       <!-- Brand & Terminal Indicator -->
       <div class="flex items-center space-x-2 sm:space-x-3">
         
-        <div class="hidden sm:flex items-center space-x-1.5 mr-1 sm:mr-2">
-          <span class="w-3 h-3 rounded-full terminal-dot-red inline-block"></span>
-          <span class="w-3 h-3 rounded-full terminal-dot-yellow inline-block"></span>
-          <span class="w-3 h-3 rounded-full terminal-dot-green inline-block"></span>
-        </div>
-        
 
         <a href="/zh/" class="flex items-center space-x-2.5 sm:space-x-3 group">
-          <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg flex items-center justify-center font-black text-base sm:text-lg bg-[#10b981] hover:bg-[#059669] text-black font-bold tracking-tight shadow-[0_0_15px_rgba(16,185,129,0.3)]">
-            D
+          <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg flex items-center justify-center font-black text-base sm:text-lg bg-[#0f172a] hover:bg-[#334155] dark:bg-[#2563eb] dark:hover:bg-[#1d4ed8] text-white font-semibold">
+            W
           </div>
           <span class="text-base sm:text-lg font-extrabold tracking-tight truncate max-w-[150px] sm:max-w-none">
-            DevZen Tools
+            WebUtil Hub
           </span>
         </a>
       </div>
@@ -169,10 +157,10 @@
           </button>
 
           <!-- Dropdown Panel (Categorized & Compact) -->
-          <div id="tools-dropdown-panel" class="hidden absolute left-0 mt-1.5 w-72 sm:w-80 rounded-2xl bg-[#11141d] border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] shadow-2xl z-50 p-2 font-mono text-xs backdrop-blur-xl">
-            <div class="flex items-center justify-between px-2.5 py-1 text-[10px] uppercase tracking-wider opacity-50 border-b border-[#1e2333] hover:border-[#10b981]/50/50 mb-1">
+          <div id="tools-dropdown-panel" class="hidden absolute left-0 mt-1.5 w-72 sm:w-80 rounded-2xl bg-white dark:bg-[#1e293b] border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-[0_2px_12px_rgba(0,0,0,0.04)] dark:shadow-none shadow-2xl z-50 p-2 font-mono text-xs backdrop-blur-xl">
+            <div class="flex items-center justify-between px-2.5 py-1 text-[10px] uppercase tracking-wider opacity-50 border-b border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb]/50 mb-1">
               <span>全站开发者工具索引</span>
-              <span>7 全部工具</span>
+              <span>9 全部工具</span>
             </div>
             <div class="max-h-72 overflow-y-auto space-y-0.5">
               
@@ -232,9 +220,25 @@
                 <span class="text-[10px] opacity-30 font-mono group-hover/item:opacity-80 transition">&rarr;</span>
               </a>
               
+              <a href="/zh/url-encoder-decoder-parser" class="flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-white/10 transition group/item">
+                <div class="truncate mr-2">
+                  <div class="font-bold text-xs group-hover/item:text-brand transition truncate">URL 在线编码与解码器 (支持 RFC 3986 规范与参数解析)</div>
+                  <div class="text-[10px] opacity-50 truncate">纯前端免安装的 URL / URI 编码解码工具，支持 RFC 3986 规范、批量转义与查询参数（Query String）可视化拆解解析。</div>
+                </div>
+                <span class="text-[10px] opacity-30 font-mono group-hover/item:opacity-80 transition">&rarr;</span>
+              </a>
+              
+              <a href="/zh/text-diff-checker-compare" class="flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-white/10 transition group/item">
+                <div class="truncate mr-2">
+                  <div class="font-bold text-xs group-hover/item:text-brand transition truncate">文本差异对比与代码 Diff 比较工具</div>
+                  <div class="text-[10px] opacity-50 truncate">纯前端文本与代码差异对比工具，提供并排（Side-by-side）与内联（Inline）高亮显示，精确标识增删改改动。</div>
+                </div>
+                <span class="text-[10px] opacity-30 font-mono group-hover/item:opacity-80 transition">&rarr;</span>
+              </a>
+              
             </div>
-            <div class="mt-1.5 pt-1.5 border-t border-[#1e2333] hover:border-[#10b981]/50/50 px-2 flex items-center justify-between">
-              <a href="/zh/#tools-grid" class="text-[11px] font-bold hover:underline flex items-center space-x-1" style="color: #10b981">
+            <div class="mt-1.5 pt-1.5 border-t border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb]/50 px-2 flex items-center justify-between">
+              <a href="/zh/#tools-grid" class="text-[11px] font-bold hover:underline flex items-center space-x-1" style="color: #2563eb">
                 <span>浏览全部</span>
                 <span>&rarr;</span>
               </a>
@@ -254,22 +258,22 @@
       <!-- Action Items & Language Selector & Quick Search & Mobile Hamburger -->
       <div class="flex items-center space-x-2 sm:space-x-3">
         <!-- Quick Search Trigger in Header -->
-        <button id="global-search-btn" type="button" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-black/15 hover:bg-black/30 text-xs font-mono opacity-80 hover:opacity-100 transition" title="按工具名称、长尾关键词或文件格式快速查找... (按 / 聚焦)">
+        <button id="global-search-btn" type="button" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-black/15 hover:bg-black/30 text-xs font-mono opacity-80 hover:opacity-100 transition" title="按工具名称、长尾关键词或文件格式快速查找... (按 / 聚焦)">
           <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
           <span class="hidden sm:inline opacity-70">搜索</span>
-          <kbd class="hidden sm:inline text-[9px] px-1 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50 bg-black/20 font-mono">Ctrl+K</kbd>
+          <kbd class="hidden sm:inline text-[9px] px-1 py-0.5 rounded border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] opacity-50 bg-black/20 font-mono">Ctrl+K</kbd>
         </button>
 
         <!-- 7-Language International Dropdown -->
         <div class="relative inline-block text-left" id="lang-container">
-          <button id="lang-toggle-btn" type="button" class="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-lg text-xs font-mono border border-[#1e2333] hover:border-[#10b981]/50 hover:opacity-90 transition bg-black/20">
+          <button id="lang-toggle-btn" type="button" class="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-lg text-xs font-mono border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] hover:opacity-90 transition bg-black/20">
             <span>[ZH]</span>
             <span class="font-bold">ZH</span>
             <span class="text-[9px] opacity-60">&darr;</span>
           </button>
-          <div id="lang-dropdown-menu" class="hidden absolute right-0 mt-2 w-36 rounded-xl bg-[#11141d] border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] z-50 py-1.5 font-mono text-xs shadow-2xl">
+          <div id="lang-dropdown-menu" class="hidden absolute right-0 mt-2 w-36 rounded-xl bg-white dark:bg-[#1e293b] border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-[0_2px_12px_rgba(0,0,0,0.04)] dark:shadow-none z-50 py-1.5 font-mono text-xs shadow-2xl">
             
             <a href="/unix-timestamp-epoch-converter" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
               <span>[EN] English</span>
@@ -310,7 +314,7 @@
         </div>
 
         <!-- Mobile Menu Toggle Button (Visible on mobile <768px) -->
-        <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 hover:opacity-80 transition flex items-center justify-center bg-black/20" aria-label="Toggle Navigation Menu">
+        <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] hover:opacity-80 transition flex items-center justify-center bg-black/20" aria-label="Toggle Navigation Menu">
           <svg id="hamburger-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
@@ -322,23 +326,23 @@
     </div>
 
     <!-- Mobile Collapsible Navigation Menu Drawer -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-[#1e2333] bg-[#11141d]/90 backdrop-blur-md px-4 pt-3 pb-5 space-y-2 backdrop-blur-lg">
+    <div id="mobile-menu" class="hidden md:hidden border-t border-[#e7e5e4] dark:border-[#334155] bg-white/80 dark:bg-[#0f172a]/80 backdrop-blur-lg px-4 pt-3 pb-5 space-y-2 backdrop-blur-lg">
       <a href="/zh/" class="block px-3 py-2 rounded-xl text-sm font-semibold hover:bg-white/10 transition">首页</a>
 
       <!-- Quick Search Trigger in Mobile Drawer -->
-      <button id="mobile-search-trigger" type="button" class="w-full flex items-center justify-between px-3 py-2 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/20 text-xs font-mono opacity-80">
+      <button id="mobile-search-trigger" type="button" class="w-full flex items-center justify-between px-3 py-2 rounded-xl border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-black/20 text-xs font-mono opacity-80">
         <span class="flex items-center space-x-2">
           <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
           <span>按工具名称、长尾关键词或文件格式快速查找... (按 / 聚焦)</span>
         </span>
-        <kbd class="text-[10px] px-1.5 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50">/</kbd>
+        <kbd class="text-[10px] px-1.5 py-0.5 rounded border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] opacity-50">/</kbd>
       </button>
 
       <!-- Tools Group in Mobile Drawer -->
-      <div class="pt-2 border-t border-[#1e2333]">
-        <div class="text-[10px] font-mono uppercase tracking-wider opacity-50 px-3 mb-1">全部工具 (7)</div>
+      <div class="pt-2 border-t border-[#e7e5e4] dark:border-[#334155]">
+        <div class="text-[10px] font-mono uppercase tracking-wider opacity-50 px-3 mb-1">全部工具 (9)</div>
         <div class="space-y-1 max-h-60 overflow-y-auto">
           
           <a href="/zh/json-formatter-validator" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
@@ -376,6 +380,16 @@
             <span class="text-xs opacity-30 font-mono ml-2">&rarr;</span>
           </a>
           
+          <a href="/zh/url-encoder-decoder-parser" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
+            <span class="truncate">URL 在线编码与解码器 (支持 RFC 3986 规范与参数解析)</span>
+            <span class="text-xs opacity-30 font-mono ml-2">&rarr;</span>
+          </a>
+          
+          <a href="/zh/text-diff-checker-compare" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
+            <span class="truncate">文本差异对比与代码 Diff 比较工具</span>
+            <span class="text-xs opacity-30 font-mono ml-2">&rarr;</span>
+          </a>
+          
         </div>
       </div>
     </div>
@@ -401,10 +415,10 @@
 
     
 <div class="max-w-5xl mx-auto">
-  <div class="bg-[#11141d] rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.5)] border border-[#1e2333] hover:border-[#10b981]/50 p-4 sm:p-6 md:p-8">
-    <div class="border-b border-[#1e2333] pb-4 sm:pb-6">
+  <div class="bg-white dark:bg-[#1e293b] rounded-2xl shadow-[0_2px_12px_rgba(0,0,0,0.04)] dark:shadow-none border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] p-4 sm:p-6 md:p-8">
+    <div class="border-b border-[#e7e5e4] dark:border-[#334155] pb-4 sm:pb-6">
       <div class="flex items-center justify-between mb-2 sm:mb-3">
-        <div class="inline-flex items-center px-2 py-0.5 rounded text-[11px] bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 font-mono">
+        <div class="inline-flex items-center px-2 py-0.5 rounded text-[11px] bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium font-mono">
           <span>高精度 Temporal 时间戳时钟引擎</span>
         </div>
         <span class="text-[10px] sm:text-[11px] font-mono opacity-50">毫秒级动态走字 • 极速双向互转</span>
@@ -414,16 +428,16 @@
     </div>
 
     <!-- Live Digital Epoch Clock -->
-    <div class="mt-6 p-4 sm:p-5 rounded-2xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/10 dark:bg-black/30 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+    <div class="mt-6 p-4 sm:p-5 rounded-2xl border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-black/10 dark:bg-black/30 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
       <div>
         <div class="text-xs font-mono opacity-60 uppercase tracking-wider">当前 Unix 时间戳</div>
         <div class="flex items-baseline space-x-3 mt-1">
-          <span id="live-epoch-sec" class="text-2xl sm:text-4xl font-black font-mono tracking-tight" style="color: #10b981">0000000000</span>
+          <span id="live-epoch-sec" class="text-2xl sm:text-4xl font-black font-mono tracking-tight" style="color: #2563eb">0000000000</span>
           <span class="text-xs font-mono opacity-50">秒 (seconds)</span>
         </div>
         <div id="live-human-date" class="text-xs font-mono opacity-75 mt-1">UTC: -</div>
       </div>
-      <button id="btn-copy-live-sec" class="px-4 py-2 rounded-xl text-xs font-mono font-bold transition flex items-center justify-center space-x-2 bg-[#10b981] hover:bg-[#059669] text-black font-bold tracking-tight shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+      <button id="btn-copy-live-sec" class="px-4 py-2 rounded-xl text-xs font-mono font-bold transition flex items-center justify-center space-x-2 bg-[#0f172a] hover:bg-[#334155] dark:bg-[#2563eb] dark:hover:bg-[#1d4ed8] text-white font-semibold">
         <span>复制时间戳</span>
       </button>
     </div>
@@ -431,53 +445,53 @@
     <!-- Dual Converters -->
     <div class="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
       <!-- A: Timestamp to Date -->
-      <div class="p-4 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5 space-y-3">
+      <div class="p-4 rounded-xl border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-black/5 dark:bg-white/5 space-y-3">
         <div class="text-xs font-bold font-mono uppercase tracking-wider opacity-80">时间戳 → 可读标准日期</div>
         <div>
           <label for="ts-input" class="text-[11px] font-mono opacity-70 block mb-1">Unix 时间戳 (秒或毫秒)</label>
           <div class="flex gap-2">
-            <input type="number" id="ts-input" class="flex-1 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-black/20 px-3 py-1.5 text-xs font-mono focus:outline-none">
-            <button id="btn-ts-now" class="px-2.5 py-1 text-xs rounded border border-[#1e2333] hover:border-[#10b981]/50 font-mono hover:bg-white/10">当前时间</button>
+            <input type="number" id="ts-input" class="flex-1 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-black/20 px-3 py-1.5 text-xs font-mono focus:outline-none">
+            <button id="btn-ts-now" class="px-2.5 py-1 text-xs rounded border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] font-mono hover:bg-white/10">当前时间</button>
           </div>
         </div>
 
         <div class="flex flex-wrap gap-1 text-[11px] font-mono">
-          <button class="btn-ts-offset px-2 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10" data-diff="-86400">-1d</button>
-          <button class="btn-ts-offset px-2 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10" data-diff="-3600">-1h</button>
-          <button class="btn-ts-offset px-2 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10" data-diff="3600">+1h</button>
-          <button class="btn-ts-offset px-2 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10" data-diff="86400">+1d</button>
-          <button class="btn-ts-offset px-2 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10" data-diff="604800">+7d</button>
+          <button class="btn-ts-offset px-2 py-0.5 rounded border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] hover:bg-white/10" data-diff="-86400">-1d</button>
+          <button class="btn-ts-offset px-2 py-0.5 rounded border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] hover:bg-white/10" data-diff="-3600">-1h</button>
+          <button class="btn-ts-offset px-2 py-0.5 rounded border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] hover:bg-white/10" data-diff="3600">+1h</button>
+          <button class="btn-ts-offset px-2 py-0.5 rounded border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] hover:bg-white/10" data-diff="86400">+1d</button>
+          <button class="btn-ts-offset px-2 py-0.5 rounded border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] hover:bg-white/10" data-diff="604800">+7d</button>
         </div>
 
-        <div class="pt-2 border-t border-[#1e2333] hover:border-[#10b981]/50/50 space-y-1.5 font-mono text-xs">
+        <div class="pt-2 border-t border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb]/50 space-y-1.5 font-mono text-xs">
           <div class="flex justify-between"><span class="opacity-60">本地时间:</span><span id="ts-out-local" class="font-bold">-</span></div>
           <div class="flex justify-between"><span class="opacity-60">UTC 国际标准时间:</span><span id="ts-out-utc" class="font-bold">-</span></div>
           <div class="flex justify-between"><span class="opacity-60">ISO-8601 格式:</span><span id="ts-out-iso" class="font-bold">-</span></div>
-          <div class="flex justify-between"><span class="opacity-60">相对时间:</span><span id="ts-out-relative" class="font-bold" style="color: #10b981">-</span></div>
+          <div class="flex justify-between"><span class="opacity-60">相对时间:</span><span id="ts-out-relative" class="font-bold" style="color: #2563eb">-</span></div>
         </div>
       </div>
 
       <!-- B: Date to Timestamp -->
-      <div class="p-4 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5 space-y-3">
+      <div class="p-4 rounded-xl border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-black/5 dark:bg-white/5 space-y-3">
         <div class="text-xs font-bold font-mono uppercase tracking-wider opacity-80">标准日期 → 时间戳</div>
         <div>
           <label for="date-input" class="text-[11px] font-mono opacity-70 block mb-1">选择日期与时间 (本地时区)</label>
-          <input type="datetime-local" id="date-input" class="w-full rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-black/20 px-3 py-1.5 text-xs font-mono focus:outline-none">
+          <input type="datetime-local" id="date-input" class="w-full rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-black/20 px-3 py-1.5 text-xs font-mono focus:outline-none">
         </div>
 
-        <div class="pt-2 border-t border-[#1e2333] hover:border-[#10b981]/50/50 space-y-2 font-mono text-xs">
+        <div class="pt-2 border-t border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb]/50 space-y-2 font-mono text-xs">
           <div>
             <div class="text-[11px] opacity-60">秒级时间戳 (Seconds):</div>
             <div class="flex items-center justify-between mt-1">
-              <span id="date-out-sec" class="font-bold text-sm" style="color: #10b981">-</span>
-              <button id="btn-copy-date-sec" class="px-2 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 text-[11px] hover:bg-white/10">复制到剪贴板</button>
+              <span id="date-out-sec" class="font-bold text-sm" style="color: #2563eb">-</span>
+              <button id="btn-copy-date-sec" class="px-2 py-0.5 rounded border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] text-[11px] hover:bg-white/10">复制到剪贴板</button>
             </div>
           </div>
           <div>
             <div class="text-[11px] opacity-60">毫秒时间戳 (Milliseconds):</div>
             <div class="flex items-center justify-between mt-1">
-              <span id="date-out-ms" class="font-bold text-sm" style="color: #10b981">-</span>
-              <button id="btn-copy-date-ms" class="px-2 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 text-[11px] hover:bg-white/10">复制到剪贴板</button>
+              <span id="date-out-ms" class="font-bold text-sm" style="color: #2563eb">-</span>
+              <button id="btn-copy-date-ms" class="px-2 py-0.5 rounded border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] text-[11px] hover:bg-white/10">复制到剪贴板</button>
             </div>
           </div>
         </div>
@@ -486,23 +500,23 @@
 
     
     <!-- SEO & Capabilities Section -->
-    <div class="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-[#1e2333] grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+    <div class="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-[#e7e5e4] dark:border-[#334155] grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
       <div>
         <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">关于 Unix 时间戳在线转换与实时数字时钟 (秒 / 毫秒)</h2>
         <p class="text-xs opacity-75 leading-relaxed">
           针对 <strong>时间戳在线转换</strong> 的高可靠纯前端在线工具。所有数据处理均在浏览器沙箱内存中即时完成，绝无任何数据上传或外部网络调用。
         </p>
         <h3 class="text-xs font-bold uppercase tracking-wider opacity-70 mt-3 sm:mt-4 mb-2">支持的长尾特性与检索场景</h3>
-        <ul class="space-y-0.5"><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>时间戳在线转换</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>unix时间戳换算</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>北京时间转时间戳</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>毫秒时间戳转换</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>时间戳转普通时间</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>当前时间戳获取</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>epoch转换器 在线</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>时间戳在线计算器</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>时间戳转iso8601</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#10b981'>+</span>日期转unix时间</li></ul>
+        <ul class="space-y-0.5"><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#2563eb'>+</span>时间戳在线转换</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#2563eb'>+</span>unix时间戳换算</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#2563eb'>+</span>北京时间转时间戳</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#2563eb'>+</span>毫秒时间戳转换</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#2563eb'>+</span>时间戳转普通时间</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#2563eb'>+</span>当前时间戳获取</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#2563eb'>+</span>epoch转换器 在线</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#2563eb'>+</span>时间戳在线计算器</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#2563eb'>+</span>时间戳转iso8601</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#2563eb'>+</span>日期转unix时间</li></ul>
       </div>
       <div>
         <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">底层架构与隐私安全保障</h2>
         <div class="space-y-2">
-          <div class="p-3 sm:p-3.5 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5">
+          <div class="p-3 sm:p-3.5 rounded-xl border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-black/5 dark:bg-white/5">
             <div class="text-xs font-bold">100% 纯前端本地运算</div>
             <p class="text-[11px] opacity-60 mt-0.5">您的敏感数据绝不上传至任何远程服务器或分析系统，全方位保障隐私安全。</p>
           </div>
-          <div class="p-3 sm:p-3.5 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5">
+          <div class="p-3 sm:p-3.5 rounded-xl border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-black/5 dark:bg-white/5">
             <div class="text-xs font-bold">边缘网络极速加速 & 离线即用</div>
             <p class="text-[11px] opacity-60 mt-0.5">依托现代浏览器原生 Web API 毫秒级极速运行，无网环境顺畅运行。</p>
           </div>
@@ -649,18 +663,18 @@
   </main>
 
   <!-- Internal Linking Matrix -->
-  <section class="border-t border-[#1e2333] py-12 px-4 sm:px-6 lg:px-8 opacity-95">
+  <section class="border-t border-[#e7e5e4] dark:border-[#334155] py-12 px-4 sm:px-6 lg:px-8 opacity-95">
     <div class="max-w-7xl mx-auto">
       <div class="flex items-center justify-between mb-6">
         <h3 class="text-sm font-bold uppercase tracking-wider opacity-80 font-mono">
           [+] 全站开发者工具索引
         </h3>
-        <span class="text-xs opacity-60 font-mono">7 全部工具</span>
+        <span class="text-xs opacity-60 font-mono">9 全部工具</span>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
         
-        <a href="/zh/json-formatter-validator" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+        <a href="/zh/json-formatter-validator" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
             JSON 在线格式化、美化与语法校验器
           </div>
@@ -669,7 +683,7 @@
           </p>
         </a>
         
-        <a href="/zh/base64-encoder-decoder" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+        <a href="/zh/base64-encoder-decoder" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
             Base64 在线编码与解码器 (支持 UTF-8 / URL-Safe)
           </div>
@@ -678,7 +692,7 @@
           </p>
         </a>
         
-        <a href="/zh/regex-tester-debugger" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+        <a href="/zh/regex-tester-debugger" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
             正则表达式在线测试、调试与常用正则大全
           </div>
@@ -687,7 +701,7 @@
           </p>
         </a>
         
-        <a href="/zh/jwt-token-decoder" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+        <a href="/zh/jwt-token-decoder" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
             JWT Token 在线解析、查看与过期时间校验器
           </div>
@@ -696,7 +710,7 @@
           </p>
         </a>
         
-        <a href="/zh/hash-generator-md5-sha256" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+        <a href="/zh/hash-generator-md5-sha256" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
             哈希值在线生成器 (MD5 / SHA-1 / SHA-256 / SHA-512)
           </div>
@@ -705,7 +719,7 @@
           </p>
         </a>
         
-        <a href="/zh/unix-timestamp-epoch-converter" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+        <a href="/zh/unix-timestamp-epoch-converter" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
             Unix 时间戳在线转换与实时数字时钟 (秒 / 毫秒)
           </div>
@@ -714,7 +728,7 @@
           </p>
         </a>
         
-        <a href="/zh/uuid-guid-v4-generator" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+        <a href="/zh/uuid-guid-v4-generator" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
             UUID / GUID v4 在线批量生成器 (CSPRNG 密码学安全)
           </div>
@@ -723,15 +737,33 @@
           </p>
         </a>
         
+        <a href="/zh/url-encoder-decoder-parser" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
+          <div class="text-xs font-bold truncate group-hover:underline">
+            URL 在线编码与解码器 (支持 RFC 3986 规范与参数解析)
+          </div>
+          <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
+            纯前端免安装的 URL / URI 编码解码工具，支持 RFC 3986 规范、批量转义与查询参数（Query String）可视化拆解解析。
+          </p>
+        </a>
+        
+        <a href="/zh/text-diff-checker-compare" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
+          <div class="text-xs font-bold truncate group-hover:underline">
+            文本差异对比与代码 Diff 比较工具
+          </div>
+          <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
+            纯前端文本与代码差异对比工具，提供并排（Side-by-side）与内联（Inline）高亮显示，精确标识增删改改动。
+          </p>
+        </a>
+        
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="border-t border-[#1e2333] py-8 text-center text-xs opacity-75">
+  <footer class="border-t border-[#e7e5e4] dark:border-[#334155] py-8 text-center text-xs opacity-75">
     <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
       <div>
-        &copy; 2026 <strong>DevZen Tools</strong>. 极速纯前端离线计算 · Cloudflare 全球边缘节点加速交付。
+        &copy; 2026 <strong>WebUtil Hub</strong>. 极速纯前端离线计算 · Cloudflare 全球边缘节点加速交付。
       </div>
       <div class="flex space-x-4 font-mono text-[11px]">
         <a href="/sitemap.xml" class="hover:underline">sitemap.xml</a>
@@ -742,7 +774,7 @@
   </footer>
 
   <!-- Floating Back to Top Button -->
-  <button id="back-to-top-btn" type="button" class="fixed bottom-6 right-6 p-2.5 rounded-full bg-[#11141d] border border-[#1e2333] hover:border-[#10b981]/50 shadow-xl opacity-0 pointer-events-none transition-all duration-300 z-40 hover:scale-110 focus:outline-none" aria-label="Back to top" title="Back to top">
+  <button id="back-to-top-btn" type="button" class="fixed bottom-6 right-6 p-2.5 rounded-full bg-white dark:bg-[#1e293b] border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-xl opacity-0 pointer-events-none transition-all duration-300 z-40 hover:scale-110 focus:outline-none" aria-label="Back to top" title="Back to top">
     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
     </svg>

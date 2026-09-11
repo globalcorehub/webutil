@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DevZen Tools - Webエンジニア向け 高速オンライン開発ツール集</title>
+  <title>WebUtil Hub - Webエンジニア向け 高速オンライン開発ツール集</title>
   <meta name="description" content="日々の開発業務を加速するモダンなオンラインツール集。サーバー送信なし、完全無料・安全・快適に利用可能です。">
   <link rel="canonical" href="https://webutil.globalcorehub.com/ja/">
 
@@ -23,18 +23,18 @@
   <!-- Open Graph & Social Cards -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://webutil.globalcorehub.com/ja/">
-  <meta property="og:title" content="DevZen Tools - Webエンジニア向け 高速オンライン開発ツール集">
+  <meta property="og:title" content="WebUtil Hub - Webエンジニア向け 高速オンライン開発ツール集">
   <meta property="og:description" content="日々の開発業務を加速するモダンなオンラインツール集。サーバー送信なし、完全無料・安全・快適に利用可能です。">
-  <meta property="og:site_name" content="DevZen Tools">
+  <meta property="og:site_name" content="WebUtil Hub">
   <meta property="og:locale" content="ja">
 
   <!-- Twitter Social Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="DevZen Tools - Webエンジニア向け 高速オンライン開発ツール集">
+  <meta name="twitter:title" content="WebUtil Hub - Webエンジニア向け 高速オンライン開発ツール集">
   <meta name="twitter:description" content="日々の開発業務を加速するモダンなオンラインツール集。サーバー送信なし、完全無料・安全・快適に利用可能です。">
 
   <!-- Theme Specific Typography -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS Core -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -44,7 +44,7 @@
       theme: {
         extend: {
           colors: {
-            brand: '#10b981'
+            brand: '#2563eb'
           }
         }
       }
@@ -53,16 +53,11 @@
 
   <!-- Theme Specific Styles -->
   <style>
-    body { font-family: 'JetBrains Mono', monospace; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
     
-        pre, code, kbd { font-family: 'JetBrains Mono', monospace; }
-        ::-webkit-scrollbar { width: 6px; height: 6px; }
-        ::-webkit-scrollbar-track { background: #0c0e14; }
-        ::-webkit-scrollbar-thumb { background: #1e2333; border-radius: 3px; }
-        ::-webkit-scrollbar-thumb:hover { background: #10b981; }
-        .terminal-dot-red { background-color: #ff5f56; }
-        .terminal-dot-yellow { background-color: #ffbd2e; }
-        .terminal-dot-green { background-color: #27c93f; }
+        body { letter-spacing: -0.015em; }
+        .glass-panel { backdrop-filter: blur(16px); background: rgba(255,255,255,0.7); }
+        .dark .glass-panel { background: rgba(15,23,42,0.7); }
         
   </style>
 
@@ -71,7 +66,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "DevZen Tools - Webエンジニア向け 高速オンライン開発ツール集",
+    "name": "WebUtil Hub - Webエンジニア向け 高速オンライン開発ツール集",
     "url": "https://webutil.globalcorehub.com/ja/",
     "description": "日々の開発業務を加速するモダンなオンラインツール集。サーバー送信なし、完全無料・安全・快適に利用可能です。",
     "applicationCategory": "UtilitiesApplication",
@@ -88,41 +83,34 @@
   <!-- Tech Stack Scripts (Alpine.js / Canvas loop / Terminal runtime) -->
   
         <script>
-        // Terminal Keyboard Shortcut (Ctrl+K or /) & Toast Notification Runtime
         window.showToast = function(msg) {
             const toast = document.createElement('div');
-            toast.className = 'fixed bottom-6 right-6 z-50 bg-[#10b981] text-black font-mono text-xs px-4 py-2.5 rounded-lg shadow-2xl font-bold flex items-center space-x-2 animate-bounce';
-            toast.innerHTML = '<span>></span><span>' + msg + '</span>';
+            toast.className = 'fixed bottom-6 right-6 z-50 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm px-5 py-3 rounded-xl shadow-xl font-medium transition-all duration-300 transform translate-y-0';
+            toast.textContent = msg;
             document.body.appendChild(toast);
-            setTimeout(() => toast.remove(), 2500);
+            setTimeout(() => { toast.classList.add('opacity-0', 'translate-y-2'); setTimeout(() => toast.remove(), 300); }, 2200);
         };
         </script>
         
 </head>
-<body class="bg-[#0c0e14] text-[#e2e8f0] min-h-screen flex flex-col transition-colors duration-200">
+<body class="bg-[#fafaf9] dark:bg-[#0f172a] text-[#1c1917] dark:text-[#f8fafc] min-h-screen flex flex-col transition-colors duration-200">
 
   
 
   <!-- Header Navigation (Responsive Desktop & Mobile) -->
-  <header class="sticky top-0 z-50 bg-[#11141d]/90 backdrop-blur-md border-b border-[#1e2333]">
+  <header class="sticky top-0 z-50 bg-white/80 dark:bg-[#0f172a]/80 backdrop-blur-lg border-b border-[#e7e5e4] dark:border-[#334155]">
     <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       
       <!-- Brand & Terminal Indicator -->
       <div class="flex items-center space-x-2 sm:space-x-3">
         
-        <div class="hidden sm:flex items-center space-x-1.5 mr-1 sm:mr-2">
-          <span class="w-3 h-3 rounded-full terminal-dot-red inline-block"></span>
-          <span class="w-3 h-3 rounded-full terminal-dot-yellow inline-block"></span>
-          <span class="w-3 h-3 rounded-full terminal-dot-green inline-block"></span>
-        </div>
-        
 
         <a href="/ja/" class="flex items-center space-x-2.5 sm:space-x-3 group">
-          <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg flex items-center justify-center font-black text-base sm:text-lg bg-[#10b981] hover:bg-[#059669] text-black font-bold tracking-tight shadow-[0_0_15px_rgba(16,185,129,0.3)]">
-            D
+          <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg flex items-center justify-center font-black text-base sm:text-lg bg-[#0f172a] hover:bg-[#334155] dark:bg-[#2563eb] dark:hover:bg-[#1d4ed8] text-white font-semibold">
+            W
           </div>
           <span class="text-base sm:text-lg font-extrabold tracking-tight truncate max-w-[150px] sm:max-w-none">
-            DevZen Tools
+            WebUtil Hub
           </span>
         </a>
       </div>
@@ -141,10 +129,10 @@
           </button>
 
           <!-- Dropdown Panel (Categorized & Compact) -->
-          <div id="tools-dropdown-panel" class="hidden absolute left-0 mt-1.5 w-72 sm:w-80 rounded-2xl bg-[#11141d] border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] shadow-2xl z-50 p-2 font-mono text-xs backdrop-blur-xl">
-            <div class="flex items-center justify-between px-2.5 py-1 text-[10px] uppercase tracking-wider opacity-50 border-b border-[#1e2333] hover:border-[#10b981]/50/50 mb-1">
+          <div id="tools-dropdown-panel" class="hidden absolute left-0 mt-1.5 w-72 sm:w-80 rounded-2xl bg-white dark:bg-[#1e293b] border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-[0_2px_12px_rgba(0,0,0,0.04)] dark:shadow-none shadow-2xl z-50 p-2 font-mono text-xs backdrop-blur-xl">
+            <div class="flex items-center justify-between px-2.5 py-1 text-[10px] uppercase tracking-wider opacity-50 border-b border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb]/50 mb-1">
               <span>開発者向け便利ツール索引</span>
-              <span>7 全ツール一覧</span>
+              <span>9 全ツール一覧</span>
             </div>
             <div class="max-h-72 overflow-y-auto space-y-0.5">
               
@@ -204,9 +192,25 @@
                 <span class="text-[10px] opacity-30 font-mono group-hover/item:opacity-80 transition">&rarr;</span>
               </a>
               
+              <a href="/ja/url-encoder-decoder-parser" class="flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-white/10 transition group/item">
+                <div class="truncate mr-2">
+                  <div class="font-bold text-xs group-hover/item:text-brand transition truncate">URL エンコード & デコード 変換ツール (RFC 3986 準拠)</div>
+                  <div class="text-[10px] opacity-50 truncate">URLエンコード(パーセントエンコーディング)とデコードを瞬時に実行。クエリパラメータの表形式パースにも対応。</div>
+                </div>
+                <span class="text-[10px] opacity-30 font-mono group-hover/item:opacity-80 transition">&rarr;</span>
+              </a>
+              
+              <a href="/ja/text-diff-checker-compare" class="flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-white/10 transition group/item">
+                <div class="truncate mr-2">
+                  <div class="font-bold text-xs group-hover/item:text-brand transition truncate">テキスト差分比較ツール (オンライン Diff チェッカー)</div>
+                  <div class="text-[10px] opacity-50 truncate">2つのテキストやソースコードの差分を並列表示(Side-by-side)で比較。行単位・文字単位での追加・削除ハイライト対応。</div>
+                </div>
+                <span class="text-[10px] opacity-30 font-mono group-hover/item:opacity-80 transition">&rarr;</span>
+              </a>
+              
             </div>
-            <div class="mt-1.5 pt-1.5 border-t border-[#1e2333] hover:border-[#10b981]/50/50 px-2 flex items-center justify-between">
-              <a href="/ja/#tools-grid" class="text-[11px] font-bold hover:underline flex items-center space-x-1" style="color: #10b981">
+            <div class="mt-1.5 pt-1.5 border-t border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb]/50 px-2 flex items-center justify-between">
+              <a href="/ja/#tools-grid" class="text-[11px] font-bold hover:underline flex items-center space-x-1" style="color: #2563eb">
                 <span>すべてのツールを見る</span>
                 <span>&rarr;</span>
               </a>
@@ -226,22 +230,22 @@
       <!-- Action Items & Language Selector & Quick Search & Mobile Hamburger -->
       <div class="flex items-center space-x-2 sm:space-x-3">
         <!-- Quick Search Trigger in Header -->
-        <button id="global-search-btn" type="button" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-black/15 hover:bg-black/30 text-xs font-mono opacity-80 hover:opacity-100 transition" title="ツール名・用途・拡張子で瞬時に絞り込み... (/ キーで検索)">
+        <button id="global-search-btn" type="button" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-black/15 hover:bg-black/30 text-xs font-mono opacity-80 hover:opacity-100 transition" title="ツール名・用途・拡張子で瞬時に絞り込み... (/ キーで検索)">
           <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
           <span class="hidden sm:inline opacity-70">検索</span>
-          <kbd class="hidden sm:inline text-[9px] px-1 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50 bg-black/20 font-mono">Ctrl+K</kbd>
+          <kbd class="hidden sm:inline text-[9px] px-1 py-0.5 rounded border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] opacity-50 bg-black/20 font-mono">Ctrl+K</kbd>
         </button>
 
         <!-- 7-Language International Dropdown -->
         <div class="relative inline-block text-left" id="lang-container">
-          <button id="lang-toggle-btn" type="button" class="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-lg text-xs font-mono border border-[#1e2333] hover:border-[#10b981]/50 hover:opacity-90 transition bg-black/20">
+          <button id="lang-toggle-btn" type="button" class="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-lg text-xs font-mono border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] hover:opacity-90 transition bg-black/20">
             <span>[JA]</span>
             <span class="font-bold">JA</span>
             <span class="text-[9px] opacity-60">&darr;</span>
           </button>
-          <div id="lang-dropdown-menu" class="hidden absolute right-0 mt-2 w-36 rounded-xl bg-[#11141d] border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] z-50 py-1.5 font-mono text-xs shadow-2xl">
+          <div id="lang-dropdown-menu" class="hidden absolute right-0 mt-2 w-36 rounded-xl bg-white dark:bg-[#1e293b] border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-[0_2px_12px_rgba(0,0,0,0.04)] dark:shadow-none z-50 py-1.5 font-mono text-xs shadow-2xl">
             
             <a href="/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
               <span>[EN] English</span>
@@ -282,7 +286,7 @@
         </div>
 
         <!-- Mobile Menu Toggle Button (Visible on mobile <768px) -->
-        <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 hover:opacity-80 transition flex items-center justify-center bg-black/20" aria-label="Toggle Navigation Menu">
+        <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] hover:opacity-80 transition flex items-center justify-center bg-black/20" aria-label="Toggle Navigation Menu">
           <svg id="hamburger-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
@@ -294,23 +298,23 @@
     </div>
 
     <!-- Mobile Collapsible Navigation Menu Drawer -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-[#1e2333] bg-[#11141d]/90 backdrop-blur-md px-4 pt-3 pb-5 space-y-2 backdrop-blur-lg">
+    <div id="mobile-menu" class="hidden md:hidden border-t border-[#e7e5e4] dark:border-[#334155] bg-white/80 dark:bg-[#0f172a]/80 backdrop-blur-lg px-4 pt-3 pb-5 space-y-2 backdrop-blur-lg">
       <a href="/ja/" class="block px-3 py-2 rounded-xl text-sm font-semibold hover:bg-white/10 transition">ホーム</a>
 
       <!-- Quick Search Trigger in Mobile Drawer -->
-      <button id="mobile-search-trigger" type="button" class="w-full flex items-center justify-between px-3 py-2 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/20 text-xs font-mono opacity-80">
+      <button id="mobile-search-trigger" type="button" class="w-full flex items-center justify-between px-3 py-2 rounded-xl border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-black/20 text-xs font-mono opacity-80">
         <span class="flex items-center space-x-2">
           <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
           <span>ツール名・用途・拡張子で瞬時に絞り込み... (/ キーで検索)</span>
         </span>
-        <kbd class="text-[10px] px-1.5 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50">/</kbd>
+        <kbd class="text-[10px] px-1.5 py-0.5 rounded border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] opacity-50">/</kbd>
       </button>
 
       <!-- Tools Group in Mobile Drawer -->
-      <div class="pt-2 border-t border-[#1e2333]">
-        <div class="text-[10px] font-mono uppercase tracking-wider opacity-50 px-3 mb-1">全ツール一覧 (7)</div>
+      <div class="pt-2 border-t border-[#e7e5e4] dark:border-[#334155]">
+        <div class="text-[10px] font-mono uppercase tracking-wider opacity-50 px-3 mb-1">全ツール一覧 (9)</div>
         <div class="space-y-1 max-h-60 overflow-y-auto">
           
           <a href="/ja/json-formatter-validator" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
@@ -348,6 +352,16 @@
             <span class="text-xs opacity-30 font-mono ml-2">&rarr;</span>
           </a>
           
+          <a href="/ja/url-encoder-decoder-parser" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
+            <span class="truncate">URL エンコード & デコード 変換ツール (RFC 3986 準拠)</span>
+            <span class="text-xs opacity-30 font-mono ml-2">&rarr;</span>
+          </a>
+          
+          <a href="/ja/text-diff-checker-compare" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
+            <span class="truncate">テキスト差分比較ツール (オンライン Diff チェッカー)</span>
+            <span class="text-xs opacity-30 font-mono ml-2">&rarr;</span>
+          </a>
+          
         </div>
       </div>
     </div>
@@ -361,11 +375,11 @@
         <div class="max-w-7xl mx-auto">
           <!-- Hero Banner (Mobile & Desktop Responsive) -->
           <div class="text-center py-8 sm:py-12 md:py-16">
-            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs font-mono mb-4 sm:mb-5">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs font-mono mb-4 sm:mb-5">
               <span>Webエンジニア向け 高速オンライン開発ツール集</span>
             </div>
             <h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight mb-3 sm:mb-4">
-              DevZen Tools
+              WebUtil Hub
             </h1>
             <p class="max-w-2xl mx-auto text-xs sm:text-sm md:text-base opacity-75 leading-relaxed px-2">
               日々の開発業務を加速するモダンなオンラインツール集。サーバー送信なし、完全無料・安全・快適に利用可能です。
@@ -380,35 +394,37 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                 </svg>
               </div>
-              <input type="text" id="tool-search" placeholder="ツール名・用途・拡張子で瞬時に絞り込み... (/ キーで検索)" class="w-full pl-11 pr-20 py-3 sm:py-3.5 rounded-2xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/10 dark:bg-black/30 text-xs sm:text-sm font-mono focus:outline-none focus:ring-2 focus:ring-emerald-500/50 transition">
+              <input type="text" id="tool-search" placeholder="ツール名・用途・拡張子で瞬時に絞り込み... (/ キーで検索)" class="w-full pl-11 pr-20 py-3 sm:py-3.5 rounded-2xl border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-black/10 dark:bg-black/30 text-xs sm:text-sm font-mono focus:outline-none focus:ring-2 focus:ring-emerald-500/50 transition">
               <div class="absolute right-3.5 flex items-center space-x-1.5">
-                <kbd class="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-mono rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50 bg-black/20">Ctrl+K</kbd>
+                <kbd class="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-mono rounded border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] opacity-50 bg-black/20">Ctrl+K</kbd>
                 <button id="btn-clear-search" class="hidden text-xs opacity-60 hover:opacity-100 font-mono px-1">&times;</button>
               </div>
             </div>
             <div class="flex items-center justify-between text-[11px] font-mono opacity-60 mt-2.5 px-1">
-              <span id="search-stats">全 7 件の開発者向けツールを表示中</span>
+              <span id="search-stats">全 9 件の開発者向けツールを表示中</span>
               <span class="hidden sm:inline">100% ブラウザ内クライアント実行</span>
             </div>
           </div>
 
           <!-- Empty State (Hidden by default) -->
-          <div id="no-tools-found" class="hidden text-center py-12 px-4 rounded-2xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5 mb-12">
+          <div id="no-tools-found" class="hidden text-center py-12 px-4 rounded-2xl border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-black/5 dark:bg-white/5 mb-12">
             <p class="text-sm font-mono opacity-75 mb-3">該当するツールが見つかりませんでした。別のキーワードをお試しください。</p>
-            <button id="btn-reset-filter" class="px-4 py-1.5 rounded-xl text-xs font-mono font-bold border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10 transition">
+            <button id="btn-reset-filter" class="px-4 py-1.5 rounded-xl text-xs font-mono font-bold border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] hover:bg-white/10 transition">
               フィルターをリセット
             </button>
           </div>
 
           <!-- Grid of Tools (1 col mobile, 2 cols tablet, 3 cols desktop) -->
           <div id="tools-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-5 mb-12 sm:mb-16">
-            <a href="/ja/json-formatter-validator" data-search="json 整形・構文チェック・バリデーター (無料オンライン) jsonコードのインデント整形、構文エラー検証、圧縮(minify)を瞬時に実行。サーバーに送信しない完全ローカル処理で安心。 json整形 オンライン 無料 json構文チェック jsonバリデータ 日本語 json見やすく整形 jsonパース エラー確認 json圧縮ツール jsonフォーマッタ おすすめ json階層表示 jsonインデント変換 jsonエスケープ解除 json-formatter-validator" class="tool-card bg-[#11141d] rounded-xl p-5 sm:p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% ローカル実行</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">JSON 整形・構文チェック・バリデーター (無料オンライン)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">JSONコードのインデント整形、構文エラー検証、圧縮(Minify)を瞬時に実行。サーバーに送信しない完全ローカル処理で安心。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#json整形 オンライン 無料</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#json構文チェック</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#jsonバリデータ 日本語</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>ツールを開く</span><span>&rarr;</span></div></div></a>
-<a href="/ja/base64-encoder-decoder" data-search="base64 エンコード & デコード 変換ツール (日本語 utf-8 対応) 日本語テキストや記号をbase64文字列に瞬時にエンコード・相互復号化。urlセーフ変換や改行設定にも対応した無料webツール。 base64変換 オンライン base64デコード 日本語 base64エンコード 無料 文字列 base64 変換 base64 復号化ツール urlセーフ base64 変換 日本語 base64 変換 base64 テキスト 戻す base64-encoder-decoder" class="tool-card bg-[#11141d] rounded-xl p-5 sm:p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% ローカル実行</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">Base64 エンコード & デコード 変換ツール (日本語 UTF-8 対応)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">日本語テキストや記号をBase64文字列に瞬時にエンコード・相互復号化。URLセーフ変換や改行設定にも対応した無料Webツール。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#base64変換 オンライン</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#base64デコード 日本語</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#base64エンコード 無料</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>ツールを開く</span><span>&rarr;</span></div></div></a>
-<a href="/ja/regex-tester-debugger" data-search="正規表現オンラインチェッカー & デバッガー (regex) 正規表現パターンの構文チェック、マッチング結果のリアルタイムハイライト、グループ抽出とプリセット（メール、url、ip）を完備。 正規表現チェッカー オンライン 正規表現テスト ツール regexテスター 日本語 正規表現 メールアドレス 正規表現 一致確認 javascript 正規表現 検証 正規表現 デバッグ 正規表現 パターン一覧 regex-tester-debugger" class="tool-card bg-[#11141d] rounded-xl p-5 sm:p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% ローカル実行</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">正規表現オンラインチェッカー & デバッガー (RegEx)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">正規表現パターンの構文チェック、マッチング結果のリアルタイムハイライト、グループ抽出とプリセット（メール、URL、IP）を完備。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#正規表現チェッカー オンライン</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#正規表現テスト ツール</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#regexテスター 日本語</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>ツールを開く</span><span>&rarr;</span></div></div></a>
-<a href="/ja/jwt-token-decoder" data-search="jwt トークン オンライン解析・デコーダー (有効期限チェック) json web token (jwt)のヘッダーとペイロードをブラウザ上で安全にデコード。有効期限(exp)の自動判別と日本語表示に対応。 jwtデコード オンライン jwt中身確認 jwtペイロード表示 jwt有効期限チェック jwtトークン解析 json web token 復号 jwtオンライン確認 jwtクレーム表示 jwt-token-decoder" class="tool-card bg-[#11141d] rounded-xl p-5 sm:p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% ローカル実行</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">JWT トークン オンライン解析・デコーダー (有効期限チェック)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">JSON Web Token (JWT)のヘッダーとペイロードをブラウザ上で安全にデコード。有効期限(exp)の自動判別と日本語表示に対応。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#jwtデコード オンライン</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#jwt中身確認</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#jwtペイロード表示</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>ツールを開く</span><span>&rarr;</span></div></div></a>
-<a href="/ja/hash-generator-md5-sha256" data-search="暗号化ハッシュ生成ツール (md5 / sha-1 / sha-256 / sha-512) web crypto apiハードウェア高速処理により、md5、sha-1、sha-256、sha-512ハッシュ値を瞬時に算出。大文字変換・即座コピー対応。 ハッシュ生成 オンライン 無料 sha256生成ツール md5ハッシュ化 オンライン 文字列ハッシュ化 sha512計算 ツール ハッシュ値計算 無料 暗号化ハッシュ オンライン sha1生成 日本語 hash-generator-md5-sha256" class="tool-card bg-[#11141d] rounded-xl p-5 sm:p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% ローカル実行</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">暗号化ハッシュ生成ツール (MD5 / SHA-1 / SHA-256 / SHA-512)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Web Crypto APIハードウェア高速処理により、MD5、SHA-1、SHA-256、SHA-512ハッシュ値を瞬時に算出。大文字変換・即座コピー対応。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#ハッシュ生成 オンライン 無料</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#sha256生成ツール</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#md5ハッシュ化 オンライン</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>ツールを開く</span><span>&rarr;</span></div></div></a>
-<a href="/ja/unix-timestamp-epoch-converter" data-search="unix タイムスタンプ・エポック秒 相互変換ツール (リアルタイム時計付) unix秒・ミリ秒と日本標準時(jst)、utc、iso-8601日時を双方向で瞬時変換。リアルタイム動作するエポック秒カウンター付き。 unixタイムスタンプ変換 エポック秒 日時 変換 タイムスタンプ 現在時刻 日付からタイムスタンプ ミリ秒 タイムスタンプ 変換 unix時間 日本時間 変換 現在エポック秒 取得 タイムスタンプ計算 ツール unix-timestamp-epoch-converter" class="tool-card bg-[#11141d] rounded-xl p-5 sm:p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% ローカル実行</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">Unix タイムスタンプ・エポック秒 相互変換ツール (リアルタイム時計付)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Unix秒・ミリ秒と日本標準時(JST)、UTC、ISO-8601日時を双方向で瞬時変換。リアルタイム動作するエポック秒カウンター付き。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#unixタイムスタンプ変換</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#エポック秒 日時 変換</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#タイムスタンプ 現在時刻</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>ツールを開く</span><span>&rarr;</span></div></div></a>
-<a href="/ja/uuid-guid-v4-generator" data-search="uuid / guid v4 一括生成ツール (暗号学的セキュア csprng) rfc 4122準拠のuuidv4およびguidをブラウザ内csprngにより最大25件一括生成。大文字・小文字、ハイフン除去、波括弧に対応。 uuid生成 オンライン 無料 guid生成 ツール uuidv4一括作成 ハイフンなしuuid生成 大文字uuid生成 ランダム識別子作成 暗号学的に安全なuuid 一意識別子生成 オンライン uuid-guid-v4-generator" class="tool-card bg-[#11141d] rounded-xl p-5 sm:p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% ローカル実行</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">UUID / GUID v4 一括生成ツール (暗号学的セキュア CSPRNG)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">RFC 4122準拠のUUIDv4およびGUIDをブラウザ内CSPRNGにより最大25件一括生成。大文字・小文字、ハイフン除去、波括弧に対応。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#uuid生成 オンライン 無料</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#guid生成 ツール</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#uuidv4一括作成</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>ツールを開く</span><span>&rarr;</span></div></div></a>
+            <a href="/ja/json-formatter-validator" data-search="json 整形・構文チェック・バリデーター (無料オンライン) jsonコードのインデント整形、構文エラー検証、圧縮(minify)を瞬時に実行。サーバーに送信しない完全ローカル処理で安心。 json整形 オンライン 無料 json構文チェック jsonバリデータ 日本語 json見やすく整形 jsonパース エラー確認 json圧縮ツール jsonフォーマッタ おすすめ json階層表示 jsonインデント変換 jsonエスケープ解除 json-formatter-validator" class="tool-card bg-white dark:bg-[#1e293b] rounded-xl p-5 sm:p-6 border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-[0_2px_12px_rgba(0,0,0,0.04)] dark:shadow-none transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% ローカル実行</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">JSON 整形・構文チェック・バリデーター (無料オンライン)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">JSONコードのインデント整形、構文エラー検証、圧縮(Minify)を瞬時に実行。サーバーに送信しない完全ローカル処理で安心。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#json整形 オンライン 無料</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#json構文チェック</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#jsonバリデータ 日本語</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #2563eb"><span>ツールを開く</span><span>&rarr;</span></div></div></a>
+<a href="/ja/base64-encoder-decoder" data-search="base64 エンコード & デコード 変換ツール (日本語 utf-8 対応) 日本語テキストや記号をbase64文字列に瞬時にエンコード・相互復号化。urlセーフ変換や改行設定にも対応した無料webツール。 base64変換 オンライン base64デコード 日本語 base64エンコード 無料 文字列 base64 変換 base64 復号化ツール urlセーフ base64 変換 日本語 base64 変換 base64 テキスト 戻す base64-encoder-decoder" class="tool-card bg-white dark:bg-[#1e293b] rounded-xl p-5 sm:p-6 border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-[0_2px_12px_rgba(0,0,0,0.04)] dark:shadow-none transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% ローカル実行</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">Base64 エンコード & デコード 変換ツール (日本語 UTF-8 対応)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">日本語テキストや記号をBase64文字列に瞬時にエンコード・相互復号化。URLセーフ変換や改行設定にも対応した無料Webツール。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#base64変換 オンライン</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#base64デコード 日本語</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#base64エンコード 無料</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #2563eb"><span>ツールを開く</span><span>&rarr;</span></div></div></a>
+<a href="/ja/regex-tester-debugger" data-search="正規表現オンラインチェッカー & デバッガー (regex) 正規表現パターンの構文チェック、マッチング結果のリアルタイムハイライト、グループ抽出とプリセット（メール、url、ip）を完備。 正規表現チェッカー オンライン 正規表現テスト ツール regexテスター 日本語 正規表現 メールアドレス 正規表現 一致確認 javascript 正規表現 検証 正規表現 デバッグ 正規表現 パターン一覧 regex-tester-debugger" class="tool-card bg-white dark:bg-[#1e293b] rounded-xl p-5 sm:p-6 border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-[0_2px_12px_rgba(0,0,0,0.04)] dark:shadow-none transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% ローカル実行</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">正規表現オンラインチェッカー & デバッガー (RegEx)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">正規表現パターンの構文チェック、マッチング結果のリアルタイムハイライト、グループ抽出とプリセット（メール、URL、IP）を完備。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#正規表現チェッカー オンライン</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#正規表現テスト ツール</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#regexテスター 日本語</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #2563eb"><span>ツールを開く</span><span>&rarr;</span></div></div></a>
+<a href="/ja/jwt-token-decoder" data-search="jwt トークン オンライン解析・デコーダー (有効期限チェック) json web token (jwt)のヘッダーとペイロードをブラウザ上で安全にデコード。有効期限(exp)の自動判別と日本語表示に対応。 jwtデコード オンライン jwt中身確認 jwtペイロード表示 jwt有効期限チェック jwtトークン解析 json web token 復号 jwtオンライン確認 jwtクレーム表示 jwt-token-decoder" class="tool-card bg-white dark:bg-[#1e293b] rounded-xl p-5 sm:p-6 border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-[0_2px_12px_rgba(0,0,0,0.04)] dark:shadow-none transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% ローカル実行</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">JWT トークン オンライン解析・デコーダー (有効期限チェック)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">JSON Web Token (JWT)のヘッダーとペイロードをブラウザ上で安全にデコード。有効期限(exp)の自動判別と日本語表示に対応。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#jwtデコード オンライン</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#jwt中身確認</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#jwtペイロード表示</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #2563eb"><span>ツールを開く</span><span>&rarr;</span></div></div></a>
+<a href="/ja/hash-generator-md5-sha256" data-search="暗号化ハッシュ生成ツール (md5 / sha-1 / sha-256 / sha-512) web crypto apiハードウェア高速処理により、md5、sha-1、sha-256、sha-512ハッシュ値を瞬時に算出。大文字変換・即座コピー対応。 ハッシュ生成 オンライン 無料 sha256生成ツール md5ハッシュ化 オンライン 文字列ハッシュ化 sha512計算 ツール ハッシュ値計算 無料 暗号化ハッシュ オンライン sha1生成 日本語 hash-generator-md5-sha256" class="tool-card bg-white dark:bg-[#1e293b] rounded-xl p-5 sm:p-6 border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-[0_2px_12px_rgba(0,0,0,0.04)] dark:shadow-none transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% ローカル実行</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">暗号化ハッシュ生成ツール (MD5 / SHA-1 / SHA-256 / SHA-512)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Web Crypto APIハードウェア高速処理により、MD5、SHA-1、SHA-256、SHA-512ハッシュ値を瞬時に算出。大文字変換・即座コピー対応。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#ハッシュ生成 オンライン 無料</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#sha256生成ツール</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#md5ハッシュ化 オンライン</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #2563eb"><span>ツールを開く</span><span>&rarr;</span></div></div></a>
+<a href="/ja/unix-timestamp-epoch-converter" data-search="unix タイムスタンプ・エポック秒 相互変換ツール (リアルタイム時計付) unix秒・ミリ秒と日本標準時(jst)、utc、iso-8601日時を双方向で瞬時変換。リアルタイム動作するエポック秒カウンター付き。 unixタイムスタンプ変換 エポック秒 日時 変換 タイムスタンプ 現在時刻 日付からタイムスタンプ ミリ秒 タイムスタンプ 変換 unix時間 日本時間 変換 現在エポック秒 取得 タイムスタンプ計算 ツール unix-timestamp-epoch-converter" class="tool-card bg-white dark:bg-[#1e293b] rounded-xl p-5 sm:p-6 border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-[0_2px_12px_rgba(0,0,0,0.04)] dark:shadow-none transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% ローカル実行</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">Unix タイムスタンプ・エポック秒 相互変換ツール (リアルタイム時計付)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Unix秒・ミリ秒と日本標準時(JST)、UTC、ISO-8601日時を双方向で瞬時変換。リアルタイム動作するエポック秒カウンター付き。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#unixタイムスタンプ変換</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#エポック秒 日時 変換</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#タイムスタンプ 現在時刻</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #2563eb"><span>ツールを開く</span><span>&rarr;</span></div></div></a>
+<a href="/ja/uuid-guid-v4-generator" data-search="uuid / guid v4 一括生成ツール (暗号学的セキュア csprng) rfc 4122準拠のuuidv4およびguidをブラウザ内csprngにより最大25件一括生成。大文字・小文字、ハイフン除去、波括弧に対応。 uuid生成 オンライン 無料 guid生成 ツール uuidv4一括作成 ハイフンなしuuid生成 大文字uuid生成 ランダム識別子作成 暗号学的に安全なuuid 一意識別子生成 オンライン uuid-guid-v4-generator" class="tool-card bg-white dark:bg-[#1e293b] rounded-xl p-5 sm:p-6 border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-[0_2px_12px_rgba(0,0,0,0.04)] dark:shadow-none transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% ローカル実行</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">UUID / GUID v4 一括生成ツール (暗号学的セキュア CSPRNG)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">RFC 4122準拠のUUIDv4およびGUIDをブラウザ内CSPRNGにより最大25件一括生成。大文字・小文字、ハイフン除去、波括弧に対応。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#uuid生成 オンライン 無料</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#guid生成 ツール</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#uuidv4一括作成</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #2563eb"><span>ツールを開く</span><span>&rarr;</span></div></div></a>
+<a href="/ja/url-encoder-decoder-parser" data-search="url エンコード & デコード 変換ツール (rfc 3986 準拠) urlエンコード(パーセントエンコーディング)とデコードを瞬時に実行。クエリパラメータの表形式パースにも対応。 urlエンコード オンライン urlデコード 日本語 パーセントエンコーディング 変換 urlパラメータ 分解 クエリ文字列 解析 url文字列 変換ツール 日本語url 変換 無料 urlencode 復号化 url-encoder-decoder-parser" class="tool-card bg-white dark:bg-[#1e293b] rounded-xl p-5 sm:p-6 border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-[0_2px_12px_rgba(0,0,0,0.04)] dark:shadow-none transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% ローカル実行</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">URL エンコード & デコード 変換ツール (RFC 3986 準拠)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">URLエンコード(パーセントエンコーディング)とデコードを瞬時に実行。クエリパラメータの表形式パースにも対応。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#urlエンコード オンライン</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#urlデコード 日本語</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#パーセントエンコーディング 変換</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #2563eb"><span>ツールを開く</span><span>&rarr;</span></div></div></a>
+<a href="/ja/text-diff-checker-compare" data-search="テキスト差分比較ツール (オンライン diff チェッカー) 2つのテキストやソースコードの差分を並列表示(side-by-side)で比較。行単位・文字単位での追加・削除ハイライト対応。 テキスト差分比較 オンライン テキスト比較 ツール 無料 コード差分 確認 diffツール 日本語 2つの文章 違い 比較 文字列比較 オンライン 文章変更箇所 チェック ファイル比較 ツール text-diff-checker-compare" class="tool-card bg-white dark:bg-[#1e293b] rounded-xl p-5 sm:p-6 border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-[0_2px_12px_rgba(0,0,0,0.04)] dark:shadow-none transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% ローカル実行</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">テキスト差分比較ツール (オンライン Diff チェッカー)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">2つのテキストやソースコードの差分を並列表示(Side-by-side)で比較。行単位・文字単位での追加・削除ハイライト対応。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#テキスト差分比較 オンライン</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#テキスト比較 ツール 無料</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#コード差分 確認</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #2563eb"><span>ツールを開く</span><span>&rarr;</span></div></div></a>
           </div>
         </div>
 
@@ -482,18 +498,18 @@
   </main>
 
   <!-- Internal Linking Matrix -->
-  <section class="border-t border-[#1e2333] py-12 px-4 sm:px-6 lg:px-8 opacity-95">
+  <section class="border-t border-[#e7e5e4] dark:border-[#334155] py-12 px-4 sm:px-6 lg:px-8 opacity-95">
     <div class="max-w-7xl mx-auto">
       <div class="flex items-center justify-between mb-6">
         <h3 class="text-sm font-bold uppercase tracking-wider opacity-80 font-mono">
           [+] 開発者向け便利ツール索引
         </h3>
-        <span class="text-xs opacity-60 font-mono">7 全ツール一覧</span>
+        <span class="text-xs opacity-60 font-mono">9 全ツール一覧</span>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
         
-        <a href="/ja/json-formatter-validator" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+        <a href="/ja/json-formatter-validator" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
             JSON 整形・構文チェック・バリデーター (無料オンライン)
           </div>
@@ -502,7 +518,7 @@
           </p>
         </a>
         
-        <a href="/ja/base64-encoder-decoder" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+        <a href="/ja/base64-encoder-decoder" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
             Base64 エンコード & デコード 変換ツール (日本語 UTF-8 対応)
           </div>
@@ -511,7 +527,7 @@
           </p>
         </a>
         
-        <a href="/ja/regex-tester-debugger" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+        <a href="/ja/regex-tester-debugger" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
             正規表現オンラインチェッカー & デバッガー (RegEx)
           </div>
@@ -520,7 +536,7 @@
           </p>
         </a>
         
-        <a href="/ja/jwt-token-decoder" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+        <a href="/ja/jwt-token-decoder" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
             JWT トークン オンライン解析・デコーダー (有効期限チェック)
           </div>
@@ -529,7 +545,7 @@
           </p>
         </a>
         
-        <a href="/ja/hash-generator-md5-sha256" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+        <a href="/ja/hash-generator-md5-sha256" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
             暗号化ハッシュ生成ツール (MD5 / SHA-1 / SHA-256 / SHA-512)
           </div>
@@ -538,7 +554,7 @@
           </p>
         </a>
         
-        <a href="/ja/unix-timestamp-epoch-converter" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+        <a href="/ja/unix-timestamp-epoch-converter" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
             Unix タイムスタンプ・エポック秒 相互変換ツール (リアルタイム時計付)
           </div>
@@ -547,7 +563,7 @@
           </p>
         </a>
         
-        <a href="/ja/uuid-guid-v4-generator" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+        <a href="/ja/uuid-guid-v4-generator" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
             UUID / GUID v4 一括生成ツール (暗号学的セキュア CSPRNG)
           </div>
@@ -556,15 +572,33 @@
           </p>
         </a>
         
+        <a href="/ja/url-encoder-decoder-parser" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
+          <div class="text-xs font-bold truncate group-hover:underline">
+            URL エンコード & デコード 変換ツール (RFC 3986 準拠)
+          </div>
+          <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
+            URLエンコード(パーセントエンコーディング)とデコードを瞬時に実行。クエリパラメータの表形式パースにも対応。
+          </p>
+        </a>
+        
+        <a href="/ja/text-diff-checker-compare" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
+          <div class="text-xs font-bold truncate group-hover:underline">
+            テキスト差分比較ツール (オンライン Diff チェッカー)
+          </div>
+          <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
+            2つのテキストやソースコードの差分を並列表示(Side-by-side)で比較。行単位・文字単位での追加・削除ハイライト対応。
+          </p>
+        </a>
+        
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="border-t border-[#1e2333] py-8 text-center text-xs opacity-75">
+  <footer class="border-t border-[#e7e5e4] dark:border-[#334155] py-8 text-center text-xs opacity-75">
     <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
       <div>
-        &copy; 2026 <strong>DevZen Tools</strong>. 完全ブラウザ内ローカル処理 · Cloudflare グローバルエッジ高速配信。
+        &copy; 2026 <strong>WebUtil Hub</strong>. 完全ブラウザ内ローカル処理 · Cloudflare グローバルエッジ高速配信。
       </div>
       <div class="flex space-x-4 font-mono text-[11px]">
         <a href="/sitemap.xml" class="hover:underline">sitemap.xml</a>
@@ -575,7 +609,7 @@
   </footer>
 
   <!-- Floating Back to Top Button -->
-  <button id="back-to-top-btn" type="button" class="fixed bottom-6 right-6 p-2.5 rounded-full bg-[#11141d] border border-[#1e2333] hover:border-[#10b981]/50 shadow-xl opacity-0 pointer-events-none transition-all duration-300 z-40 hover:scale-110 focus:outline-none" aria-label="Back to top" title="Back to top">
+  <button id="back-to-top-btn" type="button" class="fixed bottom-6 right-6 p-2.5 rounded-full bg-white dark:bg-[#1e293b] border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-xl opacity-0 pointer-events-none transition-all duration-300 z-40 hover:scale-110 focus:outline-none" aria-label="Back to top" title="Back to top">
     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
     </svg>

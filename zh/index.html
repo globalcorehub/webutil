@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DevZen Tools - 纯前端本地开发者工具箱</title>
+  <title>WebUtil Hub - 纯前端本地开发者工具箱</title>
   <meta name="description" content="专为程序员打造的现代在线工具箱。纯浏览器端毫秒级处理，无数据上传，安全、极速、永久免费。">
   <link rel="canonical" href="https://webutil.globalcorehub.com/zh/">
 
@@ -23,18 +23,18 @@
   <!-- Open Graph & Social Cards -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://webutil.globalcorehub.com/zh/">
-  <meta property="og:title" content="DevZen Tools - 纯前端本地开发者工具箱">
+  <meta property="og:title" content="WebUtil Hub - 纯前端本地开发者工具箱">
   <meta property="og:description" content="专为程序员打造的现代在线工具箱。纯浏览器端毫秒级处理，无数据上传，安全、极速、永久免费。">
-  <meta property="og:site_name" content="DevZen Tools">
+  <meta property="og:site_name" content="WebUtil Hub">
   <meta property="og:locale" content="zh-CN">
 
   <!-- Twitter Social Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="DevZen Tools - 纯前端本地开发者工具箱">
+  <meta name="twitter:title" content="WebUtil Hub - 纯前端本地开发者工具箱">
   <meta name="twitter:description" content="专为程序员打造的现代在线工具箱。纯浏览器端毫秒级处理，无数据上传，安全、极速、永久免费。">
 
   <!-- Theme Specific Typography -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS Core -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -44,7 +44,7 @@
       theme: {
         extend: {
           colors: {
-            brand: '#10b981'
+            brand: '#2563eb'
           }
         }
       }
@@ -53,16 +53,11 @@
 
   <!-- Theme Specific Styles -->
   <style>
-    body { font-family: 'JetBrains Mono', monospace; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
     
-        pre, code, kbd { font-family: 'JetBrains Mono', monospace; }
-        ::-webkit-scrollbar { width: 6px; height: 6px; }
-        ::-webkit-scrollbar-track { background: #0c0e14; }
-        ::-webkit-scrollbar-thumb { background: #1e2333; border-radius: 3px; }
-        ::-webkit-scrollbar-thumb:hover { background: #10b981; }
-        .terminal-dot-red { background-color: #ff5f56; }
-        .terminal-dot-yellow { background-color: #ffbd2e; }
-        .terminal-dot-green { background-color: #27c93f; }
+        body { letter-spacing: -0.015em; }
+        .glass-panel { backdrop-filter: blur(16px); background: rgba(255,255,255,0.7); }
+        .dark .glass-panel { background: rgba(15,23,42,0.7); }
         
   </style>
 
@@ -71,7 +66,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "DevZen Tools - 纯前端本地开发者工具箱",
+    "name": "WebUtil Hub - 纯前端本地开发者工具箱",
     "url": "https://webutil.globalcorehub.com/zh/",
     "description": "专为程序员打造的现代在线工具箱。纯浏览器端毫秒级处理，无数据上传，安全、极速、永久免费。",
     "applicationCategory": "UtilitiesApplication",
@@ -88,41 +83,34 @@
   <!-- Tech Stack Scripts (Alpine.js / Canvas loop / Terminal runtime) -->
   
         <script>
-        // Terminal Keyboard Shortcut (Ctrl+K or /) & Toast Notification Runtime
         window.showToast = function(msg) {
             const toast = document.createElement('div');
-            toast.className = 'fixed bottom-6 right-6 z-50 bg-[#10b981] text-black font-mono text-xs px-4 py-2.5 rounded-lg shadow-2xl font-bold flex items-center space-x-2 animate-bounce';
-            toast.innerHTML = '<span>></span><span>' + msg + '</span>';
+            toast.className = 'fixed bottom-6 right-6 z-50 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm px-5 py-3 rounded-xl shadow-xl font-medium transition-all duration-300 transform translate-y-0';
+            toast.textContent = msg;
             document.body.appendChild(toast);
-            setTimeout(() => toast.remove(), 2500);
+            setTimeout(() => { toast.classList.add('opacity-0', 'translate-y-2'); setTimeout(() => toast.remove(), 300); }, 2200);
         };
         </script>
         
 </head>
-<body class="bg-[#0c0e14] text-[#e2e8f0] min-h-screen flex flex-col transition-colors duration-200">
+<body class="bg-[#fafaf9] dark:bg-[#0f172a] text-[#1c1917] dark:text-[#f8fafc] min-h-screen flex flex-col transition-colors duration-200">
 
   
 
   <!-- Header Navigation (Responsive Desktop & Mobile) -->
-  <header class="sticky top-0 z-50 bg-[#11141d]/90 backdrop-blur-md border-b border-[#1e2333]">
+  <header class="sticky top-0 z-50 bg-white/80 dark:bg-[#0f172a]/80 backdrop-blur-lg border-b border-[#e7e5e4] dark:border-[#334155]">
     <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       
       <!-- Brand & Terminal Indicator -->
       <div class="flex items-center space-x-2 sm:space-x-3">
         
-        <div class="hidden sm:flex items-center space-x-1.5 mr-1 sm:mr-2">
-          <span class="w-3 h-3 rounded-full terminal-dot-red inline-block"></span>
-          <span class="w-3 h-3 rounded-full terminal-dot-yellow inline-block"></span>
-          <span class="w-3 h-3 rounded-full terminal-dot-green inline-block"></span>
-        </div>
-        
 
         <a href="/zh/" class="flex items-center space-x-2.5 sm:space-x-3 group">
-          <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg flex items-center justify-center font-black text-base sm:text-lg bg-[#10b981] hover:bg-[#059669] text-black font-bold tracking-tight shadow-[0_0_15px_rgba(16,185,129,0.3)]">
-            D
+          <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg flex items-center justify-center font-black text-base sm:text-lg bg-[#0f172a] hover:bg-[#334155] dark:bg-[#2563eb] dark:hover:bg-[#1d4ed8] text-white font-semibold">
+            W
           </div>
           <span class="text-base sm:text-lg font-extrabold tracking-tight truncate max-w-[150px] sm:max-w-none">
-            DevZen Tools
+            WebUtil Hub
           </span>
         </a>
       </div>
@@ -141,10 +129,10 @@
           </button>
 
           <!-- Dropdown Panel (Categorized & Compact) -->
-          <div id="tools-dropdown-panel" class="hidden absolute left-0 mt-1.5 w-72 sm:w-80 rounded-2xl bg-[#11141d] border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] shadow-2xl z-50 p-2 font-mono text-xs backdrop-blur-xl">
-            <div class="flex items-center justify-between px-2.5 py-1 text-[10px] uppercase tracking-wider opacity-50 border-b border-[#1e2333] hover:border-[#10b981]/50/50 mb-1">
+          <div id="tools-dropdown-panel" class="hidden absolute left-0 mt-1.5 w-72 sm:w-80 rounded-2xl bg-white dark:bg-[#1e293b] border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-[0_2px_12px_rgba(0,0,0,0.04)] dark:shadow-none shadow-2xl z-50 p-2 font-mono text-xs backdrop-blur-xl">
+            <div class="flex items-center justify-between px-2.5 py-1 text-[10px] uppercase tracking-wider opacity-50 border-b border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb]/50 mb-1">
               <span>全站开发者工具索引</span>
-              <span>7 全部工具</span>
+              <span>9 全部工具</span>
             </div>
             <div class="max-h-72 overflow-y-auto space-y-0.5">
               
@@ -204,9 +192,25 @@
                 <span class="text-[10px] opacity-30 font-mono group-hover/item:opacity-80 transition">&rarr;</span>
               </a>
               
+              <a href="/zh/url-encoder-decoder-parser" class="flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-white/10 transition group/item">
+                <div class="truncate mr-2">
+                  <div class="font-bold text-xs group-hover/item:text-brand transition truncate">URL 在线编码与解码器 (支持 RFC 3986 规范与参数解析)</div>
+                  <div class="text-[10px] opacity-50 truncate">纯前端免安装的 URL / URI 编码解码工具，支持 RFC 3986 规范、批量转义与查询参数（Query String）可视化拆解解析。</div>
+                </div>
+                <span class="text-[10px] opacity-30 font-mono group-hover/item:opacity-80 transition">&rarr;</span>
+              </a>
+              
+              <a href="/zh/text-diff-checker-compare" class="flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-white/10 transition group/item">
+                <div class="truncate mr-2">
+                  <div class="font-bold text-xs group-hover/item:text-brand transition truncate">文本差异对比与代码 Diff 比较工具</div>
+                  <div class="text-[10px] opacity-50 truncate">纯前端文本与代码差异对比工具，提供并排（Side-by-side）与内联（Inline）高亮显示，精确标识增删改改动。</div>
+                </div>
+                <span class="text-[10px] opacity-30 font-mono group-hover/item:opacity-80 transition">&rarr;</span>
+              </a>
+              
             </div>
-            <div class="mt-1.5 pt-1.5 border-t border-[#1e2333] hover:border-[#10b981]/50/50 px-2 flex items-center justify-between">
-              <a href="/zh/#tools-grid" class="text-[11px] font-bold hover:underline flex items-center space-x-1" style="color: #10b981">
+            <div class="mt-1.5 pt-1.5 border-t border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb]/50 px-2 flex items-center justify-between">
+              <a href="/zh/#tools-grid" class="text-[11px] font-bold hover:underline flex items-center space-x-1" style="color: #2563eb">
                 <span>浏览全部</span>
                 <span>&rarr;</span>
               </a>
@@ -226,22 +230,22 @@
       <!-- Action Items & Language Selector & Quick Search & Mobile Hamburger -->
       <div class="flex items-center space-x-2 sm:space-x-3">
         <!-- Quick Search Trigger in Header -->
-        <button id="global-search-btn" type="button" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-black/15 hover:bg-black/30 text-xs font-mono opacity-80 hover:opacity-100 transition" title="按工具名称、长尾关键词或文件格式快速查找... (按 / 聚焦)">
+        <button id="global-search-btn" type="button" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-black/15 hover:bg-black/30 text-xs font-mono opacity-80 hover:opacity-100 transition" title="按工具名称、长尾关键词或文件格式快速查找... (按 / 聚焦)">
           <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
           <span class="hidden sm:inline opacity-70">搜索</span>
-          <kbd class="hidden sm:inline text-[9px] px-1 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50 bg-black/20 font-mono">Ctrl+K</kbd>
+          <kbd class="hidden sm:inline text-[9px] px-1 py-0.5 rounded border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] opacity-50 bg-black/20 font-mono">Ctrl+K</kbd>
         </button>
 
         <!-- 7-Language International Dropdown -->
         <div class="relative inline-block text-left" id="lang-container">
-          <button id="lang-toggle-btn" type="button" class="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-lg text-xs font-mono border border-[#1e2333] hover:border-[#10b981]/50 hover:opacity-90 transition bg-black/20">
+          <button id="lang-toggle-btn" type="button" class="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-lg text-xs font-mono border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] hover:opacity-90 transition bg-black/20">
             <span>[ZH]</span>
             <span class="font-bold">ZH</span>
             <span class="text-[9px] opacity-60">&darr;</span>
           </button>
-          <div id="lang-dropdown-menu" class="hidden absolute right-0 mt-2 w-36 rounded-xl bg-[#11141d] border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] z-50 py-1.5 font-mono text-xs shadow-2xl">
+          <div id="lang-dropdown-menu" class="hidden absolute right-0 mt-2 w-36 rounded-xl bg-white dark:bg-[#1e293b] border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-[0_2px_12px_rgba(0,0,0,0.04)] dark:shadow-none z-50 py-1.5 font-mono text-xs shadow-2xl">
             
             <a href="/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
               <span>[EN] English</span>
@@ -282,7 +286,7 @@
         </div>
 
         <!-- Mobile Menu Toggle Button (Visible on mobile <768px) -->
-        <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 hover:opacity-80 transition flex items-center justify-center bg-black/20" aria-label="Toggle Navigation Menu">
+        <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] hover:opacity-80 transition flex items-center justify-center bg-black/20" aria-label="Toggle Navigation Menu">
           <svg id="hamburger-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
@@ -294,23 +298,23 @@
     </div>
 
     <!-- Mobile Collapsible Navigation Menu Drawer -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-[#1e2333] bg-[#11141d]/90 backdrop-blur-md px-4 pt-3 pb-5 space-y-2 backdrop-blur-lg">
+    <div id="mobile-menu" class="hidden md:hidden border-t border-[#e7e5e4] dark:border-[#334155] bg-white/80 dark:bg-[#0f172a]/80 backdrop-blur-lg px-4 pt-3 pb-5 space-y-2 backdrop-blur-lg">
       <a href="/zh/" class="block px-3 py-2 rounded-xl text-sm font-semibold hover:bg-white/10 transition">首页</a>
 
       <!-- Quick Search Trigger in Mobile Drawer -->
-      <button id="mobile-search-trigger" type="button" class="w-full flex items-center justify-between px-3 py-2 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/20 text-xs font-mono opacity-80">
+      <button id="mobile-search-trigger" type="button" class="w-full flex items-center justify-between px-3 py-2 rounded-xl border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-black/20 text-xs font-mono opacity-80">
         <span class="flex items-center space-x-2">
           <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
           <span>按工具名称、长尾关键词或文件格式快速查找... (按 / 聚焦)</span>
         </span>
-        <kbd class="text-[10px] px-1.5 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50">/</kbd>
+        <kbd class="text-[10px] px-1.5 py-0.5 rounded border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] opacity-50">/</kbd>
       </button>
 
       <!-- Tools Group in Mobile Drawer -->
-      <div class="pt-2 border-t border-[#1e2333]">
-        <div class="text-[10px] font-mono uppercase tracking-wider opacity-50 px-3 mb-1">全部工具 (7)</div>
+      <div class="pt-2 border-t border-[#e7e5e4] dark:border-[#334155]">
+        <div class="text-[10px] font-mono uppercase tracking-wider opacity-50 px-3 mb-1">全部工具 (9)</div>
         <div class="space-y-1 max-h-60 overflow-y-auto">
           
           <a href="/zh/json-formatter-validator" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
@@ -348,6 +352,16 @@
             <span class="text-xs opacity-30 font-mono ml-2">&rarr;</span>
           </a>
           
+          <a href="/zh/url-encoder-decoder-parser" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
+            <span class="truncate">URL 在线编码与解码器 (支持 RFC 3986 规范与参数解析)</span>
+            <span class="text-xs opacity-30 font-mono ml-2">&rarr;</span>
+          </a>
+          
+          <a href="/zh/text-diff-checker-compare" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
+            <span class="truncate">文本差异对比与代码 Diff 比较工具</span>
+            <span class="text-xs opacity-30 font-mono ml-2">&rarr;</span>
+          </a>
+          
         </div>
       </div>
     </div>
@@ -361,11 +375,11 @@
         <div class="max-w-7xl mx-auto">
           <!-- Hero Banner (Mobile & Desktop Responsive) -->
           <div class="text-center py-8 sm:py-12 md:py-16">
-            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs font-mono mb-4 sm:mb-5">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs font-mono mb-4 sm:mb-5">
               <span>纯前端本地开发者工具箱</span>
             </div>
             <h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight mb-3 sm:mb-4">
-              DevZen Tools
+              WebUtil Hub
             </h1>
             <p class="max-w-2xl mx-auto text-xs sm:text-sm md:text-base opacity-75 leading-relaxed px-2">
               专为程序员打造的现代在线工具箱。纯浏览器端毫秒级处理，无数据上传，安全、极速、永久免费。
@@ -380,35 +394,37 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                 </svg>
               </div>
-              <input type="text" id="tool-search" placeholder="按工具名称、长尾关键词或文件格式快速查找... (按 / 聚焦)" class="w-full pl-11 pr-20 py-3 sm:py-3.5 rounded-2xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/10 dark:bg-black/30 text-xs sm:text-sm font-mono focus:outline-none focus:ring-2 focus:ring-emerald-500/50 transition">
+              <input type="text" id="tool-search" placeholder="按工具名称、长尾关键词或文件格式快速查找... (按 / 聚焦)" class="w-full pl-11 pr-20 py-3 sm:py-3.5 rounded-2xl border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-black/10 dark:bg-black/30 text-xs sm:text-sm font-mono focus:outline-none focus:ring-2 focus:ring-emerald-500/50 transition">
               <div class="absolute right-3.5 flex items-center space-x-1.5">
-                <kbd class="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-mono rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50 bg-black/20">Ctrl+K</kbd>
+                <kbd class="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-mono rounded border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] opacity-50 bg-black/20">Ctrl+K</kbd>
                 <button id="btn-clear-search" class="hidden text-xs opacity-60 hover:opacity-100 font-mono px-1">&times;</button>
               </div>
             </div>
             <div class="flex items-center justify-between text-[11px] font-mono opacity-60 mt-2.5 px-1">
-              <span id="search-stats">显示全部 7 个开发者工具</span>
+              <span id="search-stats">显示全部 9 个开发者工具</span>
               <span class="hidden sm:inline">100% 浏览器纯前端运算</span>
             </div>
           </div>
 
           <!-- Empty State (Hidden by default) -->
-          <div id="no-tools-found" class="hidden text-center py-12 px-4 rounded-2xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/5 dark:bg-white/5 mb-12">
+          <div id="no-tools-found" class="hidden text-center py-12 px-4 rounded-2xl border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-black/5 dark:bg-white/5 mb-12">
             <p class="text-sm font-mono opacity-75 mb-3">未找到符合条件的开发者工具，请尝试其他关键词。</p>
-            <button id="btn-reset-filter" class="px-4 py-1.5 rounded-xl text-xs font-mono font-bold border border-[#1e2333] hover:border-[#10b981]/50 hover:bg-white/10 transition">
+            <button id="btn-reset-filter" class="px-4 py-1.5 rounded-xl text-xs font-mono font-bold border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] hover:bg-white/10 transition">
               重置筛选
             </button>
           </div>
 
           <!-- Grid of Tools (1 col mobile, 2 cols tablet, 3 cols desktop) -->
           <div id="tools-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-5 mb-12 sm:mb-16">
-            <a href="/zh/json-formatter-validator" data-search="json 在线格式化、美化与语法校验器 专为开发者设计的免安装 json 格式化与语法校验工具。支持一键排版、缩进美化、压缩与语法实时查错，毫秒级纯前端解析。 json格式化 在线 json校验工具 json在线解析 json在线美化 json压缩工具 json高亮显示 json语法错误检查 json树形查看 在线json转义 json排版工具 json格式化免费 json-formatter-validator" class="tool-card bg-[#11141d] rounded-xl p-5 sm:p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% 本地运算</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">JSON 在线格式化、美化与语法校验器</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">专为开发者设计的免安装 JSON 格式化与语法校验工具。支持一键排版、缩进美化、压缩与语法实时查错，毫秒级纯前端解析。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#json格式化 在线</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#json校验工具</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#json在线解析</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>立即开启</span><span>&rarr;</span></div></div></a>
-<a href="/zh/base64-encoder-decoder" data-search="base64 在线编码与解码器 (支持 utf-8 / url-safe) 支持中文 utf-8 与特殊字符的纯前端 base64 编码解码转换工具，提供标准 base64 与 url-safe 模式，毫秒级快速转换。 base64编码 在线 base64解码在线 base64转字符串 base64在线转换器 base64解密工具 url safe base64转换 文本转base64 utf8 base64编码 base64还原文本 base64加解密 base64-encoder-decoder" class="tool-card bg-[#11141d] rounded-xl p-5 sm:p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% 本地运算</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">Base64 在线编码与解码器 (支持 UTF-8 / URL-Safe)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">支持中文 UTF-8 与特殊字符的纯前端 Base64 编码解码转换工具，提供标准 Base64 与 URL-Safe 模式，毫秒级快速转换。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#base64编码 在线</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#base64解码在线</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#base64转字符串</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>立即开启</span><span>&rarr;</span></div></div></a>
-<a href="/zh/regex-tester-debugger" data-search="正则表达式在线测试、调试与常用正则大全 实时匹配测试正则表达式，支持全局、忽略大小写等多修饰符，提供捕获组拆解与常用正则模板（邮箱、手机号、ip、身份证等）。 正则表达式在线测试 regex在线测试 正则表达式校验 正则匹配工具 常用正则大全 正则表达式邮箱验证 正则表达式手机号 js正则表达式测试 在线正则调试器 正则表达式提取工具 regex-tester-debugger" class="tool-card bg-[#11141d] rounded-xl p-5 sm:p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% 本地运算</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">正则表达式在线测试、调试与常用正则大全</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">实时匹配测试正则表达式，支持全局、忽略大小写等多修饰符，提供捕获组拆解与常用正则模板（邮箱、手机号、IP、身份证等）。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#正则表达式在线测试</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#regex在线测试</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#正则表达式校验</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>立即开启</span><span>&rarr;</span></div></div></a>
-<a href="/zh/jwt-token-decoder" data-search="jwt token 在线解析、查看与过期时间校验器 免上传纯前端解析 json web token (jwt)。一键查看 header 头部算法、payload 声明信息与过期状态，保障敏感 token 绝对私密。 jwt在线解码 jwt token在线解析 jwt解析器 jwt查看工具 jwt过期时间检查 jwt payload查看 json web token在线解密 jwt离线解析 jwt token debugger jwt格式化 jwt-token-decoder" class="tool-card bg-[#11141d] rounded-xl p-5 sm:p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% 本地运算</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">JWT Token 在线解析、查看与过期时间校验器</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">免上传纯前端解析 JSON Web Token (JWT)。一键查看 Header 头部算法、Payload 声明信息与过期状态，保障敏感 Token 绝对私密。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#jwt在线解码</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#jwt token在线解析</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#jwt解析器</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>立即开启</span><span>&rarr;</span></div></div></a>
-<a href="/zh/hash-generator-md5-sha256" data-search="哈希值在线生成器 (md5 / sha-1 / sha-256 / sha-512) 纯前端极速计算文本字符串的 md5、sha-1、sha-256、sha-512 密码学散列值。基于 web crypto 硬件加速，毫秒级响应。 哈希生成器 在线 md5在线生成 sha256计算器 哈希加密工具 sha512在线计算 sha1生成器 文本哈希计算 在线字符串hash 散列值生成器 密码哈希在线校验 hash-generator-md5-sha256" class="tool-card bg-[#11141d] rounded-xl p-5 sm:p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% 本地运算</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">哈希值在线生成器 (MD5 / SHA-1 / SHA-256 / SHA-512)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">纯前端极速计算文本字符串的 MD5、SHA-1、SHA-256、SHA-512 密码学散列值。基于 Web Crypto 硬件加速，毫秒级响应。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#哈希生成器 在线</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#md5在线生成</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#sha256计算器</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>立即开启</span><span>&rarr;</span></div></div></a>
-<a href="/zh/unix-timestamp-epoch-converter" data-search="unix 时间戳在线转换与实时数字时钟 (秒 / 毫秒) 毫秒/秒级 unix 时间戳与北京时间、utc、iso-8601 标准日期双向互转，自带实时跳动的数字时钟与常用增减快捷键。 时间戳在线转换 unix时间戳换算 北京时间转时间戳 毫秒时间戳转换 时间戳转普通时间 当前时间戳获取 epoch转换器 在线 时间戳在线计算器 时间戳转iso8601 日期转unix时间 unix-timestamp-epoch-converter" class="tool-card bg-[#11141d] rounded-xl p-5 sm:p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% 本地运算</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">Unix 时间戳在线转换与实时数字时钟 (秒 / 毫秒)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">毫秒/秒级 Unix 时间戳与北京时间、UTC、ISO-8601 标准日期双向互转，自带实时跳动的数字时钟与常用增减快捷键。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#时间戳在线转换</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#unix时间戳换算</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#北京时间转时间戳</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>立即开启</span><span>&rarr;</span></div></div></a>
-<a href="/zh/uuid-guid-v4-generator" data-search="uuid / guid v4 在线批量生成器 (csprng 密码学安全) 基于浏览器底层 csprng 密码学安全随机数，批量快速生成标准 uuidv4 与 guid。支持大写字母、无连字符与花括号包覆格式。 uuid在线生成 guid批量生成器 uuidv4生成器 唯一随机id生成 批量生成uuid 无连字符uuid生成 大写uuid在线转换 rfc4122 uuid生成 guid生成器 在线 密码学安全uuid uuid-guid-v4-generator" class="tool-card bg-[#11141d] rounded-xl p-5 sm:p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% 本地运算</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">UUID / GUID v4 在线批量生成器 (CSPRNG 密码学安全)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">基于浏览器底层 CSPRNG 密码学安全随机数，批量快速生成标准 UUIDv4 与 GUID。支持大写字母、无连字符与花括号包覆格式。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#uuid在线生成</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#guid批量生成器</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#uuidv4生成器</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>立即开启</span><span>&rarr;</span></div></div></a>
+            <a href="/zh/json-formatter-validator" data-search="json 在线格式化、美化与语法校验器 专为开发者设计的免安装 json 格式化与语法校验工具。支持一键排版、缩进美化、压缩与语法实时查错，毫秒级纯前端解析。 json格式化 在线 json校验工具 json在线解析 json在线美化 json压缩工具 json高亮显示 json语法错误检查 json树形查看 在线json转义 json排版工具 json格式化免费 json-formatter-validator" class="tool-card bg-white dark:bg-[#1e293b] rounded-xl p-5 sm:p-6 border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-[0_2px_12px_rgba(0,0,0,0.04)] dark:shadow-none transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% 本地运算</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">JSON 在线格式化、美化与语法校验器</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">专为开发者设计的免安装 JSON 格式化与语法校验工具。支持一键排版、缩进美化、压缩与语法实时查错，毫秒级纯前端解析。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#json格式化 在线</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#json校验工具</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#json在线解析</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #2563eb"><span>立即开启</span><span>&rarr;</span></div></div></a>
+<a href="/zh/base64-encoder-decoder" data-search="base64 在线编码与解码器 (支持 utf-8 / url-safe) 支持中文 utf-8 与特殊字符的纯前端 base64 编码解码转换工具，提供标准 base64 与 url-safe 模式，毫秒级快速转换。 base64编码 在线 base64解码在线 base64转字符串 base64在线转换器 base64解密工具 url safe base64转换 文本转base64 utf8 base64编码 base64还原文本 base64加解密 base64-encoder-decoder" class="tool-card bg-white dark:bg-[#1e293b] rounded-xl p-5 sm:p-6 border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-[0_2px_12px_rgba(0,0,0,0.04)] dark:shadow-none transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% 本地运算</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">Base64 在线编码与解码器 (支持 UTF-8 / URL-Safe)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">支持中文 UTF-8 与特殊字符的纯前端 Base64 编码解码转换工具，提供标准 Base64 与 URL-Safe 模式，毫秒级快速转换。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#base64编码 在线</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#base64解码在线</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#base64转字符串</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #2563eb"><span>立即开启</span><span>&rarr;</span></div></div></a>
+<a href="/zh/regex-tester-debugger" data-search="正则表达式在线测试、调试与常用正则大全 实时匹配测试正则表达式，支持全局、忽略大小写等多修饰符，提供捕获组拆解与常用正则模板（邮箱、手机号、ip、身份证等）。 正则表达式在线测试 regex在线测试 正则表达式校验 正则匹配工具 常用正则大全 正则表达式邮箱验证 正则表达式手机号 js正则表达式测试 在线正则调试器 正则表达式提取工具 regex-tester-debugger" class="tool-card bg-white dark:bg-[#1e293b] rounded-xl p-5 sm:p-6 border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-[0_2px_12px_rgba(0,0,0,0.04)] dark:shadow-none transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% 本地运算</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">正则表达式在线测试、调试与常用正则大全</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">实时匹配测试正则表达式，支持全局、忽略大小写等多修饰符，提供捕获组拆解与常用正则模板（邮箱、手机号、IP、身份证等）。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#正则表达式在线测试</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#regex在线测试</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#正则表达式校验</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #2563eb"><span>立即开启</span><span>&rarr;</span></div></div></a>
+<a href="/zh/jwt-token-decoder" data-search="jwt token 在线解析、查看与过期时间校验器 免上传纯前端解析 json web token (jwt)。一键查看 header 头部算法、payload 声明信息与过期状态，保障敏感 token 绝对私密。 jwt在线解码 jwt token在线解析 jwt解析器 jwt查看工具 jwt过期时间检查 jwt payload查看 json web token在线解密 jwt离线解析 jwt token debugger jwt格式化 jwt-token-decoder" class="tool-card bg-white dark:bg-[#1e293b] rounded-xl p-5 sm:p-6 border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-[0_2px_12px_rgba(0,0,0,0.04)] dark:shadow-none transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% 本地运算</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">JWT Token 在线解析、查看与过期时间校验器</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">免上传纯前端解析 JSON Web Token (JWT)。一键查看 Header 头部算法、Payload 声明信息与过期状态，保障敏感 Token 绝对私密。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#jwt在线解码</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#jwt token在线解析</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#jwt解析器</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #2563eb"><span>立即开启</span><span>&rarr;</span></div></div></a>
+<a href="/zh/hash-generator-md5-sha256" data-search="哈希值在线生成器 (md5 / sha-1 / sha-256 / sha-512) 纯前端极速计算文本字符串的 md5、sha-1、sha-256、sha-512 密码学散列值。基于 web crypto 硬件加速，毫秒级响应。 哈希生成器 在线 md5在线生成 sha256计算器 哈希加密工具 sha512在线计算 sha1生成器 文本哈希计算 在线字符串hash 散列值生成器 密码哈希在线校验 hash-generator-md5-sha256" class="tool-card bg-white dark:bg-[#1e293b] rounded-xl p-5 sm:p-6 border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-[0_2px_12px_rgba(0,0,0,0.04)] dark:shadow-none transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% 本地运算</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">哈希值在线生成器 (MD5 / SHA-1 / SHA-256 / SHA-512)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">纯前端极速计算文本字符串的 MD5、SHA-1、SHA-256、SHA-512 密码学散列值。基于 Web Crypto 硬件加速，毫秒级响应。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#哈希生成器 在线</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#md5在线生成</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#sha256计算器</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #2563eb"><span>立即开启</span><span>&rarr;</span></div></div></a>
+<a href="/zh/unix-timestamp-epoch-converter" data-search="unix 时间戳在线转换与实时数字时钟 (秒 / 毫秒) 毫秒/秒级 unix 时间戳与北京时间、utc、iso-8601 标准日期双向互转，自带实时跳动的数字时钟与常用增减快捷键。 时间戳在线转换 unix时间戳换算 北京时间转时间戳 毫秒时间戳转换 时间戳转普通时间 当前时间戳获取 epoch转换器 在线 时间戳在线计算器 时间戳转iso8601 日期转unix时间 unix-timestamp-epoch-converter" class="tool-card bg-white dark:bg-[#1e293b] rounded-xl p-5 sm:p-6 border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-[0_2px_12px_rgba(0,0,0,0.04)] dark:shadow-none transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% 本地运算</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">Unix 时间戳在线转换与实时数字时钟 (秒 / 毫秒)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">毫秒/秒级 Unix 时间戳与北京时间、UTC、ISO-8601 标准日期双向互转，自带实时跳动的数字时钟与常用增减快捷键。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#时间戳在线转换</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#unix时间戳换算</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#北京时间转时间戳</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #2563eb"><span>立即开启</span><span>&rarr;</span></div></div></a>
+<a href="/zh/uuid-guid-v4-generator" data-search="uuid / guid v4 在线批量生成器 (csprng 密码学安全) 基于浏览器底层 csprng 密码学安全随机数，批量快速生成标准 uuidv4 与 guid。支持大写字母、无连字符与花括号包覆格式。 uuid在线生成 guid批量生成器 uuidv4生成器 唯一随机id生成 批量生成uuid 无连字符uuid生成 大写uuid在线转换 rfc4122 uuid生成 guid生成器 在线 密码学安全uuid uuid-guid-v4-generator" class="tool-card bg-white dark:bg-[#1e293b] rounded-xl p-5 sm:p-6 border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-[0_2px_12px_rgba(0,0,0,0.04)] dark:shadow-none transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% 本地运算</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">UUID / GUID v4 在线批量生成器 (CSPRNG 密码学安全)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">基于浏览器底层 CSPRNG 密码学安全随机数，批量快速生成标准 UUIDv4 与 GUID。支持大写字母、无连字符与花括号包覆格式。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#uuid在线生成</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#guid批量生成器</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#uuidv4生成器</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #2563eb"><span>立即开启</span><span>&rarr;</span></div></div></a>
+<a href="/zh/url-encoder-decoder-parser" data-search="url 在线编码与解码器 (支持 rfc 3986 规范与参数解析) 纯前端免安装的 url / uri 编码解码工具，支持 rfc 3986 规范、批量转义与查询参数（query string）可视化拆解解析。 url在线编码 url解码在线 url转义工具 urlencode在线转换 urldecode还原 查询参数解析工具 特殊字符url编码 uri在线解析 url参数批量解析 中文url编码转换 url-encoder-decoder-parser" class="tool-card bg-white dark:bg-[#1e293b] rounded-xl p-5 sm:p-6 border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-[0_2px_12px_rgba(0,0,0,0.04)] dark:shadow-none transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% 本地运算</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">URL 在线编码与解码器 (支持 RFC 3986 规范与参数解析)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">纯前端免安装的 URL / URI 编码解码工具，支持 RFC 3986 规范、批量转义与查询参数（Query String）可视化拆解解析。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#url在线编码</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#url解码在线</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#url转义工具</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #2563eb"><span>立即开启</span><span>&rarr;</span></div></div></a>
+<a href="/zh/text-diff-checker-compare" data-search="文本差异对比与代码 diff 比较工具 纯前端文本与代码差异对比工具，提供并排（side-by-side）与内联（inline）高亮显示，精确标识增删改改动。 文本差异对比 在线 代码对比工具 diff比较 在线 两段文本对比找不同 文本内容比对 代码查重比对 在线文件比对工具 文本比对高亮 并排文本对比 字符串对比工具 text-diff-checker-compare" class="tool-card bg-white dark:bg-[#1e293b] rounded-xl p-5 sm:p-6 border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-[0_2px_12px_rgba(0,0,0,0.04)] dark:shadow-none transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% 本地运算</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">文本差异对比与代码 Diff 比较工具</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">纯前端文本与代码差异对比工具，提供并排（Side-by-side）与内联（Inline）高亮显示，精确标识增删改改动。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#文本差异对比 在线</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#代码对比工具</span><span class='inline-block bg-[#f1f5f9] dark:bg-[#334155] text-[#334155] dark:text-[#94a3b8] font-medium text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#diff比较 在线</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #2563eb"><span>立即开启</span><span>&rarr;</span></div></div></a>
           </div>
         </div>
 
@@ -482,18 +498,18 @@
   </main>
 
   <!-- Internal Linking Matrix -->
-  <section class="border-t border-[#1e2333] py-12 px-4 sm:px-6 lg:px-8 opacity-95">
+  <section class="border-t border-[#e7e5e4] dark:border-[#334155] py-12 px-4 sm:px-6 lg:px-8 opacity-95">
     <div class="max-w-7xl mx-auto">
       <div class="flex items-center justify-between mb-6">
         <h3 class="text-sm font-bold uppercase tracking-wider opacity-80 font-mono">
           [+] 全站开发者工具索引
         </h3>
-        <span class="text-xs opacity-60 font-mono">7 全部工具</span>
+        <span class="text-xs opacity-60 font-mono">9 全部工具</span>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
         
-        <a href="/zh/json-formatter-validator" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+        <a href="/zh/json-formatter-validator" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
             JSON 在线格式化、美化与语法校验器
           </div>
@@ -502,7 +518,7 @@
           </p>
         </a>
         
-        <a href="/zh/base64-encoder-decoder" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+        <a href="/zh/base64-encoder-decoder" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
             Base64 在线编码与解码器 (支持 UTF-8 / URL-Safe)
           </div>
@@ -511,7 +527,7 @@
           </p>
         </a>
         
-        <a href="/zh/regex-tester-debugger" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+        <a href="/zh/regex-tester-debugger" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
             正则表达式在线测试、调试与常用正则大全
           </div>
@@ -520,7 +536,7 @@
           </p>
         </a>
         
-        <a href="/zh/jwt-token-decoder" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+        <a href="/zh/jwt-token-decoder" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
             JWT Token 在线解析、查看与过期时间校验器
           </div>
@@ -529,7 +545,7 @@
           </p>
         </a>
         
-        <a href="/zh/hash-generator-md5-sha256" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+        <a href="/zh/hash-generator-md5-sha256" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
             哈希值在线生成器 (MD5 / SHA-1 / SHA-256 / SHA-512)
           </div>
@@ -538,7 +554,7 @@
           </p>
         </a>
         
-        <a href="/zh/unix-timestamp-epoch-converter" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+        <a href="/zh/unix-timestamp-epoch-converter" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
             Unix 时间戳在线转换与实时数字时钟 (秒 / 毫秒)
           </div>
@@ -547,7 +563,7 @@
           </p>
         </a>
         
-        <a href="/zh/uuid-guid-v4-generator" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
+        <a href="/zh/uuid-guid-v4-generator" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
             UUID / GUID v4 在线批量生成器 (CSPRNG 密码学安全)
           </div>
@@ -556,15 +572,33 @@
           </p>
         </a>
         
+        <a href="/zh/url-encoder-decoder-parser" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
+          <div class="text-xs font-bold truncate group-hover:underline">
+            URL 在线编码与解码器 (支持 RFC 3986 规范与参数解析)
+          </div>
+          <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
+            纯前端免安装的 URL / URI 编码解码工具，支持 RFC 3986 规范、批量转义与查询参数（Query String）可视化拆解解析。
+          </p>
+        </a>
+        
+        <a href="/zh/text-diff-checker-compare" class="p-3.5 rounded-lg border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] transition group block">
+          <div class="text-xs font-bold truncate group-hover:underline">
+            文本差异对比与代码 Diff 比较工具
+          </div>
+          <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
+            纯前端文本与代码差异对比工具，提供并排（Side-by-side）与内联（Inline）高亮显示，精确标识增删改改动。
+          </p>
+        </a>
+        
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="border-t border-[#1e2333] py-8 text-center text-xs opacity-75">
+  <footer class="border-t border-[#e7e5e4] dark:border-[#334155] py-8 text-center text-xs opacity-75">
     <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
       <div>
-        &copy; 2026 <strong>DevZen Tools</strong>. 极速纯前端离线计算 · Cloudflare 全球边缘节点加速交付。
+        &copy; 2026 <strong>WebUtil Hub</strong>. 极速纯前端离线计算 · Cloudflare 全球边缘节点加速交付。
       </div>
       <div class="flex space-x-4 font-mono text-[11px]">
         <a href="/sitemap.xml" class="hover:underline">sitemap.xml</a>
@@ -575,7 +609,7 @@
   </footer>
 
   <!-- Floating Back to Top Button -->
-  <button id="back-to-top-btn" type="button" class="fixed bottom-6 right-6 p-2.5 rounded-full bg-[#11141d] border border-[#1e2333] hover:border-[#10b981]/50 shadow-xl opacity-0 pointer-events-none transition-all duration-300 z-40 hover:scale-110 focus:outline-none" aria-label="Back to top" title="Back to top">
+  <button id="back-to-top-btn" type="button" class="fixed bottom-6 right-6 p-2.5 rounded-full bg-white dark:bg-[#1e293b] border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-xl opacity-0 pointer-events-none transition-all duration-300 z-40 hover:scale-110 focus:outline-none" aria-label="Back to top" title="Back to top">
     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
     </svg>
