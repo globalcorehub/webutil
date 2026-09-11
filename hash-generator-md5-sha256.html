@@ -118,26 +118,113 @@
         </a>
       </div>
 
-      <!-- Desktop Navigation Links (Concise & Clean) -->
-      <nav class="hidden md:flex items-center space-x-3 lg:space-x-5 text-xs lg:text-sm font-medium">
-        <a href="/" class="hover:opacity-80 transition opacity-90 whitespace-nowrap">Home</a>
+      <!-- Desktop Navigation Links (Clean Dropdown Architecture) -->
+      <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 text-xs lg:text-sm font-medium">
+        <a href="/" class="px-2.5 py-1.5 rounded-lg hover:bg-white/5 transition opacity-90 whitespace-nowrap">Home</a>
+
+        <!-- "All Tools" Structured Dropdown Menu -->
+        <div class="relative inline-block text-left" id="tools-dropdown-container">
+          <button id="tools-dropdown-btn" type="button" class="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-lg hover:bg-white/10 transition opacity-80 hover:opacity-100 font-medium">
+            <span>All Tools</span>
+            <svg id="tools-arrow-icon" class="w-3.5 h-3.5 opacity-60 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+
+          <!-- Dropdown Panel (Categorized & Compact) -->
+          <div id="tools-dropdown-panel" class="hidden absolute left-0 mt-1.5 w-72 sm:w-80 rounded-2xl bg-[#11141d] border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] shadow-2xl z-50 p-2 font-mono text-xs backdrop-blur-xl">
+            <div class="flex items-center justify-between px-2.5 py-1 text-[10px] uppercase tracking-wider opacity-50 border-b border-[#1e2333] hover:border-[#10b981]/50/50 mb-1">
+              <span>Developer Tools Index</span>
+              <span>7 All Tools</span>
+            </div>
+            <div class="max-h-72 overflow-y-auto space-y-0.5">
+              
+              <a href="/json-formatter-validator" class="flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-white/10 transition group/item">
+                <div class="truncate mr-2">
+                  <div class="font-bold text-xs group-hover/item:text-brand transition truncate">JSON Formatter & Validator</div>
+                  <div class="text-[10px] opacity-50 truncate">Format, beautify, validate, and minify JSON payloads with syntax highlighting and instant error detection.</div>
+                </div>
+                <span class="text-[10px] opacity-30 font-mono group-hover/item:opacity-80 transition">&rarr;</span>
+              </a>
+              
+              <a href="/base64-encoder-decoder" class="flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-white/10 transition group/item">
+                <div class="truncate mr-2">
+                  <div class="font-bold text-xs group-hover/item:text-brand transition truncate">Base64 Encoder & Decoder</div>
+                  <div class="text-[10px] opacity-50 truncate">Encode plain text and UTF-8 characters to Base64 or decode Base64 strings instantly with zero server lag.</div>
+                </div>
+                <span class="text-[10px] opacity-30 font-mono group-hover/item:opacity-80 transition">&rarr;</span>
+              </a>
+              
+              <a href="/regex-tester-debugger" class="flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-white/10 transition group/item">
+                <div class="truncate mr-2">
+                  <div class="font-bold text-xs group-hover/item:text-brand transition truncate">RegEx Tester & Debugger</div>
+                  <div class="text-[10px] opacity-50 truncate">Test, debug, and optimize regular expressions in real-time with capture groups and multi-flag regex support.</div>
+                </div>
+                <span class="text-[10px] opacity-30 font-mono group-hover/item:opacity-80 transition">&rarr;</span>
+              </a>
+              
+              <a href="/jwt-token-decoder" class="flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-white/10 transition group/item">
+                <div class="truncate mr-2">
+                  <div class="font-bold text-xs group-hover/item:text-brand transition truncate">JWT Token Decoder</div>
+                  <div class="text-[10px] opacity-50 truncate">Inspect header, payload claims, and expiration timestamps of JSON Web Tokens without disclosing private secrets.</div>
+                </div>
+                <span class="text-[10px] opacity-30 font-mono group-hover/item:opacity-80 transition">&rarr;</span>
+              </a>
+              
+              <a href="/hash-generator-md5-sha256" class="flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-white/10 transition group/item">
+                <div class="truncate mr-2">
+                  <div class="font-bold text-xs group-hover/item:text-brand transition truncate">Hash Generator (SHA/MD5)</div>
+                  <div class="text-[10px] opacity-50 truncate">Compute cryptographic message digests using MD5, SHA-1, SHA-256, and SHA-512 directly with Web Crypto API.</div>
+                </div>
+                <span class="text-[10px] opacity-30 font-mono group-hover/item:opacity-80 transition">&rarr;</span>
+              </a>
+              
+              <a href="/unix-timestamp-epoch-converter" class="flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-white/10 transition group/item">
+                <div class="truncate mr-2">
+                  <div class="font-bold text-xs group-hover/item:text-brand transition truncate">Unix Timestamp Converter</div>
+                  <div class="text-[10px] opacity-50 truncate">Convert Unix epoch timestamps in seconds or milliseconds to human-readable ISO-8601 dates and vice versa.</div>
+                </div>
+                <span class="text-[10px] opacity-30 font-mono group-hover/item:opacity-80 transition">&rarr;</span>
+              </a>
+              
+              <a href="/uuid-guid-v4-generator" class="flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-white/10 transition group/item">
+                <div class="truncate mr-2">
+                  <div class="font-bold text-xs group-hover/item:text-brand transition truncate">UUID / GUID v4 Generator</div>
+                  <div class="text-[10px] opacity-50 truncate">Generate cryptographically strong random UUID v4 and GUID identifiers in bulk with uppercase or lowercase formatting.</div>
+                </div>
+                <span class="text-[10px] opacity-30 font-mono group-hover/item:opacity-80 transition">&rarr;</span>
+              </a>
+              
+            </div>
+            <div class="mt-1.5 pt-1.5 border-t border-[#1e2333] hover:border-[#10b981]/50/50 px-2 flex items-center justify-between">
+              <a href="/#tools-grid" class="text-[11px] font-bold hover:underline flex items-center space-x-1" style="color: #10b981">
+                <span>Browse All</span>
+                <span>&rarr;</span>
+              </a>
+              <span class="text-[10px] opacity-40 font-mono">100% Client-Side</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- At most 2 quick shortcut links for high-frequency tools on large screens -->
         
-        <a href="/json-formatter-validator" class="hover:opacity-80 transition opacity-70 hover:opacity-100 whitespace-nowrap">JSON Formatter & Validator</a>
+        <a href="/json-formatter-validator" class="hidden xl:inline-block px-2.5 py-1.5 rounded-lg hover:bg-white/5 transition opacity-70 hover:opacity-100 whitespace-nowrap">JSON Formatter & Validator</a>
         
-        <a href="/base64-encoder-decoder" class="hover:opacity-80 transition opacity-70 hover:opacity-100 whitespace-nowrap">Base64 Encoder & Decoder</a>
-        
-        <a href="/regex-tester-debugger" class="hover:opacity-80 transition opacity-70 hover:opacity-100 whitespace-nowrap">RegEx Tester & Debugger</a>
-        
-        <a href="/jwt-token-decoder" class="hover:opacity-80 transition opacity-70 hover:opacity-100 whitespace-nowrap">JWT Token Decoder</a>
-        
-        <a href="/hash-generator-md5-sha256" class="hover:opacity-80 transition opacity-70 hover:opacity-100 whitespace-nowrap">Hash Generator (SHA/MD5)</a>
-        
-        <a href="/unix-timestamp-epoch-converter" class="hover:opacity-80 transition opacity-70 hover:opacity-100 whitespace-nowrap">Unix Timestamp Converter</a>
+        <a href="/base64-encoder-decoder" class="hidden xl:inline-block px-2.5 py-1.5 rounded-lg hover:bg-white/5 transition opacity-70 hover:opacity-100 whitespace-nowrap">Base64 Encoder & Decoder</a>
         
       </nav>
 
-      <!-- Action Items & Language Selector & Mobile Hamburger -->
+      <!-- Action Items & Language Selector & Quick Search & Mobile Hamburger -->
       <div class="flex items-center space-x-2 sm:space-x-3">
+        <!-- Quick Search Trigger in Header -->
+        <button id="global-search-btn" type="button" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-black/15 hover:bg-black/30 text-xs font-mono opacity-80 hover:opacity-100 transition" title="Search tools (Press /)">
+          <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+          <span class="hidden sm:inline opacity-70">Search</span>
+          <kbd class="hidden sm:inline text-[9px] px-1 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50 bg-black/20 font-mono">/</kbd>
+        </button>
+
         <!-- 7-Language International Dropdown -->
         <div class="relative inline-block text-left" id="lang-container">
           <button id="lang-toggle-btn" type="button" class="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-lg text-xs font-mono border border-[#1e2333] hover:border-[#10b981]/50 hover:opacity-90 transition bg-black/20">
@@ -185,10 +272,6 @@
           </div>
         </div>
 
-        <a href="/" class="hidden sm:inline-flex px-3.5 py-1.5 text-xs font-bold rounded-lg transition bg-[#10b981] hover:bg-[#059669] text-black font-bold tracking-tight shadow-[0_0_15px_rgba(16,185,129,0.3)]">
-          Browse All
-        </a>
-
         <!-- Mobile Menu Toggle Button (Visible on mobile <768px) -->
         <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 hover:opacity-80 transition flex items-center justify-center bg-black/20" aria-label="Toggle Navigation Menu">
           <svg id="hamburger-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -202,44 +285,61 @@
     </div>
 
     <!-- Mobile Collapsible Navigation Menu Drawer -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-[#1e2333] bg-[#11141d]/90 backdrop-blur-md px-4 pt-3 pb-5 space-y-1 backdrop-blur-lg">
-      <a href="/" class="block px-3 py-2.5 rounded-lg text-sm font-semibold hover:bg-white/10 transition">Home</a>
-      
-      <a href="/json-formatter-validator" class="block px-3 py-2 rounded-lg text-xs sm:text-sm font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
-        <span>JSON Formatter & Validator</span>
-        <span class="text-xs opacity-40 font-mono">&rarr;</span>
-      </a>
-      
-      <a href="/base64-encoder-decoder" class="block px-3 py-2 rounded-lg text-xs sm:text-sm font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
-        <span>Base64 Encoder & Decoder</span>
-        <span class="text-xs opacity-40 font-mono">&rarr;</span>
-      </a>
-      
-      <a href="/regex-tester-debugger" class="block px-3 py-2 rounded-lg text-xs sm:text-sm font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
-        <span>RegEx Tester & Debugger</span>
-        <span class="text-xs opacity-40 font-mono">&rarr;</span>
-      </a>
-      
-      <a href="/jwt-token-decoder" class="block px-3 py-2 rounded-lg text-xs sm:text-sm font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
-        <span>JWT Token Decoder</span>
-        <span class="text-xs opacity-40 font-mono">&rarr;</span>
-      </a>
-      
-      <a href="/hash-generator-md5-sha256" class="block px-3 py-2 rounded-lg text-xs sm:text-sm font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
-        <span>Hash Generator (SHA/MD5)</span>
-        <span class="text-xs opacity-40 font-mono">&rarr;</span>
-      </a>
-      
-      <a href="/unix-timestamp-epoch-converter" class="block px-3 py-2 rounded-lg text-xs sm:text-sm font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
-        <span>Unix Timestamp Converter</span>
-        <span class="text-xs opacity-40 font-mono">&rarr;</span>
-      </a>
-      
-      <div class="pt-3 mt-2 border-t border-[#1e2333] flex items-center justify-between">
-        <span class="text-xs opacity-60 font-mono">7 All Tools</span>
-        <a href="/" class="px-3.5 py-1.5 text-xs font-bold rounded-lg transition bg-[#10b981] hover:bg-[#059669] text-black font-bold tracking-tight shadow-[0_0_15px_rgba(16,185,129,0.3)]">
-          Browse All
-        </a>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-[#1e2333] bg-[#11141d]/90 backdrop-blur-md px-4 pt-3 pb-5 space-y-2 backdrop-blur-lg">
+      <a href="/" class="block px-3 py-2 rounded-xl text-sm font-semibold hover:bg-white/10 transition">Home</a>
+
+      <!-- Quick Search Trigger in Mobile Drawer -->
+      <button id="mobile-search-trigger" type="button" class="w-full flex items-center justify-between px-3 py-2 rounded-xl border border-[#1e2333] hover:border-[#10b981]/50 bg-black/20 text-xs font-mono opacity-80">
+        <span class="flex items-center space-x-2">
+          <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+          <span>Search utilities...</span>
+        </span>
+        <kbd class="text-[10px] px-1.5 py-0.5 rounded border border-[#1e2333] hover:border-[#10b981]/50 opacity-50">/</kbd>
+      </button>
+
+      <!-- Tools Group in Mobile Drawer -->
+      <div class="pt-2 border-t border-[#1e2333]">
+        <div class="text-[10px] font-mono uppercase tracking-wider opacity-50 px-3 mb-1">All Tools (7)</div>
+        <div class="space-y-1 max-h-60 overflow-y-auto">
+          
+          <a href="/json-formatter-validator" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
+            <span class="truncate">JSON Formatter & Validator</span>
+            <span class="text-xs opacity-30 font-mono ml-2">&rarr;</span>
+          </a>
+          
+          <a href="/base64-encoder-decoder" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
+            <span class="truncate">Base64 Encoder & Decoder</span>
+            <span class="text-xs opacity-30 font-mono ml-2">&rarr;</span>
+          </a>
+          
+          <a href="/regex-tester-debugger" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
+            <span class="truncate">RegEx Tester & Debugger</span>
+            <span class="text-xs opacity-30 font-mono ml-2">&rarr;</span>
+          </a>
+          
+          <a href="/jwt-token-decoder" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
+            <span class="truncate">JWT Token Decoder</span>
+            <span class="text-xs opacity-30 font-mono ml-2">&rarr;</span>
+          </a>
+          
+          <a href="/hash-generator-md5-sha256" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
+            <span class="truncate">Hash Generator (SHA/MD5)</span>
+            <span class="text-xs opacity-30 font-mono ml-2">&rarr;</span>
+          </a>
+          
+          <a href="/unix-timestamp-epoch-converter" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
+            <span class="truncate">Unix Timestamp Converter</span>
+            <span class="text-xs opacity-30 font-mono ml-2">&rarr;</span>
+          </a>
+          
+          <a href="/uuid-guid-v4-generator" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
+            <span class="truncate">UUID / GUID v4 Generator</span>
+            <span class="text-xs opacity-30 font-mono ml-2">&rarr;</span>
+          </a>
+          
+        </div>
       </div>
     </div>
   </header>
@@ -668,6 +768,46 @@
 
   <script>
   (function() {
+    // 0. Tools Dropdown Toggle
+    const toolsBtn = document.getElementById('tools-dropdown-btn');
+    const toolsPanel = document.getElementById('tools-dropdown-panel');
+    const toolsArrow = document.getElementById('tools-arrow-icon');
+    if (toolsBtn && toolsPanel) {
+      toolsBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isHidden = toolsPanel.classList.toggle('hidden');
+        if (toolsArrow) toolsArrow.classList.toggle('rotate-180', !isHidden);
+      });
+      document.addEventListener('click', (e) => {
+        if (!toolsPanel.contains(e.target) && e.target !== toolsBtn) {
+          toolsPanel.classList.add('hidden');
+          if (toolsArrow) toolsArrow.classList.remove('rotate-180');
+        }
+      });
+    }
+
+    // 0.1 Quick Search Trigger Action
+    function triggerSearchFocus() {
+      const searchInput = document.getElementById('tool-search');
+      if (searchInput) {
+        searchInput.focus();
+        searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        window.location.href = '/#tool-search';
+      }
+    }
+    const globalSearchBtn = document.getElementById('global-search-btn');
+    const mobileSearchBtn = document.getElementById('mobile-search-trigger');
+    if (globalSearchBtn) globalSearchBtn.addEventListener('click', triggerSearchFocus);
+    if (mobileSearchBtn) mobileSearchBtn.addEventListener('click', triggerSearchFocus);
+
+    if (window.location.hash === '#tool-search') {
+      setTimeout(() => {
+        const s = document.getElementById('tool-search');
+        if (s) { s.focus(); s.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+      }, 300);
+    }
+
     // 1. Language dropdown menu
     const langBtn = document.getElementById('lang-toggle-btn');
     const langMenu = document.getElementById('lang-dropdown-menu');
