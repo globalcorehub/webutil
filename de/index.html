@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DevZen Tools - 100% Client-seitig & Ohne Server-Verzögerung | DevZen Tools</title>
+  <title>DevZen Tools - Lokale Browser-Tools</title>
   <meta name="description" content="Moderne Entwickler-Utilities mit Fokus auf Datenschutz, Geschwindigkeit und Zuverlässigkeit.">
   <link rel="canonical" href="https://webutil.globalcorehub.com/de/">
 
@@ -20,7 +20,7 @@
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://webutil.globalcorehub.com/de/">
-  <meta property="og:title" content="DevZen Tools - 100% Client-seitig & Ohne Server-Verzögerung | DevZen Tools">
+  <meta property="og:title" content="DevZen Tools - Lokale Browser-Tools">
   <meta property="og:description" content="Moderne Entwickler-Utilities mit Fokus auf Datenschutz, Geschwindigkeit und Zuverlässigkeit.">
   <meta property="og:site_name" content="DevZen Tools">
   <meta property="og:locale" content="de">
@@ -63,7 +63,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "DevZen Tools - 100% Client-seitig & Ohne Server-Verzögerung",
+    "name": "DevZen Tools - Lokale Browser-Tools",
     "url": "https://webutil.globalcorehub.com/de/",
     "description": "Moderne Entwickler-Utilities mit Fokus auf Datenschutz, Geschwindigkeit und Zuverlässigkeit.",
     "applicationCategory": "UtilitiesApplication",
@@ -94,47 +94,50 @@
 
   
 
-  <!-- Header Navigation -->
+  <!-- Header Navigation (Responsive Desktop & Mobile) -->
   <header class="sticky top-0 z-50 bg-[#11141d]/90 backdrop-blur-md border-b border-[#1e2333]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       
-      <div class="flex items-center space-x-3">
+      <!-- Brand & Terminal Indicator -->
+      <div class="flex items-center space-x-2 sm:space-x-3">
         
-        <div class="flex items-center space-x-1.5 mr-2">
+        <div class="hidden sm:flex items-center space-x-1.5 mr-1 sm:mr-2">
           <span class="w-3 h-3 rounded-full terminal-dot-red inline-block"></span>
           <span class="w-3 h-3 rounded-full terminal-dot-yellow inline-block"></span>
           <span class="w-3 h-3 rounded-full terminal-dot-green inline-block"></span>
         </div>
         
 
-        <a href="/de/" class="flex items-center space-x-3 group">
-          <div class="w-9 h-9 rounded-lg flex items-center justify-center font-black text-lg bg-[#10b981] hover:bg-[#059669] text-black font-bold tracking-tight shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+        <a href="/de/" class="flex items-center space-x-2.5 sm:space-x-3 group">
+          <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg flex items-center justify-center font-black text-base sm:text-lg bg-[#10b981] hover:bg-[#059669] text-black font-bold tracking-tight shadow-[0_0_15px_rgba(16,185,129,0.3)]">
             D
           </div>
-          <span class="text-lg font-extrabold tracking-tight">
+          <span class="text-base sm:text-lg font-extrabold tracking-tight truncate max-w-[150px] sm:max-w-none">
             DevZen Tools
           </span>
         </a>
       </div>
 
-      <!-- Navigation Links -->
-      <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
-        <a href="/de/" class="hover:opacity-80 transition opacity-90">Startseite</a>
+      <!-- Desktop Navigation Links (Concise & Clean) -->
+      <nav class="hidden md:flex items-center space-x-3 lg:space-x-5 text-xs lg:text-sm font-medium">
+        <a href="/de/" class="hover:opacity-80 transition opacity-90 whitespace-nowrap">Startseite</a>
         
-        <a href="/de/json-formatter-validator" class="hover:opacity-80 transition opacity-70 hover:opacity-100 truncate max-w-[160px]">JSON Formatierer und V</a>
+        <a href="/de/json-formatter-validator" class="hover:opacity-80 transition opacity-70 hover:opacity-100 whitespace-nowrap">JSON Format</a>
         
-        <a href="/de/base64-encoder-decoder" class="hover:opacity-80 transition opacity-70 hover:opacity-100 truncate max-w-[160px]">Base64 Kodierer und De</a>
+        <a href="/de/base64-encoder-decoder" class="hover:opacity-80 transition opacity-70 hover:opacity-100 whitespace-nowrap">Base64 Codec</a>
         
-        <a href="/de/regex-tester-debugger" class="hover:opacity-80 transition opacity-70 hover:opacity-100 truncate max-w-[160px]">Reguläre Ausdrücke (Re</a>
+        <a href="/de/regex-tester-debugger" class="hover:opacity-80 transition opacity-70 hover:opacity-100 whitespace-nowrap">RegEx Tester</a>
         
-        <a href="/de/jwt-token-decoder" class="hover:opacity-80 transition opacity-70 hover:opacity-100 truncate max-w-[160px]">JWT Token Dekodierer u</a>
+        <a href="/de/jwt-token-decoder" class="hover:opacity-80 transition opacity-70 hover:opacity-100 whitespace-nowrap">JWT Decoder</a>
         
-        <a href="/de/hash-generator-md5-sha256" class="hover:opacity-80 transition opacity-70 hover:opacity-100 truncate max-w-[160px]">Kryptografischer Hash </a>
+        <a href="/de/hash-generator-md5-sha256" class="hover:opacity-80 transition opacity-70 hover:opacity-100 whitespace-nowrap">Hash Generator</a>
+        
+        <a href="/de/unix-timestamp-epoch-converter" class="hover:opacity-80 transition opacity-70 hover:opacity-100 whitespace-nowrap">Unix Zeitstempel</a>
         
       </nav>
 
-      <!-- Action Items & Language Selector -->
-      <div class="flex items-center space-x-3">
+      <!-- Action Items & Language Selector & Mobile Hamburger -->
+      <div class="flex items-center space-x-2 sm:space-x-3">
         <!-- 7-Language International Dropdown -->
         <div class="relative inline-block text-left" id="lang-container">
           <button id="lang-toggle-btn" type="button" class="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-lg text-xs font-mono border border-[#1e2333] hover:border-[#10b981]/50 hover:opacity-90 transition bg-black/20">
@@ -182,6 +185,58 @@
           </div>
         </div>
 
+        <a href="/de/" class="hidden sm:inline-flex px-3.5 py-1.5 text-xs font-bold rounded-lg transition bg-[#10b981] hover:bg-[#059669] text-black font-bold tracking-tight shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+          Alle Anzeigen
+        </a>
+
+        <!-- Mobile Menu Toggle Button (Visible on mobile <768px) -->
+        <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 hover:opacity-80 transition flex items-center justify-center bg-black/20" aria-label="Toggle Navigation Menu">
+          <svg id="hamburger-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="close-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Collapsible Navigation Menu Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-[#1e2333] bg-[#11141d]/90 backdrop-blur-md px-4 pt-3 pb-5 space-y-1 backdrop-blur-lg">
+      <a href="/de/" class="block px-3 py-2.5 rounded-lg text-sm font-semibold hover:bg-white/10 transition">Startseite</a>
+      
+      <a href="/de/json-formatter-validator" class="block px-3 py-2 rounded-lg text-xs sm:text-sm font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
+        <span>JSON Format</span>
+        <span class="text-xs opacity-40 font-mono">&rarr;</span>
+      </a>
+      
+      <a href="/de/base64-encoder-decoder" class="block px-3 py-2 rounded-lg text-xs sm:text-sm font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
+        <span>Base64 Codec</span>
+        <span class="text-xs opacity-40 font-mono">&rarr;</span>
+      </a>
+      
+      <a href="/de/regex-tester-debugger" class="block px-3 py-2 rounded-lg text-xs sm:text-sm font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
+        <span>RegEx Tester</span>
+        <span class="text-xs opacity-40 font-mono">&rarr;</span>
+      </a>
+      
+      <a href="/de/jwt-token-decoder" class="block px-3 py-2 rounded-lg text-xs sm:text-sm font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
+        <span>JWT Decoder</span>
+        <span class="text-xs opacity-40 font-mono">&rarr;</span>
+      </a>
+      
+      <a href="/de/hash-generator-md5-sha256" class="block px-3 py-2 rounded-lg text-xs sm:text-sm font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
+        <span>Hash Generator</span>
+        <span class="text-xs opacity-40 font-mono">&rarr;</span>
+      </a>
+      
+      <a href="/de/unix-timestamp-epoch-converter" class="block px-3 py-2 rounded-lg text-xs sm:text-sm font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
+        <span>Unix Zeitstempel</span>
+        <span class="text-xs opacity-40 font-mono">&rarr;</span>
+      </a>
+      
+      <div class="pt-3 mt-2 border-t border-[#1e2333] flex items-center justify-between">
+        <span class="text-xs opacity-60 font-mono">7 Alle Werkzeuge</span>
         <a href="/de/" class="px-3.5 py-1.5 text-xs font-bold rounded-lg transition bg-[#10b981] hover:bg-[#059669] text-black font-bold tracking-tight shadow-[0_0_15px_rgba(16,185,129,0.3)]">
           Alle Anzeigen
         </a>
@@ -193,28 +248,28 @@
   <main class="flex-grow py-8 px-4 sm:px-6 lg:px-8">
     
         <div class="max-w-7xl mx-auto">
-          <!-- Hero Banner -->
-          <div class="text-center py-12 md:py-20">
-            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs font-mono mb-6">
-              <span>100% Client-seitig & Ohne Server-Verzögerung</span>
+          <!-- Hero Banner (Mobile & Desktop Responsive) -->
+          <div class="text-center py-8 sm:py-12 md:py-16">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs font-mono mb-4 sm:mb-5">
+              <span>Lokale Browser-Tools</span>
             </div>
-            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
+            <h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight mb-3 sm:mb-4">
               DevZen Tools
             </h1>
-            <p class="max-w-2xl mx-auto text-sm md:text-base opacity-75 leading-relaxed">
+            <p class="max-w-2xl mx-auto text-xs sm:text-sm md:text-base opacity-75 leading-relaxed px-2">
               Moderne Entwickler-Utilities mit Fokus auf Datenschutz, Geschwindigkeit und Zuverlässigkeit.
             </p>
           </div>
 
-          <!-- Grid of Tools -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-16">
-            <a href="/de/json-formatter-validator" class="bg-[#11141d] rounded-xl p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-4"><span class="text-xs font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-xs opacity-50 font-mono">100% Local</span></div><h3 class="text-lg font-bold group-hover:underline transition mb-2">JSON Formatierer und Validator Online</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">JSON-Dateien formatieren, validieren und bereinigen ohne Datenübertragung an Server.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#json validator online</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#json pruefen</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#json beautify deutsch</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>Werkzeug starten</span><span>&rarr;</span></div></div></a>
-<a href="/de/base64-encoder-decoder" class="bg-[#11141d] rounded-xl p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-4"><span class="text-xs font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-xs opacity-50 font-mono">100% Local</span></div><h3 class="text-lg font-bold group-hover:underline transition mb-2">Base64 Kodierer und Dekodierer Online</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Text in Base64 umwandeln oder Base64-Zeichenketten sekundenschnell decodieren.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#base64 dekodieren</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#base64 umwandler online</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>Werkzeug starten</span><span>&rarr;</span></div></div></a>
-<a href="/de/regex-tester-debugger" class="bg-[#11141d] rounded-xl p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-4"><span class="text-xs font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-xs opacity-50 font-mono">100% Local</span></div><h3 class="text-lg font-bold group-hover:underline transition mb-2">Reguläre Ausdrücke (RegEx) Tester & Debugger</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">RegEx-Muster interaktiv testen und validieren mit sofortiger Hervorhebung.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#regulaere ausdruecke testen</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#regex pruefer</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>Werkzeug starten</span><span>&rarr;</span></div></div></a>
-<a href="/de/jwt-token-decoder" class="bg-[#11141d] rounded-xl p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-4"><span class="text-xs font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-xs opacity-50 font-mono">100% Local</span></div><h3 class="text-lg font-bold group-hover:underline transition mb-2">JWT Token Dekodierer und Payload Inspector</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">JWT Tokens einsehen, Header und Payload entschlüsseln ohne Server-Übertragung.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#jwt token entschluesseln</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#jwt payload anzeigen</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>Werkzeug starten</span><span>&rarr;</span></div></div></a>
-<a href="/de/hash-generator-md5-sha256" class="bg-[#11141d] rounded-xl p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-4"><span class="text-xs font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-xs opacity-50 font-mono">100% Local</span></div><h3 class="text-lg font-bold group-hover:underline transition mb-2">Kryptografischer Hash Generator (MD5, SHA-256)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Kryptografische Prüfsummen berechnen mit SHA-256 und MD5.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#sha256 berechnen</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#md5 erstellen</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>Werkzeug starten</span><span>&rarr;</span></div></div></a>
-<a href="/de/unix-timestamp-epoch-converter" class="bg-[#11141d] rounded-xl p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-4"><span class="text-xs font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-xs opacity-50 font-mono">100% Local</span></div><h3 class="text-lg font-bold group-hover:underline transition mb-2">Unix Zeitstempel (Epoch) Konverter Online</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Unix Epoch Zeitstempel in lesbare Datumsformate umwandeln und umgekehrt.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#epoch zu datum</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#timestamp umrechnen</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>Werkzeug starten</span><span>&rarr;</span></div></div></a>
-<a href="/de/uuid-guid-v4-generator" class="bg-[#11141d] rounded-xl p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-4"><span class="text-xs font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-xs opacity-50 font-mono">100% Local</span></div><h3 class="text-lg font-bold group-hover:underline transition mb-2">UUID und GUID v4 Online Generator</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Kryptografisch sichere UUID v4 Identifikatoren stapelweise generieren.</p></div><div><div class="flex flex-wrap mb-4"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#guid erstellen</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#uuid v4 massenhaft</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>Werkzeug starten</span><span>&rarr;</span></div></div></a>
+          <!-- Grid of Tools (1 col mobile, 2 cols tablet, 3 cols desktop) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-5 mb-12 sm:mb-16">
+            <a href="/de/json-formatter-validator" class="bg-[#11141d] rounded-xl p-5 sm:p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% Local</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">JSON Formatierer & Validator</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">JSON-Dateien formatieren, validieren und bereinigen ohne Datenübertragung an Server.</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#json validator online</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#json pruefen</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#json beautify deutsch</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>Werkzeug starten</span><span>&rarr;</span></div></div></a>
+<a href="/de/base64-encoder-decoder" class="bg-[#11141d] rounded-xl p-5 sm:p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% Local</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">Base64 Kodierer & Dekodierer</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Text in Base64 umwandeln oder Base64-Zeichenketten sekundenschnell decodieren.</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#base64 dekodieren</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#base64 umwandler online</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>Werkzeug starten</span><span>&rarr;</span></div></div></a>
+<a href="/de/regex-tester-debugger" class="bg-[#11141d] rounded-xl p-5 sm:p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% Local</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">RegEx Tester & Debugger</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">RegEx-Muster interaktiv testen und validieren mit sofortiger Hervorhebung.</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#regulaere ausdruecke testen</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#regex pruefer</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>Werkzeug starten</span><span>&rarr;</span></div></div></a>
+<a href="/de/jwt-token-decoder" class="bg-[#11141d] rounded-xl p-5 sm:p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% Local</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">JWT Token Dekodierer</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">JWT Tokens einsehen, Header und Payload entschlüsseln ohne Server-Übertragung.</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#jwt token entschluesseln</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#jwt payload anzeigen</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>Werkzeug starten</span><span>&rarr;</span></div></div></a>
+<a href="/de/hash-generator-md5-sha256" class="bg-[#11141d] rounded-xl p-5 sm:p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% Local</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">Hash Generator (SHA/MD5)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Kryptografische Prüfsummen berechnen mit SHA-256 und MD5.</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#sha256 berechnen</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#md5 erstellen</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>Werkzeug starten</span><span>&rarr;</span></div></div></a>
+<a href="/de/unix-timestamp-epoch-converter" class="bg-[#11141d] rounded-xl p-5 sm:p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% Local</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">Unix Zeitstempel Konverter</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Unix Epoch Zeitstempel in lesbare Datumsformate umwandeln und umgekehrt.</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#epoch zu datum</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#timestamp umrechnen</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>Werkzeug starten</span><span>&rarr;</span></div></div></a>
+<a href="/de/uuid-guid-v4-generator" class="bg-[#11141d] rounded-xl p-5 sm:p-6 border border-[#1e2333] hover:border-[#10b981]/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% Local</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">UUID v4 Online Generator</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Kryptografisch sichere UUID v4 Identifikatoren stapelweise generieren.</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#guid erstellen</span><span class='inline-block bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30 text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#uuid v4 massenhaft</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #10b981"><span>Werkzeug starten</span><span>&rarr;</span></div></div></a>
           </div>
         </div>
         
@@ -225,7 +280,7 @@
     <div class="max-w-7xl mx-auto">
       <div class="flex items-center justify-between mb-6">
         <h3 class="text-sm font-bold uppercase tracking-wider opacity-80 font-mono">
-          [+] Verzeichnis der Entwickler-Tools & Ressourcen
+          [+] Entwickler-Tools Verzeichnis
         </h3>
         <span class="text-xs opacity-60 font-mono">7 Alle Werkzeuge</span>
       </div>
@@ -234,7 +289,7 @@
         
         <a href="/de/json-formatter-validator" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
-            JSON Formatierer und Validator Online
+            JSON Formatierer & Validator
           </div>
           <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
             JSON-Dateien formatieren, validieren und bereinigen ohne Datenübertragung an Server.
@@ -243,7 +298,7 @@
         
         <a href="/de/base64-encoder-decoder" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
-            Base64 Kodierer und Dekodierer Online
+            Base64 Kodierer & Dekodierer
           </div>
           <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
             Text in Base64 umwandeln oder Base64-Zeichenketten sekundenschnell decodieren.
@@ -252,7 +307,7 @@
         
         <a href="/de/regex-tester-debugger" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
-            Reguläre Ausdrücke (RegEx) Tester & Debugger
+            RegEx Tester & Debugger
           </div>
           <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
             RegEx-Muster interaktiv testen und validieren mit sofortiger Hervorhebung.
@@ -261,7 +316,7 @@
         
         <a href="/de/jwt-token-decoder" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
-            JWT Token Dekodierer und Payload Inspector
+            JWT Token Dekodierer
           </div>
           <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
             JWT Tokens einsehen, Header und Payload entschlüsseln ohne Server-Übertragung.
@@ -270,7 +325,7 @@
         
         <a href="/de/hash-generator-md5-sha256" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
-            Kryptografischer Hash Generator (MD5, SHA-256)
+            Hash Generator (SHA/MD5)
           </div>
           <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
             Kryptografische Prüfsummen berechnen mit SHA-256 und MD5.
@@ -279,7 +334,7 @@
         
         <a href="/de/unix-timestamp-epoch-converter" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
-            Unix Zeitstempel (Epoch) Konverter Online
+            Unix Zeitstempel Konverter
           </div>
           <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
             Unix Epoch Zeitstempel in lesbare Datumsformate umwandeln und umgekehrt.
@@ -288,7 +343,7 @@
         
         <a href="/de/uuid-guid-v4-generator" class="p-3.5 rounded-lg border border-[#1e2333] hover:border-[#10b981]/50 bg-[#11141d] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
-            UUID und GUID v4 Online Generator
+            UUID v4 Online Generator
           </div>
           <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
             Kryptografisch sichere UUID v4 Identifikatoren stapelweise generieren.
@@ -315,15 +370,46 @@
 
   <script>
   (function() {
-    const btn = document.getElementById('lang-toggle-btn');
-    const menu = document.getElementById('lang-dropdown-menu');
-    if (btn && menu) {
-      btn.addEventListener('click', (e) => {
+    // 1. Language dropdown menu
+    const langBtn = document.getElementById('lang-toggle-btn');
+    const langMenu = document.getElementById('lang-dropdown-menu');
+    if (langBtn && langMenu) {
+      langBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        menu.classList.toggle('hidden');
+        langMenu.classList.toggle('hidden');
       });
       document.addEventListener('click', () => {
-        if (!menu.classList.contains('hidden')) menu.classList.add('hidden');
+        if (!langMenu.classList.contains('hidden')) langMenu.classList.add('hidden');
+      });
+    }
+
+    // 2. Responsive Mobile Drawer Menu
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        if (isOpen) {
+          mobileMenu.classList.add('hidden');
+          if (hamburgerIcon) hamburgerIcon.classList.remove('hidden');
+          if (closeIcon) closeIcon.classList.add('hidden');
+        } else {
+          mobileMenu.classList.remove('hidden');
+          if (hamburgerIcon) hamburgerIcon.classList.add('hidden');
+          if (closeIcon) closeIcon.classList.remove('hidden');
+        }
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && e.target !== menuBtn) {
+          mobileMenu.classList.add('hidden');
+          if (hamburgerIcon) hamburgerIcon.classList.remove('hidden');
+          if (closeIcon) closeIcon.classList.add('hidden');
+        }
       });
     }
   })();
