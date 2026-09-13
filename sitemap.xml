@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://webutil.globalcorehub.com/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/"/>
@@ -16,7 +16,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/json-formatter-validator</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/json-formatter-validator"/>
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/base64-encoder-decoder</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/base64-encoder-decoder"/>
@@ -44,7 +44,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/regex-tester-debugger</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/regex-tester-debugger"/>
@@ -58,7 +58,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/jwt-token-decoder</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/jwt-token-decoder"/>
@@ -72,7 +72,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/hash-generator-md5-sha256</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/hash-generator-md5-sha256"/>
@@ -86,7 +86,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/unix-timestamp-epoch-converter</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/unix-timestamp-epoch-converter"/>
@@ -100,7 +100,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/uuid-guid-v4-generator</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/uuid-guid-v4-generator"/>
@@ -114,7 +114,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/url-encoder-decoder-parser</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/url-encoder-decoder-parser"/>
@@ -128,7 +128,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/text-diff-checker-compare</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/text-diff-checker-compare"/>
@@ -142,7 +142,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/zh/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/"/>
@@ -156,7 +156,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/zh/json-formatter-validator</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/json-formatter-validator"/>
@@ -170,7 +170,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/zh/base64-encoder-decoder</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/base64-encoder-decoder"/>
@@ -184,7 +184,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/zh/regex-tester-debugger</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/regex-tester-debugger"/>
@@ -198,7 +198,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/zh/jwt-token-decoder</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/jwt-token-decoder"/>
@@ -212,7 +212,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/zh/hash-generator-md5-sha256</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/hash-generator-md5-sha256"/>
@@ -226,7 +226,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/zh/unix-timestamp-epoch-converter</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/unix-timestamp-epoch-converter"/>
@@ -240,7 +240,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/zh/uuid-guid-v4-generator</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/uuid-guid-v4-generator"/>
@@ -254,7 +254,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/zh/url-encoder-decoder-parser</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/url-encoder-decoder-parser"/>
@@ -268,7 +268,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/zh/text-diff-checker-compare</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/text-diff-checker-compare"/>
@@ -282,7 +282,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/es/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/"/>
@@ -296,7 +296,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/es/json-formatter-validator</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/json-formatter-validator"/>
@@ -310,7 +310,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/es/base64-encoder-decoder</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/base64-encoder-decoder"/>
@@ -324,7 +324,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/es/regex-tester-debugger</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/regex-tester-debugger"/>
@@ -338,7 +338,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/es/jwt-token-decoder</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/jwt-token-decoder"/>
@@ -352,7 +352,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/es/hash-generator-md5-sha256</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/hash-generator-md5-sha256"/>
@@ -366,7 +366,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/es/unix-timestamp-epoch-converter</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/unix-timestamp-epoch-converter"/>
@@ -380,7 +380,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/es/uuid-guid-v4-generator</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/uuid-guid-v4-generator"/>
@@ -394,7 +394,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/es/url-encoder-decoder-parser</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/url-encoder-decoder-parser"/>
@@ -408,7 +408,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/es/text-diff-checker-compare</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/text-diff-checker-compare"/>
@@ -422,7 +422,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/pt/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/"/>
@@ -436,7 +436,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/pt/json-formatter-validator</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/json-formatter-validator"/>
@@ -450,7 +450,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/pt/base64-encoder-decoder</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/base64-encoder-decoder"/>
@@ -464,7 +464,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/pt/regex-tester-debugger</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/regex-tester-debugger"/>
@@ -478,7 +478,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/pt/jwt-token-decoder</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/jwt-token-decoder"/>
@@ -492,7 +492,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/pt/hash-generator-md5-sha256</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/hash-generator-md5-sha256"/>
@@ -506,7 +506,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/pt/unix-timestamp-epoch-converter</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/unix-timestamp-epoch-converter"/>
@@ -520,7 +520,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/pt/uuid-guid-v4-generator</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/uuid-guid-v4-generator"/>
@@ -534,7 +534,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/pt/url-encoder-decoder-parser</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/url-encoder-decoder-parser"/>
@@ -548,7 +548,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/pt/text-diff-checker-compare</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/text-diff-checker-compare"/>
@@ -562,7 +562,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/de/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/"/>
@@ -576,7 +576,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/de/json-formatter-validator</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/json-formatter-validator"/>
@@ -590,7 +590,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/de/base64-encoder-decoder</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/base64-encoder-decoder"/>
@@ -604,7 +604,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/de/regex-tester-debugger</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/regex-tester-debugger"/>
@@ -618,7 +618,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/de/jwt-token-decoder</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/jwt-token-decoder"/>
@@ -632,7 +632,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/de/hash-generator-md5-sha256</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/hash-generator-md5-sha256"/>
@@ -646,7 +646,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/de/unix-timestamp-epoch-converter</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/unix-timestamp-epoch-converter"/>
@@ -660,7 +660,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/de/uuid-guid-v4-generator</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/uuid-guid-v4-generator"/>
@@ -674,7 +674,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/de/url-encoder-decoder-parser</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/url-encoder-decoder-parser"/>
@@ -688,7 +688,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/de/text-diff-checker-compare</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/text-diff-checker-compare"/>
@@ -702,7 +702,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/fr/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/"/>
@@ -716,7 +716,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/fr/json-formatter-validator</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/json-formatter-validator"/>
@@ -730,7 +730,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/fr/base64-encoder-decoder</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/base64-encoder-decoder"/>
@@ -744,7 +744,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/fr/regex-tester-debugger</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/regex-tester-debugger"/>
@@ -758,7 +758,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/fr/jwt-token-decoder</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/jwt-token-decoder"/>
@@ -772,7 +772,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/fr/hash-generator-md5-sha256</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/hash-generator-md5-sha256"/>
@@ -786,7 +786,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/fr/unix-timestamp-epoch-converter</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/unix-timestamp-epoch-converter"/>
@@ -800,7 +800,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/fr/uuid-guid-v4-generator</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/uuid-guid-v4-generator"/>
@@ -814,7 +814,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/fr/url-encoder-decoder-parser</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/url-encoder-decoder-parser"/>
@@ -828,7 +828,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/fr/text-diff-checker-compare</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/text-diff-checker-compare"/>
@@ -842,7 +842,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/ja/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/"/>
@@ -856,7 +856,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/ja/json-formatter-validator</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/json-formatter-validator"/>
@@ -870,7 +870,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/ja/base64-encoder-decoder</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/base64-encoder-decoder"/>
@@ -884,7 +884,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/ja/regex-tester-debugger</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/regex-tester-debugger"/>
@@ -898,7 +898,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/ja/jwt-token-decoder</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/jwt-token-decoder"/>
@@ -912,7 +912,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/ja/hash-generator-md5-sha256</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/hash-generator-md5-sha256"/>
@@ -926,7 +926,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/ja/unix-timestamp-epoch-converter</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/unix-timestamp-epoch-converter"/>
@@ -940,7 +940,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/ja/uuid-guid-v4-generator</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/uuid-guid-v4-generator"/>
@@ -954,7 +954,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/ja/url-encoder-decoder-parser</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/url-encoder-decoder-parser"/>
@@ -968,7 +968,7 @@
   </url>
   <url>
     <loc>https://webutil.globalcorehub.com/ja/text-diff-checker-compare</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://webutil.globalcorehub.com/text-diff-checker-compare"/>
